@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 및 속성 일치 여부 보고서</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter 폰트 적용 */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* 스크롤바 숨기기 (선택 사항) */
+        textarea::-webkit-scrollbar {
+            display: none;
+        }
+        textarea {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8 space-y-8">
+        <h1 class="text-4xl font-bold text-gray-800 text-center mb-8">함수 및 속성 일치 여부 보고서</h1>
+
+        <!-- 입력 섹션 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- XML 내용 입력 -->
+            <div class="flex flex-col space-y-4">
+                <label for="xmlInput" class="text-lg font-semibold text-gray-700">XML 파일 내용 붙여넣기:</label>
+                <textarea id="xmlInput" rows="20" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-mono" placeholder="여기에 XML 메타 정보 파일을 붙여넣으세요. (예: SpinField.txt)"></textarea>
+                <p class="text-sm text-gray-500">예시: SpinField.txt 파일의 전체 내용</p>
+            </div>
+
+            <!-- JS 파일 내용 입력 -->
+            <div class="flex flex-col space-y-4">
+                <label for="jsInput" class="text-lg font-semibold text-gray-700">JS 파일 내용 붙여넣기:</label>
+                <textarea id="jsInput" rows="20" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-mono" placeholder="여기에 JS 파일 내용을 붙여넣으세요. (예: _pSpinField.on_after_created_ext = function ... 패턴의 함수와 속성 사용 코드)"></textarea>
+                <p class="text-sm text-gray-500">예시: _pSpinField.on_after_created_ext = function ... 패턴의 함수가 포함된 JS 코드</p>
+            </div>
+        </div>
+
+        <!-- 보고서 생성 버튼 -->
+        <div class="flex justify-center gap-6 mt-6">
+            <button id="generateReportBtn" class="px-8 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200">
+                보고서 생성
+            </button>
+            <button id="generateCSVEvent" class="px-8 py-3 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200">
+                이벤트 CSV 다운로드
+            </button>
+            <button id="generateCSVMethod" class="px-8 py-3 bg-purple-600 text-white font-bold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-200">
+                메서드 CSV 다운로드
+            </button>
+        </div>
+
+        <!-- 보고서 결과 섹션 -->
+        <div id="reportOutput" class="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200 hidden">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">비교 결과</h2>
+            <div id="reportContent" class="space-y-6">
+                <!-- 결과가 여기에 동적으로 삽입됩니다. -->
+            </div>
+        </div>
+
+        <!-- 메시지 박스 (alert 대체) -->
+        <div id="messageBox" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                <p id="messageText" class="text-lg font-semibold text-gray-800 mb-4"></p>
+                <button id="closeMessageBox" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 외부 JavaScript 파일 가져오기 (순서 중요!) -->
+    <!-- X2C_event.js가 먼저 로드되어 전역 유틸리티 함수를 정의합니다. -->
+    <script src="./X2C_event.js"></script>
+    <!-- X2C_method.js는 X2C_event.js에 정의된 전역 함수를 사용합니다. -->
+    <script src="./X2C_method.js"></script>
+</body>
+</html>
