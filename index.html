@@ -29,16 +29,23 @@
         <div class="p-6 border border-gray-200 rounded-lg space-y-6">
             <h2 class="text-2xl font-bold text-gray-800">1. XML 분석 및 CSV 생성</h2>
             <div class="flex flex-col space-y-4">
-                <label for="xmlInput" class="text-lg font-semibold text-gray-700">XML 파일 내용:</label>
-                <textarea id="xmlInput" rows="15" class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-mono" placeholder="여기에 XML 메타 정보 파일을 붙여넣으세요. (예: SpinField.txt)"></textarea>
-                <p class="text-sm text-gray-500">XML 내용을 입력하면 이벤트 및 메서드 정보를 CSV 파일로 다운로드할 수 있습니다.</p>
+                <label for="xmlFileInput" class="text-lg font-semibold text-gray-700">XML 파일 선택:</label>
+                <input type="file" id="xmlFileInput" accept=".xml, .txt" class="w-full p-2 border border-gray-300 rounded-lg file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+                <p class="text-sm text-gray-500">분석할 XML 메타 정보 파일을 선택하세요. (예: SpinField.xml)</p>
+                <textarea id="xmlInput" class="hidden"></textarea> <!-- 기존 로직과의 호환성을 위해 숨김 처리 -->
             </div>
-            <div class="flex justify-center gap-6">
+            <div class="flex justify-center flex-wrap gap-6">
                 <button id="generateCSVEvent" class="px-8 py-3 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-200">
                     이벤트 CSV 다운로드
                 </button>
                 <button id="generateCSVMethod" class="px-8 py-3 bg-purple-600 text-white font-bold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-200">
                     메서드 CSV 다운로드
+                </button>
+                <button id="generateCSVStatus" class="px-8 py-3 bg-yellow-500 text-white font-bold rounded-lg shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transition duration-200">
+                    상태 CSV 다운로드
+                </button>
+                <button id="generateCSVControl" class="px-8 py-3 bg-red-500 text-white font-bold rounded-lg shadow-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition duration-200">
+                    컨트롤 CSV 다운로드
                 </button>
             </div>
         </div>
@@ -83,5 +90,25 @@
     <script src="./X2C_event.js"></script>
     <!-- X2C_method.js는 X2C_event.js에 정의된 전역 함수를 사용합니다. -->
     <script src="./X2C_method.js"></script>
+    <script src="./X2C_status.js"></script>
+    <script src="./X2C_control.js"></script>
+
+    <script>
+        document.getElementById('xmlFileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const xmlContent = e.target.result;
+                    document.getElementById('xmlInput').value = xmlContent;
+                    showMessage(`'${file.name}' 파일이 성공적으로 로드되었습니다.`);
+                };
+                reader.onerror = function() {
+                    showMessage('파일을 읽는 중 오류가 발생했습니다.');
+                }
+                reader.readAsText(file);
+            }
+        });
+    </script>
 </body>
 </html>
