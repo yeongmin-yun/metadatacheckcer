@@ -205,6 +205,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderPropertiesTable(finalChildrenProperties) {
         finalPropertiesTableBody.innerHTML = ''; // Clear existing rows
+        const downloadCsvBtn = document.getElementById('downloadPropertiesCsvBtn');
+        const downloadExcelBtn = document.getElementById('downloadPropertiesExcelBtn');
+
+        if (finalChildrenProperties.size === 0) {
+            downloadCsvBtn.classList.add('hidden');
+            downloadExcelBtn.classList.add('hidden');
+            return;
+        }
+
+        downloadCsvBtn.classList.remove('hidden');
+        downloadExcelBtn.classList.remove('hidden');
 
         finalChildrenProperties.forEach((properties, component) => {
             properties.forEach((prop, name) => {
@@ -219,4 +230,44 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    function getTableCsvContent() {
+        const table = document.getElementById('finalPropertiesTable');
+        const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+        
+        let csvContent = headers.map(window.escapeCsvField).join(",") + "\n";
+
+        rows.forEach(row => {
+            const cells = Array.from(row.querySelectorAll('td'));
+            const rowData = cells.map(cell => window.escapeCsvField(cell.textContent));
+            csvContent += rowData.join(",") + "\n";
+        });
+        
+        return csvContent;
+    }
+
+    function downloadProperties(fileType) {
+        const csvContent = getTableCsvContent();
+        const fileName = fileType === 'excel' ? 'Inherited_Properties.xlsx' : 'Inherited_Properties.csv';
+        const mimeType = fileType === 'excel' ? 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' : 'text/csv';
+
+        // BOM for UTF-8 to ensure Excel opens it correctly
+        const bom = "\uFEFF"; 
+        const blob = new Blob([bom + csvContent], { type: `${mimeType};charset=utf-8;` });
+        
+        const link = document.createElement("a");
+        if (link.download !== undefined) { // Feature detection
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url);
+            link.setAttribute("download", fileName);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+
+    document.getElementById('downloadPropertiesCsvBtn').addEventListener('click', () => downloadProperties('csv'));
+    document.getElementById('downloadPropertiesExcelBtn').addEventListener('click', () => downloadProperties('excel'));
 });

@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(currentXmlContent, "text/xml");
+            const xmlDoc = parser.parseFromString(currentXmlContent, "text/xml/info");
 
             // XML 파싱 오류 확인
             const errorNode = xmlDoc.querySelector('parsererror');
