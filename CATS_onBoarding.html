@@ -82,7 +82,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl font-semibold mb-2">1.2. 목적</h3>
-                            <p class="text-lg">본 문서의 목적은 CI 자동 테스트 샘플에서 테스트 API를 ���용하여 작성하기 위한 문서이다. 본 문서는 아래의 내용을 담고 있다.</p>
+                            <p class="text-lg">본 문서의 목적은 CI 자동 테스트 샘플에서 테스트 API를 사용하여 작성하기 위한 문서이다. 본 문서는 아래의 내용을 담고 있다.</p>
                             <ul class="list-disc list-inside mt-4 text-lg ml-4">
                                 <li>키보드 API, 마우스 API, 터치 API</li>
                                 <li>Style API</li>
@@ -339,29 +339,29 @@ setTimeout(function () {
 
                                 <div class="mt-6">
                                     <h4 class="text-xl font-semibold mb-2">Sample Call</h4>
-                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>// Tab
-var target = this.div00.form.btn00.getElement();
+                                    
+                                    <h5 class="text-lg font-semibold mt-4 mb-2">Tab</h5>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>var target = this.div00.form.btn00.getElement();
 nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
-nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
+nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);</code></pre>
 
-// Double Tab
-var target = this.div00.form.btn02.getElement();
+                                    <h5 class="text-lg font-semibold mt-4 mb-2">Double Tab</h5>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>var target = this.div00.form.btn02.getElement();
 setTimeout(function () {
     nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
     nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
     nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
     nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
-}, 100);
+}, 100);</code></pre>
 
-// Swipe
-var target = this.div00.form.btn03;
+                                    <h5 class="text-lg font-semibold mt-4 mb-2">Swipe</h5>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>var target = this.div00.form.btn03;
 var target_elem = target.getElement();
 var offsetLeft = target.getOffsetLeft();
 var offsetTop = target.getOffsetTop();
 nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchstart', 0, offsetLeft, offsetTop);
 nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchmove', 0, offsetLeft - 10, offsetTop);
-nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchend', 0, offsetLeft - 10, offsetTop);
-</code></pre>
+nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchend', 0, offsetLeft - 10, offsetTop);</code></pre>
                                 </div>
                             </div>
                         </article>
@@ -448,16 +448,52 @@ nexacro.test.Event.dispatchKeyBoardEventEx(elem(comp), name, key, location, ctrl
                             <p class="text-lg mb-4">Component Property 속성 중 Style을 검증하는 API입니다. Computed style 값을 통해 이미지 유효성을 검증할 수 있습니다.</p>
                             <h4 class="text-xl font-semibold mb-2">Syntax</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Style.getComputedStyle(obj, prop [, clientX, clientY])</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Parameters</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full border border-gray-300">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="border px-4 py-2">Parameter</th>
+                                            <th class="border px-4 py-2">Type</th>
+                                            <th class="border px-4 py-2">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border px-4 py-2">obj</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">Component Object 또는 Element Object.</td></tr>
+                                        <tr><td class="border px-4 py-2">prop</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">가져올 스타일 속성 이름.</td></tr>
+                                        <tr><td class="border px-4 py-2">clientX</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">(Optional) 가상 커서의 X 좌표.</td></tr>
+                                        <tr><td class="border px-4 py-2">clientY</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">(Optional) 가상 커서의 Y 좌표.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <h4 class="text-xl font-semibold mt-4 mb-2">Return</h4>
                             <p>스타일 값은 객체이거나 문자열이며, 컴포넌트 종류에 따라 지원하지 않는 스타일도 존재합니다. 속성 값이 두 개 이상이면 객체 타입으로 반환됩니다. (예: border)</p>
                         </article>
 
-                    <!-- 5.2. getComputedStyleString -->
+                        <!-- 5.2. getComputedStyleString -->
                         <article id="section5-2" class="border-t pt-10">
                             <h3 class="text-3xl font-semibold mb-4">5.2. getComputedStyleString</h3>
                             <p class="text-lg mb-4">Component Property 속성 중 Style을 검증하는 API로, 항상 문자열 값을 반환합니다.</p>
                             <h4 class="text-xl font-semibold mb-2">Syntax</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Style.getComputedStyleString(obj, prop [, clientX, clientY])</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Parameters</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full border border-gray-300">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="border px-4 py-2">Parameter</th>
+                                            <th class="border px-4 py-2">Type</th>
+                                            <th class="border px-4 py-2">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border px-4 py-2">obj</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">Component Object 또는 Element Object.</td></tr>
+                                        <tr><td class="border px-4 py-2">prop</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">가져올 스타일 속성 이름.</td></tr>
+                                        <tr><td class="border px-4 py-2">clientX</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">(Optional) 가상 커서의 X 좌표.</td></tr>
+                                        <tr><td class="border px-4 py-2">clientY</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">(Optional) 가상 커서의 Y 좌표.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <h4 class="text-xl font-semibold mt-4 mb-2">Return</h4>
                             <p>스타일 값은 항상 문자열이며, 컴포넌트 종류에 따라 지원하지 않는 스타일도 존재합니다. 포지션 별 동일 값이 있는 경우 CSS 룰에 따라 값이 축약될 수 있습니다.</p>
                         </article>
@@ -542,5 +578,48 @@ nexacro.test.Event.dispatchKeyBoardEventEx(elem(comp), name, key, location, ctrl
             </div>
         </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const codeBlocks = document.querySelectorAll('pre');
+
+            codeBlocks.forEach(codeBlock => {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('relative');
+                
+                const copyButton = document.createElement('button');
+                copyButton.textContent = 'Copy';
+                copyButton.classList.add(
+                    'absolute', 'top-2', 'right-2', 'px-2', 'py-1', 
+                    'bg-gray-600', 'text-white', 'text-xs', 'font-semibold', 
+                    'rounded', 'hover:bg-gray-700', 'focus:outline-none', 'focus:ring-2', 'focus:ring-gray-500', 'transition-colors'
+                );
+
+                copyButton.addEventListener('click', () => {
+                    const code = codeBlock.querySelector('code');
+                    if (code) {
+                        navigator.clipboard.writeText(code.innerText).then(() => {
+                            copyButton.textContent = 'Copied!';
+                            setTimeout(() => {
+                                copyButton.textContent = 'Copy';
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Failed to copy text: ', err);
+                            copyButton.textContent = 'Error';
+                            setTimeout(() => {
+                                copyButton.textContent = 'Copy';
+                            }, 2000);
+                        });
+                    }
+                });
+
+                // Wrap the code block
+                if (codeBlock.parentNode) {
+                    codeBlock.parentNode.insertBefore(wrapper, codeBlock);
+                }
+                wrapper.appendChild(codeBlock);
+                wrapper.appendChild(copyButton);
+            });
+        });
+    </script>
 </body>
 </html>
