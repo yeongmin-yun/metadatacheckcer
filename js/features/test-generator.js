@@ -13,37 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let baseObjectName = 'Component'; // Default value
     let selectedProperties = new Map(); // Stores propertyName -> generatedLogicSnippet
 
-    // 탭 변경 함수
-    function showTab(tabId) {
-        tabContents.forEach(content => {
-            content.classList.add('hidden');
-        });
-        tabButtons.forEach(button => {
-            button.classList.remove('active-tab', 'border-blue-600', 'text-blue-600');
-            button.classList.add('border-transparent', 'text-gray-600');
-        });
-
-        document.getElementById(tabId).classList.remove('hidden');
-        document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active-tab', 'border-blue-600', 'text-blue-600');
-
-        // Specific logic for dynamicTestTab
-        if (tabId === 'dynamicTestTab') {
-            // Ensure the code output area is visible and displays the initial template
-            dynamicTestCodeOutput.classList.remove('hidden');
-            updateOverallTestCodeDisplay(); // This will show the default template
-        }
-    }
-
-    // 초기 탭 설정
-    showTab('xmlCsvTab');
-
-    // 탭 버튼 클릭 이벤트 리스너
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            showTab(button.dataset.tab);
-        });
-    });
-
     // 메시지 박스 관련 요소 가져오기
     const messageBox = document.getElementById('messageBox');
     const messageText = document.getElementById('messageText');
@@ -75,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const xmlFile = dynamicXmlFileInput.files[0];
 
         if (!xmlFile) {
-            showMessageBox('XML 파일을 업로드해주세요.');
+            showMessageBox('INFO 파일을 업로드해주세요.');
             return;
         }
 
         try {
             currentXmlContent = await readFileContent(xmlFile);
-            // Extract base object name from filename (e.g., "SpinField.xml" -> "SpinField")
+            // Extract base object name from filename (e.g., "SpinField.info" -> "SpinField")
             baseObjectName = xmlFile.name.split('.').slice(0, -1).join('.');
             if (baseObjectName.includes('/')) { // Handle cases where path might be included
                 baseObjectName = baseObjectName.substring(baseObjectName.lastIndexOf('/') + 1);
@@ -94,12 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(currentXmlContent, "text/xml/info");
+            const xmlDoc = parser.parseFromString(currentXmlContent, "text/xml"); // FIX: Use valid MIME type
 
             // XML 파싱 오류 확인
             const errorNode = xmlDoc.querySelector('parsererror');
             if (errorNode) {
-                showMessageBox('XML 파일 파싱 중 오류가 발생했습니다: ' + errorNode.textContent);
+                showMessageBox('INFO 파일 파싱 중 오류가 발생했습니다: ' + errorNode.textContent);
                 return;
             }
 
@@ -192,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 propertyListContainer.classList.remove('hidden');
             } else {
-                showMessageBox('XML 파일에서 추출할 속성이 없습니다.');
+                showMessageBox('INFO 파일에서 추출할 속성이 없습니다.');
                 propertyListContainer.classList.add('hidden');
             }
 
@@ -205,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to generate a single property's test logic snippet (LLM 없이 클라이언트 측에서 생성)
+    // Function to generate a single property's test logic snippet
     function generatePropertyLogicSnippet(propertyName, objName, edittype, readonly, description) {
         let logicSnippet = '';
         let exampleValue = '';
@@ -259,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 logicSnippet += `    // ${propertyName}은 읽기 전용 속성입니다. 설정할 수 없습니다.\n`;
             }
-            // Getter logic removed as per request
         }
         return logicSnippet;
     }
@@ -268,21 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateOverallTestCodeDisplay() {
         const allSetLogic = Array.from(selectedProperties.values()).join('\n');
 
-        const testCodeTemplate = `// Create Object
-var obj${baseObjectName}1 = new ${baseObjectName}("${baseObjectName}00", 30, 100, 200, 50, null, null);
-
-// Set Logic Here
-${allSetLogic}
-
-// Add Object to Parent Form
-this.addChild("${baseObjectName}00", obj${baseObjectName}1);
-
-// Insert Object to Parent Form
-// this.insertChild(1, "${baseObjectName}00", obj${baseObjectName}1); // Uncomment if needed
-
-// Show Object
-obj${baseObjectName}1.show();
-`;
+        const testCodeTemplate = `// Create Object\nvar obj${baseObjectName}1 = new ${baseObjectName}("${baseObjectName}00", 30, 100, 200, 50, null, null);\n\n// Set Logic Here\n${allSetLogic || '// 속성, 메서드, 또는 이벤트를 선택하여 테스트 코드를 생성하세요.'}\n\n// Add Object to Parent Form\nthis.addChild("${baseObjectName}00", obj${baseObjectName}1);\n\n// Insert Object to Parent Form\n// this.insertChild(1, "${baseObjectName}00", obj${baseObjectName}1); // Uncomment if needed\n\n// Show Object\nobj${baseObjectName}1.show();\n`;
         generatedTestCode.textContent = testCodeTemplate;
     }
 
@@ -290,7 +244,6 @@ obj${baseObjectName}1.show();
     copyTestCodeBtn.addEventListener('click', () => {
         const codeToCopy = generatedTestCode.textContent;
         if (codeToCopy) {
-            // Using document.execCommand('copy') for better iframe compatibility
             const textarea = document.createElement('textarea');
             textarea.value = codeToCopy;
             document.body.appendChild(textarea);
@@ -306,27 +259,6 @@ obj${baseObjectName}1.show();
             }
         } else {
             showMessageBox('복사할 코드가 없습니다.');
-        }
-    });
-
-    // Dark mode toggle logic
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const htmlElement = document.documentElement; // Get the html element
-
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        htmlElement.classList.add('dark');
-    } else {
-        htmlElement.classList.remove('dark');
-    }
-
-    darkModeToggle.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark');
-        if (htmlElement.classList.contains('dark')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
         }
     });
 });
