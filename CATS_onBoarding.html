@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATS API 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding-top: 2rem;
+            margin-top: -2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="flex">
+        <!-- Sidebar Navigation -->
+        <aside class="w-1/4 h-screen sticky top-0 bg-gray-800 text-white p-6 overflow-y-auto">
+            <h2 class="text-2xl font-bold mb-6">목차</h2>
+            <nav>
+                <ul>
+                    <li class="mb-3"><a href="#section1" class="font-bold hover:text-blue-300">1. 코딩 가이드 개요</a></li>
+                    <li class="mb-3"><a href="#section2" class="font-bold hover:text-blue-300">2. Mouse API</a>
+                        <ul class="ml-4 mt-2">
+                            <li><a href="#section2-1" class="hover:text-blue-300">2.1. dispatchMouseEvent</a></li>
+                            <li><a href="#section2-2" class="hover:text-blue-300">2.2. click</a></li>
+                        </ul>
+                    </li>
+                    <li class="mb-3"><a href="#section3" class="font-bold hover:text-blue-300">3. Touch API</a>
+                        <ul class="ml-4 mt-2">
+                            <li><a href="#section3-1" class="hover:text-blue-300">3.1. dispatchTouchEvent</a></li>
+                        </ul>
+                    </li>
+                    <li class="mb-3"><a href="#section4" class="font-bold hover:text-blue-300">4. Keyboard API</a>
+                        <ul class="ml-4 mt-2">
+                            <li><a href="#section4-1" class="hover:text-blue-300">4.1. dispatchKeyBoardEvent</a></li>
+                            <li><a href="#section4-2" class="hover:text-blue-300">4.2. sendKeys</a></li>
+                            <li><a href="#section4-3" class="hover:text-blue-300">4.3. key_click</a></li>
+                        </ul>
+                    </li>
+                    <li class="mb-3"><a href="#section5" class="font-bold hover:text-blue-300">5. Style API</a>
+                        <ul class="ml-4 mt-2">
+                            <li><a href="#section5-1" class="hover:text-blue-300">5.1. getComputedStyle</a></li>
+                            <li><a href="#section5-2" class="hover:text-blue-300">5.2. getComputedStyleString</a></li>
+                        </ul>
+                    </li>
+                    <li class="mb-3"><a href="#section6" class="font-bold hover:text-blue-300">6. Misc API</a>
+                        <ul class="ml-4 mt-2">
+                            <li><a href="#section6-1" class="hover:text-blue-300">6.1. nx_key_copy</a></li>
+                            <li><a href="#section6-2" class="hover:text-blue-300">6.2. nx_key_cut</a></li>
+                            <li><a href="#section6-3" class="hover:text-blue-300">6.3. nx_key_all</a></li>
+                            <li><a href="#section6-4" class="hover:text-blue-300">6.4. nx_key_paste</a></li>
+                            <li><a href="#section6-5" class="hover:text-blue-300">6.5. nx_dragdrop</a></li>
+                            <li><a href="#section6-6" class="hover:text-blue-300">6.6. nx_getGridEditor</a></li>
+                            <li><a href="#section6-7" class="hover:text-blue-300">6.7. nx_toColorname</a></li>
+                            <li><a href="#section6-8" class="hover:text-blue-300">6.8. clearNXData</a></li>
+                        </ul>
+                    </li>
+                    <li class="mb-3"><a href="#section7" class="font-bold hover:text-blue-300">7. API 사용시 주의사항</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-3/4 p-10">
+            <header class="mb-12 border-b pb-6">
+                <h1 class="text-5xl font-extrabold">CATS API 가이드</h1>
+                <p class="text-lg text-gray-600 mt-2">CI 자동 테스트 API 레퍼런스 문서</p>
+            </header>
+
+            <div id="content-container" class="space-y-12">
+                <!-- Section 1: 코딩 가이드 개요 -->
+                <section id="section1">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">1. 코딩 가이드 개요</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">1.1. 개요</h3>
+                            <p class="text-lg">본 문서는 CI 자동 테스트 API를 사용하기 위한 레퍼런스 가이드 문서이다.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">1.2. 목적</h3>
+                            <p class="text-lg">본 문서의 목적은 CI 자동 테스트 샘플에서 테스트 API를 ���용하여 작성하기 위한 문서이다. 본 문서는 아래의 내용을 담고 있다.</p>
+                            <ul class="list-disc list-inside mt-4 text-lg ml-4">
+                                <li>키보드 API, 마우스 API, 터치 API</li>
+                                <li>Style API</li>
+                                <li>기타 API 및 API 사용시 주의사항</li>
+                            </ul>
+                        </div>
+                        <div class="border-t pt-6">
+                            <h3 class="text-2xl font-semibold mb-2">1.3. 용어정의</h3>
+                            <p class="text-lg">PDF 문서에 해당 섹션의 상세 내용이 없어, 필요시 내용을 추가해야 합니다.</p>
+                        </div>
+                        <div class="border-t pt-6">
+                            <h3 class="text-2xl font-semibold mb-2">1.4. 테스트 API 구성요소</h3>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full border border-gray-300">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="border px-4 py-2">분류</th>
+                                            <th class="border px-4 py-2">아이템명</th>
+                                            <th class="border px-4 py-2">설명</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border px-4 py-2">Mouse</td><td class="border px-4 py-2">DispatchMouseEvent, Click</td><td class="border px-4 py-2">마우스 이벤트를 테스트하기 위한 함수</td></tr>
+                                        <tr><td class="border px-4 py-2">Keyboard</td><td class="border px-4 py-2">DispatchKeyboardEvent</td><td class="border px-4 py-2">키보드 키 이벤트를 테스트하기 위한 함수</td></tr>
+                                        <tr><td class="border px-4 py-2">Touch</td><td class="border px-4 py-2">DispatchTouchEvent</td><td class="border px-4 py-2">터치 이벤트를 테스트하기 위한 함수</td></tr>
+                                        <tr><td class="border px-4 py-2">Style</td><td class="border px-4 py-2">getComputedStyle</td><td class="border px-4 py-2">컴포넌트의 스타일을 검증하기 위한 함수</td></tr>
+                                        <tr><td class="border px-4 py-2">Misc</td><td class="border px-4 py-2">nx_key_copy, nx_key_cut, 등</td><td class="border px-4 py-2">개발 편의성을 증대하기 위한 유틸리티 함수</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 2: Mouse API -->
+                <section id="section2">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">2. Mouse API</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-10">
+                        
+                        <!-- 2.1. dispatchMouseEvent -->
+                        <article id="section2-1">
+                            <h3 class="text-3xl font-semibold mb-4">2.1. dispatchMouseEvent</h3>
+                            <div class="space-y-4">
+                                <p class="text-lg">Mouse를 실제로 제어하지 않으면서 마우스가 동작하는 것처럼 에뮬레이션하여 테스트를 할 수 있는 메소드입니다. 테스트 대상의 컴포넌트에 마우스 클릭, 마우스 휠스크롤을 사용할 수 있습니다.</p>
+                                <p class="text-lg"><code class="bg-gray-200 p-1 rounded">dispatchMouseEventEx</code>는 <code class="bg-gray-200 p-1 rounded">dispatchMouseEvent</code> 함수를 확장한 함수입니다.</p>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Supported Environments</h4>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li><b>Desktop:</b> Windows nexacro Browser, Chrome, IE11</li>
+                                        <li><b>Mobile:</b> iOS nexacro Browser, Android nexacro Browser</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.dispatchMouseEvent(targetElem, type, buttonName, clientX, clientY, [relatedElem])
+nexacro.test.Event.dispatchMouseEventEx(targetElem(comp), type, buttonName, altKey, ctrlKey, shiftKey, clientX, clientY, [relatedElem])
+nx_common_dispatchMouseEvent(targetElem(comp), type, buttonName, altKey, ctrlKey, shiftKey, clientX, clientY, [relatedElem])</code></pre>
+                                    <p class="mt-2 text-md text-gray-600"><code>nx_common_dispatchMouseEvent</code>는 Desktop과 Mobile에서 공통으로 사용할 수 있는 래퍼 함수입니다.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Parameters</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="min-w-full border border-gray-300">
+                                            <thead class="bg-gray-200">
+                                                <tr>
+                                                    <th class="border px-4 py-2">Parameter</th>
+                                                    <th class="border px-4 py-2">Type</th>
+                                                    <th class="border px-4 py-2">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td class="border px-4 py-2">targetElem</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">마우스가 입력될 ControlElement 또는 Component Object.</td></tr>
+                                                <tr><td class="border px-4 py-2">type</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">마우스 이벤트 유형: "lbuttondown", "lbuttonup", "rbuttondown", "rbuttonup", "mouseenter", "mousemove", "mouseleave", "mousewheel", "dblclick", "mousedown", "mouseup"</td></tr>
+                                                <tr><td class="border px-4 py-2">buttonName</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">마우스 버튼: "lbutton", "rbutton", "mbutton". type이 'mousewheel'인 경우 빈 값("") 사용.</td></tr>
+                                                <tr><td class="border px-4 py-2">ctrlKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Control 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">shiftKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Shift 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">altKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Alt 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">clientX</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">이벤트의 X 좌표</td></tr>
+                                                <tr><td class="border px-4 py-2">clientY</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">이벤트의 Y 좌표</td></tr>
+                                                <tr><td class="border px-4 py-2">relatedElem</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">이벤트와 연관된 ControlElement Object (예: mouseenter, mouseleave)</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Return</h4>
+                                    <p>Mouse event object를 반환하며, 해당 object의 내부 파라미터 값은 브라우저마다 다를 수 있습니다.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Remark</h4>
+                                    <p>click(rbutton) 파라미터 사용 시 <code class="bg-gray-200 p-1 rounded">usercontextmenu</code> 프로퍼티가 true이면 contextmenu가 열리므로, 테스트 자동화 샘플 작성 시 false로 설정해야 합니다.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Sample Call</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>// lbuttondown
+var target = this.div00.form.edt00.getElement();
+nexacro.test.Event.dispatchMouseEvent(target, 'lbuttondown', 'lbutton', 15, 20);
+var comp = this.div00.form.edt00;
+nexacro.test.Event.dispatchMouseEventEx(comp, 'lbuttondown', 'lbutton', false, false, false, 15, 20);
+
+// rbuttondown
+var target = this.div00.form.txt00.getElement();
+nexacro.test.Event.dispatchMouseEvent(target, 'rbuttondown', 'rbutton', 15, 20);
+
+// mouseenter
+var target = this.div00.form.btn00.getElement();
+var comp = this.div00.form.btn00;
+var relatedTarget = this.div00.form.getElement();
+nexacro.test.Event.dispatchMouseEvent(target, 'mouseenter', '', 10, 20, relatedTarget);
+
+// dblclick
+var target = this.div00.form.btn01.getElement();
+setTimeout(function () {
+    nexacro.test.Event.dispatchMouseEvent(target, 'dblclick', 'lbutton', 15, 20);
+}, 50);</code></pre>
+                                </div>
+                            </div>
+                        </article>
+                    <!-- 2.2. click -->
+                        <article id="section2-2" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">2.2. click</h3>
+                            <div class="space-y-4">
+                                <p class="text-lg">마우스 클릭 이벤트를 테스트하는 API입니다. 타이머 로직 처리 부분을 개발하기 쉽게 구현한 메소드입니다.</p>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Supported Environments</h4>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li><b>Desktop:</b> Windows nexacro Browser, Chrome, IE11</li>
+                                        <li><b>Mobile:</b> iOS nexacro Browser, Android nexacro Browser</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.click(targetElem, buttonName, clientX, clientY)
+nexacro.test.Event.clickEx(targetElem(comp), buttonName, altKey, ctrlKey, shiftKey, clientX, clientY)
+nexacro.test.Event.nx_common_click(targetElem(comp), buttonName, altKey, ctrlKey, shiftKey, clientX, clientY)</code></pre>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Parameters</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="min-w-full border border-gray-300">
+                                            <thead class="bg-gray-200">
+                                                <tr>
+                                                    <th class="border px-4 py-2">Parameter</th>
+                                                    <th class="border px-4 py-2">Type</th>
+                                                    <th class="border px-4 py-2">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td class="border px-4 py-2">targetElem</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">마우스가 입력될 ControlElement 또는 Component Object.</td></tr>
+                                                <tr><td class="border px-4 py-2">buttonName</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">마우스 버튼: "lbutton"</td></tr>
+                                                <tr><td class="border px-4 py-2">altKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Alt 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">ctrlKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Control 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">shiftKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Shift 키 입력 유무 (true/false)</td></tr>
+                                                <tr><td class="border px-4 py-2">clientX</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">마우스가 입력될 X 좌표</td></tr>
+                                                <tr><td class="border px-4 py-2">clientY</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">마우스가 입력될 Y 좌표</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Sample Call</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>// Click with lbutton
+var target = this.div00.form.btn00.getElement();
+setTimeout(function () {
+    var rtn = nexacro.test.Event.click(target, 'lbutton', 10, 10);
+});
+
+var comp = this.div00.form.btn00;
+setTimeout(function () {
+    var rtn = nexacro.test.Event.clickEx(comp, 'lbutton', false, false, false, 10, 10);
+});</code></pre>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Return</h4>
+                                    <p>없음.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Remark</h4>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li><code class="bg-gray-200 p-1 rounded">nexacro.test.Event.click</code>은 element만 지정할 수 있으며, alt, ctrl, shift key를 제어할 수 없습니다.</li>
+                                        <li><code class="bg-gray-200 p-1 rounded">nexacro.test.Event.clickEx</code>은 component object를 지정할 수 있고, alt, ctrl, shift key를 지정할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section 3: Touch API -->
+                <section id="section3">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">3. Touch API</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-10">
+                        
+                        <!-- 3.1. dispatchTouchEvent -->
+                        <article id="section3-1">
+                            <h3 class="text-3xl font-semibold mb-4">3.1. dispatchTouchEvent</h3>
+                            <div class="space-y-4">
+                                <p class="text-lg">Touch를 실제 제어하지 않으면서 터치를 에뮬레이션하는 메소드입니다. 테스트 대상의 터치 이벤트(탭, 더블탭, 스와이프)를 발생시킬 수 있습니다.</p>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Supported Environments</h4>
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li><b>Desktop:</b> Windows nexacro Browser, Chrome, IE11</li>
+                                        <li><b>Mobile:</b> iOSnexacro Browser, Android nexacro Browser</li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.dispatchTouchEvent(targetElem, type, identifier, clientX, clientY)</code></pre>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Parameters</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="min-w-full border border-gray-300">
+                                            <thead class="bg-gray-200">
+                                                <tr>
+                                                    <th class="border px-4 py-2">Parameter</th>
+                                                    <th class="border px-4 py-2">Type</th>
+                                                    <th class="border px-4 py-2">Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td class="border px-4 py-2">targetElem</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">화면에서 터치할 ControlElement 또는 Component Object.</td></tr>
+                                                <tr><td class="border px-4 py-2">type</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">터치 형태: "touchstart", "touchmove", "touchend"</td></tr>
+                                                <tr><td class="border px-4 py-2">identifier</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">이벤트를 일으키는 포인터를 위한 고유 식별자 (0, 1, 2, 3...).</td></tr>
+                                                <tr><td class="border px-4 py-2">clientX</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">화면에서 터치할 X 좌표.</td></tr>
+                                                <tr><td class="border px-4 py-2">clientY</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">화면에서 터치할 Y 좌표.</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Return</h4>
+                                    <p>Touch event object를 반환하며, 해당 object의 내부 파라미터 값은 브라우저마다 다를 수 있습니다.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Remark</h4>
+                                    <p>없음.</p>
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4 class="text-xl font-semibold mb-2">Sample Call</h4>
+                                    <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>// Tab
+var target = this.div00.form.btn00.getElement();
+nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
+nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
+
+// Double Tab
+var target = this.div00.form.btn02.getElement();
+setTimeout(function () {
+    nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
+    nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
+    nexacro.test.Event.dispatchTouchEvent(target, 'touchstart', 0);
+    nexacro.test.Event.dispatchTouchEvent(target, 'touchend', 0);
+}, 100);
+
+// Swipe
+var target = this.div00.form.btn03;
+var target_elem = target.getElement();
+var offsetLeft = target.getOffsetLeft();
+var offsetTop = target.getOffsetTop();
+nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchstart', 0, offsetLeft, offsetTop);
+nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchmove', 0, offsetLeft - 10, offsetTop);
+nexacro.test.Event.dispatchTouchEvent(target_elem, 'touchend', 0, offsetLeft - 10, offsetTop);
+</code></pre>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section 4: Keyboard API -->
+                <section id="section4">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">4. Keyboard API</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-10">
+                        
+                        <!-- 4.1. dispatchKeyBoardEvent -->
+                        <article id="section4-1">
+                            <h3 class="text-3xl font-semibold mb-4">4.1. dispatchKeyBoardEvent</h3>
+                            <p class="text-lg mb-4">키보드를 실제로 제어하지 않으면서 키보드가 동작하는 것처럼 문자 키 입력을 에뮬레이션하는 메소드입니다.</p>
+                            <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.dispatchKeyBoardEvent(elem, name, key, [location, [ctrlkey, [shiftkey]]], [altkey])
+nexacro.test.Event.dispatchKeyBoardEventEx(elem(comp), name, key, location, ctrlkey, shiftkey, altkey, clientX, clientY)</code></pre>
+                        </article>
+
+                        <!-- 4.2. sendKeys -->
+                        <article id="section4-2" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">4.2. sendKeys</h3>
+                            <p class="text-lg mb-4">키보드를 실제로 제어하지 않으면서 키보드가 동작하는 것처럼 문자열 입력을 에뮬레이션하는 메소드입니다.</p>
+                            <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.sendKeys(element(comp), keys, [pos, [range]])</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Parameters</h4>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full border border-gray-300">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="border px-4 py-2">Parameter</th>
+                                            <th class="border px-4 py-2">Type</th>
+                                            <th class="border px-4 py-2">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border px-4 py-2">element(comp)</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">키보드가 입력될 ControlElement 또는 Component Object.</td></tr>
+                                        <tr><td class="border px-4 py-2">keys</td><td class="border px-4 py-2">Array</td><td class="border px-4 py-2">입력할 문자열. 예: ['a'], ['ab\\n', 'd', nexacro.Event.KEY_LEFT]</td></tr>
+                                        <tr><td class="border px-4 py-2">pos</td><td class="border px-4 py-2">Number</td><td class="border px-4 py-2">입력할 문자열의 위치. "start" 또는 "end".</td></tr>
+                                        <tr><td class="border px-4 py-2">range</td><td class="border px-4 py-2">Array</td><td class="border px-4 py-2">입력할 문자열의 위치를 길이로 지정. 예: [0, 3]</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Remark</h4>
+                            <p>일부 특수문자("#$%'&amp;")의 입력은 불가능합니다.</p>
+                        </article>
+                    <!-- 4.3. key_downup -->
+                        <article id="section4-3" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">4.3. key_downup</h3>
+                            <p class="text-lg mb-4">키 입력을 간소화한 API로, keydown과 keyup을 한 번에 수행합니다.</p>
+                            <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.key_downup(targetElem(comp), key, location, ctrlKey, shiftKey, altKey, clientX, clientY)</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Parameters</h4>
+                             <div class="overflow-x-auto">
+                                <table class="min-w-full border border-gray-300">
+                                    <thead class="bg-gray-200">
+                                        <tr>
+                                            <th class="border px-4 py-2">Parameter</th>
+                                            <th class="border px-4 py-2">Type</th>
+                                            <th class="border px-4 py-2">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border px-4 py-2">targetElem(comp)</td><td class="border px-4 py-2">Object</td><td class="border px-4 py-2">키보드가 입력될 ControlElement 또는 Component Object.</td></tr>
+                                        <tr><td class="border px-4 py-2">key</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">입력할 키보드 버튼. 예: "Enter", "A", "a", "ArrowLeft" 등.</td></tr>
+                                        <tr><td class="border px-4 py-2">location</td><td class="border px-4 py-2">String</td><td class="border px-4 py-2">키의 위치. 0: default, 1: LEFT, 2: RIGHT, 3: NUMPAD.</td></tr>
+                                        <tr><td class="border px-4 py-2">ctrlKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Control 키 입력 유무.</td></tr>
+                                        <tr><td class="border px-4 py-2">shiftKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Shift 키 입력 유무.</td></tr>
+                                        <tr><td class="border px-4 py-2">altKey</td><td class="border px-4 py-2">Boolean</td><td class="border px-4 py-2">Alt 키 입력 유무.</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section 5: Style API -->
+                <section id="section5">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">5. Style API</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-10">
+                        
+                        <!-- 5.1. getComputedStyle -->
+                        <article id="section5-1">
+                            <h3 class="text-3xl font-semibold mb-4">5.1. getComputedStyle</h3>
+                            <p class="text-lg mb-4">Component Property 속성 중 Style을 검증하는 API입니다. Computed style 값을 통해 이미지 유효성을 검증할 수 있습니다.</p>
+                            <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Style.getComputedStyle(obj, prop [, clientX, clientY])</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Return</h4>
+                            <p>스타일 값은 객체이거나 문자열이며, 컴포넌트 종류에 따라 지원하지 않는 스타일도 존재합니다. 속성 값이 두 개 이상이면 객체 타입으로 반환됩니다. (예: border)</p>
+                        </article>
+
+                    <!-- 5.2. getComputedStyleString -->
+                        <article id="section5-2" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">5.2. getComputedStyleString</h3>
+                            <p class="text-lg mb-4">Component Property 속성 중 Style을 검증하는 API로, 항상 문자열 값을 반환합니다.</p>
+                            <h4 class="text-xl font-semibold mb-2">Syntax</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Style.getComputedStyleString(obj, prop [, clientX, clientY])</code></pre>
+                            <h4 class="text-xl font-semibold mt-4 mb-2">Return</h4>
+                            <p>스타일 값은 항상 문자열이며, 컴포넌트 종류에 따라 지원하지 않는 스타일도 존재합니다. 포지션 별 동일 값이 있는 경우 CSS 룰에 따라 값이 축약될 수 있습니다.</p>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section 6: Misc API -->
+                <section id="section6">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">6. Misc API</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-10">
+                        
+                        <!-- 6.1. nx_key_copy -->
+                        <article id="section6-1">
+                            <h3 class="text-3xl font-semibold mb-4">6.1. nx_key_copy</h3>
+                            <p class="text-lg mb-4">키보드 Ctrl+C 입력의 키보드 이벤트를 발생시킵니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.nx_key_copy(comp)</code></pre>
+                        </article>
+
+                        <!-- 6.2. nx_key_cut -->
+                        <article id="section6-2" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.2. nx_key_cut</h3>
+                            <p class="text-lg mb-4">키보드 Ctrl+X 입력의 키보드 이벤트를 발생시킵니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.nx_key_cut(comp)</code></pre>
+                        </article>
+
+                        <!-- 6.3. nx_key_all -->
+                        <article id="section6-3" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.3. nx_key_all</h3>
+                            <p class="text-lg mb-4">키보드 Ctrl+A 입력의 키보드 이벤트를 발생시킵니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.nx_key_all(comp)</code></pre>
+                        </article>
+
+                    <!-- 6.4. nx_key_paste -->
+                        <article id="section6-4" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.4. nx_key_paste</h3>
+                            <p class="text-lg mb-4">키보드 Ctrl+V 입력의 키보드 이벤트를 발생시킵니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.nx_key_paste(comp, paste_string)</code></pre>
+                        </article>
+
+                        <!-- 6.5. nx_dragdrop -->
+                        <article id="section6-5" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.5. nx_dragdrop</h3>
+                            <p class="text-lg mb-4">마우스 드래그 앤 드롭 기능을 스크립트로 테스트합니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md overflow-x-auto"><code>nexacro.test.Event.nx_dragdrop(drag_elem, drop_elem, related_elem, drag_clientX, drag_clientY, drop_clientX, drop_clientY, related_clientX, related_clientY)</code></pre>
+                        </article>
+
+                        <!-- 6.6. nx_getGridEditor -->
+                        <article id="section6-6" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.6. nx_getGridEditor</h3>
+                            <p class="text-lg mb-4">Grid Cell이 Edit 타입일 때 editObject를 구하는 API입니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.nx_getGridEditor(comp)</code></pre>
+                        </article>
+
+                        <!-- 6.7. nx_toColorname -->
+                        <article id="section6-7" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.7. nx_toColorname</h3>
+                            <p class="text-lg mb-4">color 값의 hexadecimal 값을 Named Color 값으로 변환하는 API입니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Style.nx_toColorname(hexadecimal)</code></pre>
+                        </article>
+
+                        <!-- 6.8. clearNXData -->
+                        <article id="section6-8" class="border-t pt-10">
+                            <h3 class="text-3xl font-semibold mb-4">6.8. clearNXData</h3>
+                            <p class="text-lg mb-4">테스트 샘플 종료 후 다음 테스트로 넘어가기 전 초기화 작업을 수행하는 API입니다.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md"><code>nexacro.test.Event.clearNXData()</code></pre>
+                        </article>
+                    </div>
+                </section>
+                <!-- Section 7: API 사용시 주의사항 -->
+                <section id="section7">
+                    <h2 class="text-4xl font-bold mb-6 border-l-4 border-blue-500 pl-4">7. API 사용시 주의사항</h2>
+                    <div class="bg-white p-8 rounded-lg shadow-md space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">7.1. 컴포넌트에 포함된 scrollbar 사용</h3>
+                            <p class="text-lg">Scrollbar를 가진 컴포넌트를 클릭하는 API 사용 시, <code class="bg-gray-200 p-1 rounded">component.hscrollbar</code> 또는 <code class="bg-gray-200 p-1 rounded">component.vscrollbar</code> object를 매개변수로 사용해야 정상 동작합니다.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2">7.2. popup창 접근</h3>
+                            <p class="text-lg">Popup창을 띄워 API 동작을 수행시키는 경우, popup창의 객체(<code class="bg-gray-200 p-1 rounded">component.popupwindow</code>)를 넘기거나 element를 넘기는 방식을 추천합니다. Menu 사용 시 popupmenu는 1단계만 지원됩니다.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
