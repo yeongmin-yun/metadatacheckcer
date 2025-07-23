@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     copyScriptBtn.addEventListener('click', () => {
         const modifiedScript = getModifiedScript();
+        editableScript.value = modifiedScript; // Update the textarea with the final script
         navigator.clipboard.writeText(modifiedScript)
             .then(() => window.showToast('수정된 스크립트가 클립보드에 복사되었습니다.', 'success'))
             .catch(() => window.showToast('클립보드 복사에 실패했습니다.', 'error'));
@@ -115,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loadedFiles.length !== 1) return;
         const originalContent = loadedFiles[0].content;
         const modifiedScript = getModifiedScript();
+        editableScript.value = modifiedScript; // Update the textarea before generating the file
         const newXfdlContent = replaceScriptInXFDL(originalContent, modifiedScript);
         
         const newFileName = `A_${newCompNameInput.value}_all.xfdl`;
@@ -167,17 +169,46 @@ document.addEventListener('DOMContentLoaded', () => {
  * Modifies the script content with new metadata.
  */
 function modifyScript(script, author, date, originalComp, newComp) {
-    if (author) {
-        script = script.replace(/(@author\s+).*/, `$1${author}`);
+    let modifiedScript = script;
+
+    // First, perform replacements for existing tags
+    if (author && /@author/.test(modifiedScript)) {
+        modifiedScript = modifiedScript.replace(/(@author\s+).*/, `$1${author}`);
     }
-    if (date) {
-        script = script.replace(/(@creation\s+).*/, `$1${date}`);
+    if (date && /@creation/.test(modifiedScript)) {
+        modifiedScript = modifiedScript.replace(/(@creation\s+).*/, `$1${date}`);
     }
+
+    // Then, find what tags are still missing and need to be added
+    const linesToAdd = [];
+    if (author && !/@author/.test(modifiedScript)) {
+        linesToAdd.push(` * @author      ${author}`);
+    }
+    if (date && !/@creation/.test(modifiedScript)) {
+        linesToAdd.push(` * @creation    ${date}`);
+    }
+
+    // Add missing tags to a JSDoc block
+    if (linesToAdd.length > 0) {
+        const newLines = linesToAdd.join('\n') + '\n';
+        const jsdocRegex = /(\/\*[\s\S]*?)(\s*\*\/)/;
+        
+        if (jsdocRegex.test(modifiedScript)) {
+            // If a JSDoc block exists, add the new lines inside it
+            modifiedScript = modifiedScript.replace(jsdocRegex, `$1${newLines}$2`);
+        } else {
+            // Otherwise, create a new JSDoc block at the top of the script
+            modifiedScript = `/**\n${newLines} */\n\n${modifiedScript}`;
+        }
+    }
+
+    // Finally, handle component name replacement
     if (originalComp && newComp && originalComp !== newComp) {
-        const regex = new RegExp(originalComp, 'g');
-        script = script.replace(regex, newComp);
+        const compRegex = new RegExp(originalComp, 'g');
+        modifiedScript = modifiedScript.replace(compRegex, newComp);
     }
-    return script;
+
+    return modifiedScript;
 }
 
 /**
