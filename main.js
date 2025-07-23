@@ -78,17 +78,21 @@ function filterButtons() {
     const propertyTableContainer = document.getElementById('property-table-container');
     const eventTableContainer = document.getElementById('event-table-container');
     const logContainer = document.getElementById('log-container');
+    const preSearchContainer = document.getElementById('pre-search-container');
 
-    buttonContainer.classList.remove('hidden', 'slide-up');
     visualizationContainer.classList.add('hidden');
     propertyTableContainer.classList.add('hidden');
     eventTableContainer.classList.add('hidden');
-    logContainer.classList.add('hidden'); // Hide log container on filter
+    logContainer.classList.add('hidden');
 
     if (!searchTerm) {
-        renderGroupedButtons(groupedComponents);
+        buttonContainer.classList.add('hidden');
+        preSearchContainer.classList.remove('hidden');
         return;
     }
+
+    preSearchContainer.classList.add('hidden');
+    buttonContainer.classList.remove('hidden');
 
     const filteredGroups = { Component: [], Control: [], EventInfo: [], ETC: [] };
     for (const groupName in groupedComponents) {
@@ -423,19 +427,22 @@ function switchTab(tabId) {
     document.getElementById('metainfo-analyzer-content').classList.add('hidden');
     document.getElementById('component-analyzer-content').classList.add('hidden');
     document.getElementById('cats-sample-maker-content').classList.add('hidden');
-    document.getElementById('metainfo-maker-content').classList.add('hidden'); // Hide new tab
+    document.getElementById('metainfo-maker-content').classList.add('hidden');
 
     // Show the selected content container
     const contentId = tabId.replace('-tab', '-content');
     document.getElementById(contentId).classList.remove('hidden');
 
     // Update active tab styles
-    document.querySelectorAll('aside nav a').forEach(tab => {
+    document.querySelectorAll('#tab-container a').forEach(tab => {
         tab.classList.remove('bg-gray-200', 'text-blue-600');
         tab.classList.add('text-gray-700');
     });
-    document.getElementById(tabId).classList.add('bg-gray-200', 'text-blue-600');
-    document.getElementById(tabId).classList.remove('text-gray-700');
+    const activeTab = document.getElementById(tabId);
+    if (activeTab) {
+        activeTab.classList.add('bg-gray-200', 'text-blue-600');
+        activeTab.classList.remove('text-gray-700');
+    }
 
     // Load component analyzer data only when its tab is selected for the first time
     if (tabId === 'component-analyzer-tab' && !isComponentDataLoaded) {
@@ -445,13 +452,11 @@ function switchTab(tabId) {
 
     // Set up metainfo analyzer only when its tab is selected for the first time
     if (tabId === 'metainfo-analyzer-tab' && !isMetainfoAnalyzerSetup) {
-        // The logic is self-contained in csv-generator.js, so no function call is needed here.
         isMetainfoAnalyzerSetup = true;
     }
 
     // Set up metainfo maker only when its tab is selected for the first time
     if (tabId === 'metainfo-maker-tab' && !isMetainfoMakerSetup) {
-        // The logic is self-contained in metainfo-maker.js, so no function call is needed here.
         isMetainfoMakerSetup = true;
     }
 }
@@ -460,12 +465,27 @@ function switchTab(tabId) {
  * Main function to load data and set up the application.
  */
 document.addEventListener('DOMContentLoaded', async () => {
+    const sidebarContent = document.getElementById('sidebar-content');
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+
+    sidebarToggle.addEventListener('click', () => {
+        // Toggle between w-0 and w-72 for proper animation
+        if (sidebarContent.classList.contains('w-0')) {
+            sidebarContent.classList.remove('w-0');
+            sidebarContent.classList.add('w-72');
+        } else {
+            sidebarContent.classList.remove('w-72');
+            sidebarContent.classList.add('w-0');
+        }
+    });
+
     // Set up tab switching
-    document.getElementById('home-tab').addEventListener('click', (e) => { e.preventDefault(); switchTab('home-tab'); });
-    document.getElementById('metainfo-analyzer-tab').addEventListener('click', (e) => { e.preventDefault(); switchTab('metainfo-analyzer-tab'); });
-    document.getElementById('component-analyzer-tab').addEventListener('click', (e) => { e.preventDefault(); switchTab('component-analyzer-tab'); });
-    document.getElementById('cats-sample-maker-tab').addEventListener('click', (e) => { e.preventDefault(); switchTab('cats-sample-maker-tab'); });
-    document.getElementById('metainfo-maker-tab').addEventListener('click', (e) => { e.preventDefault(); switchTab('metainfo-maker-tab'); });
+    document.querySelectorAll('#tab-container a').forEach(tabLink => {
+        tabLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchTab(tabLink.id);
+        });
+    });
 
     // Set the initial tab
     switchTab('component-analyzer-tab');
@@ -517,7 +537,6 @@ async function loadComponentAnalyzerData() {
         });
 
         if (loadingMessage) loadingMessage.remove();
-        renderGroupedButtons(groupedComponents);
         searchInput.addEventListener('input', filterButtons);
 
     } catch (error) {

@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- UI Elements ---
+    const tooltip = document.getElementById('tooltip');
     const createNewInfoBtn = document.getElementById('createNewInfoBtn');
     const downloadTemplateBtn = document.getElementById('downloadTemplateBtn');
     const infoFileInput = document.getElementById('infoFileInput');
@@ -9,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const existingInfoFileInput = document.getElementById('existingInfoFileInput');
     const newComponentNameInput = document.getElementById('newComponentNameInput');
     const step1NextBtn = document.getElementById('step1NextBtn');
+
+    // --- Modal Elements ---
+    const customItemModal = document.getElementById('custom-item-modal');
+    const customItemModalTitle = document.getElementById('custom-item-modal-title');
+    const customItemModalFormContainer = document.getElementById('custom-item-modal-form-container');
+    const saveCustomItemBtn = document.getElementById('save-custom-item-btn');
+    const cancelCustomItemBtn = document.getElementById('cancel-custom-item-btn');
 
     // --- Step Containers ---
     const steps = {
@@ -20,24 +28,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Search and Selection Containers ---
     const containers = {
         properties: document.getElementById('properties-container'),
+        cssinfo: document.getElementById('cssinfo-container'),
         controls: document.getElementById('controls-container'),
         statuses: document.getElementById('statuses-container'),
+        methods: document.getElementById('methods-container'),
+        events: document.getElementById('events-container'),
     };
     const searchInputs = {
         properties: document.getElementById('property-search'),
+        cssinfo: document.getElementById('cssinfo-search'),
         controls: document.getElementById('control-search'),
         statuses: document.getElementById('status-search'),
+        methods: document.getElementById('method-search'),
+        events: document.getElementById('event-search'),
     };
     const selectionContainers = {
         PropertyInfo: document.getElementById('selected-properties-container'),
+        CSSInfo: document.getElementById('selected-cssinfo-container'),
         ControlInfo: document.getElementById('selected-controls-container'),
         StatusInfo: document.getElementById('selected-statuses-container'),
+        MethodInfo: document.getElementById('selected-methods-container'),
+        EventHandlerInfo: document.getElementById('selected-events-container'),
+    };
+    const addedSelectionContainers = {
+        PropertyInfo: document.getElementById('added-properties-container'),
+        CSSInfo: document.getElementById('added-cssinfo-container'),
+        ControlInfo: document.getElementById('added-controls-container'),
+        StatusInfo: document.getElementById('added-statuses-container'),
+        MethodInfo: document.getElementById('added-methods-container'),
+        EventHandlerInfo: document.getElementById('added-events-container'),
     };
 
     // --- State Management ---
     let parsedInfoData = null;
     let rawInfoFileContent = null;
-    let aggregatedData = { properties: [], controls: [], statuses: [] };
+    let aggregatedData = { properties: [], cssinfo: [], controls: [], statuses: [], methods: [], events: [] };
     const userSelections = {
         PropertyInfo: [],
         ControlInfo: [],
@@ -46,6 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         MethodInfo: [],
         EventHandlerInfo: [],
     };
+    let componentNames = new Set();
+    let currentCustomItemType = null;
+    const booleanAttributes = new Set(['readonly', 'initonly', 'hidden', 'deprecated', 'unused', 'mandatory', 'async', 'usecontextmenu', 'default', 'control', 'expr', 'bind', 'style']);
+
 
     // --- Initialization ---
     if (!createNewInfoBtn) return;
@@ -56,10 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('./parsers/json/aggregated_metainfo.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             aggregatedData = await response.json();
+
+            const namesResponse = await fetch('./parsers/json/aggregated_component_names.json');
+            if (!namesResponse.ok) throw new Error(`HTTP error! status: ${namesResponse.status}`);
+            const names = await namesResponse.json();
+            componentNames = new Set(names);
+
             renderAllButtons();
         } catch (error) {
-            console.error("Failed to load aggregated metainfo:", error);
-            window.showToast('속성/컨트롤/상태 목록을 불러오는 데 실패했습니다.', 'error');
+            console.error("Failed to load initial data:", error);
+            window.showToast('초기 데이터 로딩에 실패했습니다.', 'error');
         }
 
         // --- Event Listeners ---
@@ -86,8 +121,111 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
+
+        document.querySelectorAll('.custom-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => openCustomItemModal(btn.dataset.type));
+        });
+
+        saveCustomItemBtn.addEventListener('click', handleSaveCustomItem);
+        cancelCustomItemBtn.addEventListener('click', () => customItemModal.classList.add('hidden'));
     }
     
+    // --- Modal Management ---
+    function openCustomItemModal(type) {
+        currentCustomItemType = type;
+        customItemModalTitle.textContent = `Add Custom ${type.replace('Info', '')}`;
+        
+        const headers = getSheetHeaders()[type];
+        if (!headers) {
+            console.error(`No headers found for type: ${type}`);
+            return;
+        }
+
+        customItemModalFormContainer.innerHTML = '';
+
+        headers.forEach(headerText => {
+            const fieldWrapper = document.createElement('div');
+            fieldWrapper.className = 'grid grid-cols-3 gap-4 items-center';
+
+            const label = document.createElement('label');
+            label.className = 'text-sm font-medium text-gray-700 col-span-1';
+            label.textContent = headerText;
+            label.htmlFor = `custom-input-${headerText}`;
+            fieldWrapper.appendChild(label);
+
+            const inputContainer = document.createElement('div');
+            inputContainer.className = 'col-span-2';
+            
+            let field;
+            if (booleanAttributes.has(headerText)) {
+                field = document.createElement('select');
+                field.className = 'w-full p-2 pr-8 border border-gray-300 rounded-md text-sm bg-white text-red-500';
+                field.innerHTML = `
+                    <option value="true">true</option>
+                    <option value="false" selected>false</option>
+                `;
+                field.addEventListener('change', (e) => {
+                    if (e.target.value === 'true') {
+                        e.target.classList.remove('text-red-500');
+                        e.target.classList.add('text-blue-500');
+                    } else {
+                        e.target.classList.remove('text-blue-500');
+                        e.target.classList.add('text-red-500');
+                    }
+                });
+            } else {
+                field = document.createElement('input');
+                field.type = 'text';
+                field.className = 'w-full p-2 border border-gray-300 rounded-md text-sm';
+                field.placeholder = headerText;
+            }
+            field.id = `custom-input-${headerText}`;
+            field.name = headerText;
+            
+            inputContainer.appendChild(field);
+            fieldWrapper.appendChild(inputContainer);
+            customItemModalFormContainer.appendChild(fieldWrapper);
+        });
+
+        customItemModal.classList.remove('hidden');
+    }
+
+    function handleSaveCustomItem() {
+        const fields = customItemModalFormContainer.querySelectorAll('input, select');
+        const newItem = { fromFile: false };
+
+        fields.forEach(field => {
+            const key = field.name;
+            const value = field.value.trim();
+            if (value) {
+                newItem[key] = value;
+            }
+        });
+
+        if (!newItem.name) {
+            window.showToast('Item name is required.', 'error');
+            return;
+        }
+
+        const targetArray = userSelections[currentCustomItemType];
+        if (targetArray.some(item => item.name === newItem.name)) {
+            window.showToast(`'${newItem.name}' is already in the list.`, 'warning');
+            return;
+        }
+        
+        if (currentCustomItemType === 'PropertyInfo' || currentCustomItemType === 'CSSInfo') {
+            if (!newItem.hasOwnProperty('unused')) {
+                newItem.unused = 'false';
+            }
+        }
+
+        targetArray.push(newItem);
+        window.showToast(`Custom item '${newItem.name}' added.`, 'success');
+        
+        renderSelections();
+        customItemModal.classList.add('hidden');
+    }
+
     // --- UI Flow Management ---
     function showSteps(stepToShow) {
         Object.values(steps).forEach(step => step.classList.add('hidden'));
@@ -106,95 +244,174 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderAllButtons() {
         renderButtons('properties', aggregatedData.properties);
+        renderButtons('cssinfo', aggregatedData.CSSInfo);
         renderButtons('controls', aggregatedData.controls);
         renderButtons('statuses', aggregatedData.statuses);
+        renderButtons('methods', aggregatedData.methods);
+        renderButtons('events', aggregatedData.events);
     }
 
     function renderButtons(type, items) {
         const container = containers[type];
         if (!container) return;
         container.innerHTML = '';
+
+        let targetArrayKey;
+        if (type === 'properties') targetArrayKey = 'PropertyInfo';
+        else if (type === 'cssinfo') targetArrayKey = 'CSSInfo';
+        else if (type === 'controls') targetArrayKey = 'ControlInfo';
+        else if (type === 'statuses') targetArrayKey = 'StatusInfo';
+        else if (type === 'methods') targetArrayKey = 'MethodInfo';
+        else if (type === 'events') targetArrayKey = 'EventHandlerInfo';
+
         items.forEach(item => {
             const button = document.createElement('button');
-            button.className = 'w-full text-left p-2 text-sm rounded-md bg-white hover:bg-blue-100 border border-gray-200 transition-colors';
+            const isSelected = userSelections[targetArrayKey] && userSelections[targetArrayKey].some(selected => selected.name === item.name);
+            
+            button.className = `w-full text-left p-2 text-sm rounded-md border border-gray-200 transition-colors ${isSelected ? 'bg-yellow-200 hover:bg-yellow-300' : 'bg-white hover:bg-blue-100'}`;
             button.textContent = item.name;
             button.dataset.item = JSON.stringify(item);
             button.addEventListener('click', () => handleItemSelection(type, item));
+
+            if (item.description && tooltip) {
+                button.addEventListener('mouseenter', (e) => {
+                    if (!item.description) return;
+
+                    let description = item.description;
+                    const words = description.split(' ');
+                    if (words.length > 0 && componentNames.has(words[0])) {
+                        words[0] = 'Component';
+                        description = words.join(' ');
+                    }
+                    tooltip.textContent = description;
+                    
+                    const rect = e.target.getBoundingClientRect();
+                    
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.classList.remove('hidden');
+                    
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    
+                    let top = rect.bottom + 5;
+                    let left = rect.left;
+                    
+                    if (left + tooltipRect.width > window.innerWidth) {
+                        left = window.innerWidth - tooltipRect.width - 5;
+                    }
+                    if (top + tooltipRect.height > window.innerHeight) {
+                        top = rect.top - tooltipRect.height - 5;
+                    }
+                    
+                    tooltip.style.top = `${top}px`;
+                    tooltip.style.left = `${left}px`;
+                    tooltip.style.visibility = 'visible';
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    tooltip.classList.add('hidden');
+                    tooltip.style.visibility = 'hidden';
+                });
+            }
+
             container.appendChild(button);
         });
     }
 
     function filterButtons(type, searchTerm) {
         const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        const filteredItems = aggregatedData[type].filter(item =>
+        const dataKey = type === 'cssinfo' ? 'CSSInfo' : type;
+        const filteredItems = aggregatedData[dataKey].filter(item =>
             item.name.toLowerCase().includes(lowerCaseSearchTerm)
         );
         renderButtons(type, filteredItems);
     }
 
+    function createSelectionTag(item, index, key) {
+        const tag = document.createElement('div');
+        let bgColorClass = 'bg-gray-100 text-gray-800';
+
+        if (key === 'PropertyInfo' || key === 'CSSInfo') {
+            bgColorClass = item.unused === 'true' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800';
+        }
+
+        tag.className = `flex justify-between items-center p-2 rounded-md text-sm ${bgColorClass}`;
+
+        let content = `<span class="truncate" title="${item.name}">${item.name}</span>`;
+        const controls = document.createElement('div');
+        controls.className = 'flex items-center';
+
+        if (key === 'PropertyInfo' || key === 'CSSInfo') {
+            const select = document.createElement('select');
+            select.dataset.type = key;
+            select.dataset.index = index;
+            select.className = 'unused-select ml-auto mr-2 text-sm border-gray-300 rounded-md';
+            select.innerHTML = `
+                <option value="true" ${item.unused === 'true' ? 'selected' : ''}>Unused</option>
+                <option value="false" ${item.unused !== 'true' ? 'selected' : ''}>Used</option>
+            `;
+            controls.appendChild(select);
+        }
+
+        const removeBtn = document.createElement('button');
+        removeBtn.dataset.type = key;
+        removeBtn.dataset.index = index;
+        removeBtn.className = 'ml-2 text-current hover:text-black font-bold';
+        removeBtn.innerHTML = '&times;';
+        controls.appendChild(removeBtn);
+
+        tag.innerHTML = content;
+        tag.appendChild(controls);
+        return tag;
+    }
+
     function renderSelections() {
-        for (const key in selectionContainers) {
-            const container = selectionContainers[key];
-            if (!container) continue;
-            container.innerHTML = '';
-            userSelections[key].forEach((item, index) => {
-                const tag = document.createElement('div');
-                let bgColorClass = 'bg-gray-100 text-gray-800'; // Default for non-property items
+        for (const key in userSelections) {
+            const fromFileContainer = selectionContainers[key];
+            const addedContainer = addedSelectionContainers[key];
+            if (!fromFileContainer || !addedContainer) continue;
 
-                if (key === 'PropertyInfo') {
-                    bgColorClass = item.unused === 'true' ? 'bg-red-100 text-red-800' : 'bg-green-100 text-green-800';
-                }
+            fromFileContainer.innerHTML = '';
+            addedContainer.innerHTML = '';
 
-                tag.className = `flex justify-between items-center p-2 rounded-md text-sm ${bgColorClass}`;
+            const itemsFromFile = userSelections[key].filter(item => item.fromFile);
+            const itemsAdded = userSelections[key].filter(item => !item.fromFile);
 
-                let content = `<span class="truncate" title="${item.name}">${item.name}</span>`;
-                const controls = document.createElement('div');
-                controls.className = 'flex items-center';
-
-                if (key === 'PropertyInfo') {
-                    const select = document.createElement('select');
-                    select.dataset.index = index;
-                    select.className = 'unused-select ml-auto mr-2 text-sm border-gray-300 rounded-md';
-                    select.innerHTML = `
-                        <option value="true" ${item.unused === 'true' ? 'selected' : ''}>Unused</option>
-                        <option value="false" ${item.unused !== 'true' ? 'selected' : ''}>Used</option>
-                    `;
-                    controls.appendChild(select);
-                }
-
-                const removeBtn = document.createElement('button');
-                removeBtn.dataset.type = key;
-                removeBtn.dataset.index = index;
-                removeBtn.className = 'ml-2 text-current hover:text-black font-bold';
-                removeBtn.innerHTML = '&times;';
-                controls.appendChild(removeBtn);
-
-                tag.innerHTML = content;
-                tag.appendChild(controls);
-                container.appendChild(tag);
+            itemsFromFile.forEach(item => {
+                const originalIndex = userSelections[key].findIndex(i => i.name === item.name);
+                const tag = createSelectionTag(item, originalIndex, key);
+                fromFileContainer.appendChild(tag);
             });
 
-            // Add event listeners for the new select and remove buttons
-            container.querySelectorAll('.unused-select').forEach(select => {
-                select.addEventListener('change', handleUnusedChange);
+            itemsAdded.forEach(item => {
+                const originalIndex = userSelections[key].findIndex(i => i.name === item.name);
+                const tag = createSelectionTag(item, originalIndex, key);
+                addedContainer.appendChild(tag);
             });
-            container.querySelectorAll('button[data-type]').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const type = e.currentTarget.dataset.type;
-                    const index = parseInt(e.currentTarget.dataset.index, 10);
-                    handleItemRemoval(type, index);
+
+            const allContainers = [fromFileContainer, addedContainer];
+            allContainers.forEach(container => {
+                container.querySelectorAll('.unused-select').forEach(select => {
+                    select.addEventListener('change', handleUnusedChange);
+                });
+                container.querySelectorAll('button[data-type]').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const type = e.currentTarget.dataset.type;
+                        const index = parseInt(e.currentTarget.dataset.index, 10);
+                        handleItemRemoval(type, index);
+                    });
                 });
             });
         }
     }
 
     function handleUnusedChange(event) {
+        const type = event.target.dataset.type;
         const index = parseInt(event.target.dataset.index, 10);
         const value = event.target.value;
-        if (userSelections.PropertyInfo[index]) {
-            userSelections.PropertyInfo[index].unused = value;
-            window.showToast(`Property '${userSelections.PropertyInfo[index].name}' unused status updated to ${value}.`, 'info');
-            renderSelections(); // Re-render to update background color
+        if (userSelections[type][index]) {
+            userSelections[type][index].unused = value;
+            window.showToast(`Property '${userSelections[type][index].name}' unused status updated to ${value}.`, 'info');
+            renderSelections();
         }
     }
 
@@ -209,13 +426,21 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSelections();
         window.showToast('빈 템플릿으로 시작합니다. 항목을 추가하세요.', 'info');
         setNextButtonState(true);
+        
+        for (const key in searchInputs) {
+            searchInputs[key].value = '';
+        }
+        renderAllButtons();
     }
 
     function handleItemSelection(type, item) {
         let targetArrayKey;
         if (type === 'properties') targetArrayKey = 'PropertyInfo';
+        else if (type === 'cssinfo') targetArrayKey = 'CSSInfo';
         else if (type === 'controls') targetArrayKey = 'ControlInfo';
         else if (type === 'statuses') targetArrayKey = 'StatusInfo';
+        else if (type === 'methods') targetArrayKey = 'MethodInfo';
+        else if (type === 'events') targetArrayKey = 'EventHandlerInfo';
         else return;
 
         const targetArray = userSelections[targetArrayKey];
@@ -224,6 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
             targetArray.push(newItem);
             window.showToast(`'${item.name}'이(가) 템플릿에 추가되었습니다.`, 'success');
             renderSelections();
+            const searchTerm = searchInputs[type].value;
+            filterButtons(type, searchTerm);
         } else {
             window.showToast(`'${item.name}'은(는) 이미 추가된 항목입니다.`, 'warning');
         }
@@ -234,6 +461,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const removedItem = userSelections[type].splice(index, 1);
             window.showToast(`'${removedItem[0].name}'이(가) 제거되었습니다.`, 'info');
             renderSelections();
+
+            let searchType;
+            if (type === 'PropertyInfo') searchType = 'properties';
+            else if (type === 'CSSInfo') searchType = 'cssinfo';
+            else if (type === 'ControlInfo') searchType = 'controls';
+            else if (type === 'StatusInfo') searchType = 'statuses';
+            else if (type === 'MethodInfo') searchType = 'methods';
+            else if (type === 'EventHandlerInfo') searchType = 'events';
+            
+            if (searchType) {
+                const searchTerm = searchInputs[searchType].value;
+                filterButtons(searchType, searchTerm);
+            }
         }
     }
 
@@ -248,7 +488,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Extract component name from filename and set it in the input
         const filename = file.name;
         const componentNameMatch = filename.match(/^(.*?)\.info$/);
         if (componentNameMatch && componentNameMatch[1]) {
@@ -268,6 +507,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSelections();
                 window.showToast('.info 파일의 내용이 로드되었습니다.', 'success');
                 setNextButtonState(true);
+
+                for (const key in searchInputs) {
+                    searchInputs[key].value = '';
+                }
+                renderAllButtons();
             } catch (error) {
                 console.error("Error parsing .info file:", error);
                 window.showToast(`Info 파일 파싱 오류: ${error.message}`, 'error');
@@ -299,18 +543,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 contentToParse = rawInfoFileContent.replace(replaceRegex, newComponentName);
                 finalFilename = `${newComponentName}.info.xlsx`;
                 window.showToast(`'${originalComponentName}'이(가) '${newComponentName}'(으)로 대체되었습니다.`, 'info');
-
-                // Update descriptions in userSelections
-                for (const key in userSelections) {
-                    if (Array.isArray(userSelections[key])) {
-                        userSelections[key].forEach(item => {
-                            if (item.description) {
-                                item.description = item.description.replace(new RegExp(originalComponentName, 'g'), newComponentName);
-                            }
-                        });
-                    }
-                }
-
             } else if (originalComponentName) {
                  finalFilename = `${originalComponentName}.info.xlsx`;
             }
@@ -332,10 +564,36 @@ document.addEventListener('DOMContentLoaded', () => {
             finalFilename = `${newComponentName}.info.xlsx`;
         }
 
-        Object.assign(dataForXlsx, userSelections);
+        const processedSelections = JSON.parse(JSON.stringify(userSelections));
+
+        if (newComponentName) {
+            const originalComponentName = parsedInfoData?.ObjectInfo[0]?.shorttypename;
+
+            for (const key in processedSelections) {
+                if (Array.isArray(processedSelections[key])) {
+                    processedSelections[key].forEach(item => {
+                        if (item.description) {
+                            if (originalComponentName && newComponentName !== originalComponentName) {
+                                item.description = item.description.replace(new RegExp(originalComponentName, 'g'), newComponentName);
+                            }
+                            
+                            const words = item.description.split(' ');
+                            const firstWord = words[0];
+                            if (componentNames.has(firstWord)) {
+                                words[0] = newComponentName;
+                                item.description = words.join(' ');
+                            }
+                        }
+                    });
+                }
+            }
+        }
+
+        Object.assign(dataForXlsx, processedSelections);
         generateXlsxFromData(dataForXlsx, finalFilename);
         window.showToast('XLSX 템플릿 다운로드가 시작됩니다.', 'success');
         showSteps(4);
+        steps.step4.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function parseInfoFile(xmlString) {
@@ -351,8 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const getAttributes = (element) => {
             if (!element) return {};
             const attrs = {};
-            for (const attr of element.attributes) attrs[attr.name] = attr.value;
-            return attrs;
+            for (const attr of element.attributes) attrs[attr.name] = attr.value;            return attrs;
         };
 
         const processSection = (sectionName, elementName) => {
@@ -478,12 +735,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         xml += ` />\n`;
 
-        xml += generateElements('PropertyInfo', 'Property', 4);
-        xml += generateElements('CSSInfo', 'Property', 4);
-        xml += generateElements('StatusInfo', 'Status', 4);
-        xml += generateElements('ControlInfo', 'Control', 4);
-        xml += generateElements('MethodInfo', 'Method', 4);
-        xml += generateElements('EventHandlerInfo', 'EventHandler', 4);
+        xml += generateElements('PropertyInfo', 'Property', 2);
+        xml += generateElements('CSSInfo', 'Property', 2);
+        xml += generateElements('StatusInfo', 'Status', 2);
+        xml += generateElements('ControlInfo', 'Control', 2);
+        xml += generateElements('MethodInfo', 'Method', 2);
+        xml += generateElements('EventHandlerInfo', 'EventHandler', 2);
 
         xml += `  </Object>\n</MetaInfo>`;
         return xml;
