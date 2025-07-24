@@ -6,6 +6,7 @@ const metainfoPropertyJsonFilePath = './parsers/json/metainfo/output_property_me
 const allComponentPropertiesJsonFilePath = './parsers/json/codebase/all_component_properties.json';
 const metainfoEventJsonFilePath = './parsers/json/metainfo/output_event_metainfo.json';
 const allComponentEventsJsonFilePath = './parsers/json/codebase/output_event.json';
+const annotationsJsonFilePath = './parsers/json/codebase/output_annotations.json';
 
 // Data stores
 let allInheritanceDataRaw = [];
@@ -462,6 +463,164 @@ function switchTab(tabId) {
 }
 
 /**
+ * Loads and displays the annotation status.
+ */
+/**
+ * Draws a vertical bar chart of annotation counts per file.
+ * @param {Array<object>} data - Data for the chart, e.g., [{ file: 'file.js', count: 5 }]
+ */
+function drawAnnotationBarChart(data) {
+    const svg = d3.select("#annotation-bar-chart-svg");
+    svg.selectAll("*").remove();
+
+    const container = document.getElementById('annotation-chart-container');
+    const margin = { top: 20, right: 30, bottom: 150, left: 60 }; // Increased bottom margin for rotated labels
+    const width = container.clientWidth - margin.left - margin.right;
+    const height = 400 - margin.top - margin.bottom; // Fixed height for the chart
+    svg.attr("height", height + margin.top + margin.bottom);
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    const x = d3.scaleBand()
+        .range([0, width])
+        .domain(data.map(d => d.file))
+        .padding(0.2);
+
+    const y = d3.scaleLinear()
+        .range([height, 0])
+        .domain([0, d3.max(data, d => d.count)]);
+
+    const xAxis = g.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x));
+
+    xAxis.selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end")
+        .style("cursor", "pointer")
+        .on("click", (event, d) => {
+            const cardId = `annotation-card-${d.replace(/\./g, '-')}`;
+            const cardElement = document.getElementById(cardId);
+            if (cardElement) {
+                cardElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+
+    g.append("g")
+        .attr("class", "y-axis")
+        .call(d3.axisLeft(y).tickFormat(""));
+
+    g.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.file))
+        .attr("width", x.bandwidth())
+        .attr("y", d => y(d.count))
+        .attr("height", d => height - y(d.count))
+        .attr("fill", "#63b3ed");
+
+    g.selectAll(".bar-label")
+        .data(data)
+        .enter().append("text")
+        .attr("class", "bar-label")
+        .attr("x", d => x(d.file) + x.bandwidth() / 2)
+        .attr("y", d => y(d.count) - 5)
+        .attr("text-anchor", "middle")
+        .style("fill", "#333")
+        .text(d => d.count);
+}
+
+async function loadAnnotationStatus() {
+    const detailsContainer = document.getElementById('annotation-details-container');
+    const cardsContainer = document.getElementById('annotation-cards-container');
+    const noAnnotationMessage = document.getElementById('no-annotation-message');
+    const chartContainer = document.getElementById('annotation-chart-container');
+
+    try {
+        const response = await fetch(annotationsJsonFilePath);
+        if (!response.ok) {
+            throw new Error('Annotation data not found');
+        }
+        const data = await response.json();
+        const fileNames = Object.keys(data);
+
+        const chartData = fileNames.map(fileName => ({
+            file: fileName,
+            count: data[fileName].length
+        })).filter(d => d.count > 0);
+
+        if (chartData.length === 0) {
+            detailsContainer.classList.add('hidden');
+            chartContainer.classList.add('hidden');
+            noAnnotationMessage.classList.remove('hidden');
+            return;
+        }
+
+        detailsContainer.classList.remove('hidden');
+        chartContainer.classList.remove('hidden');
+        noAnnotationMessage.classList.add('hidden');
+        cardsContainer.innerHTML = '';
+
+        drawAnnotationBarChart(chartData);
+
+        fileNames.forEach(fileName => {
+            const annotations = data[fileName];
+            if (annotations.length === 0) return;
+
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-md p-6 border border-gray-200';
+            card.id = `annotation-card-${fileName.replace(/\./g, '-')}`;
+
+            const header = document.createElement('h4');
+            header.className = 'text-xl font-bold text-gray-800 mb-4';
+            header.textContent = fileName;
+            card.appendChild(header);
+
+            const tableContainer = document.createElement('div');
+            tableContainer.className = 'overflow-x-auto';
+            
+            const table = document.createElement('table');
+            table.className = 'min-w-full divide-y divide-gray-200';
+            
+            const thead = document.createElement('thead');
+            thead.className = 'bg-gray-50';
+            thead.innerHTML = `
+                <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Line</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Content</th>
+                </tr>
+            `;
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+            tbody.className = 'bg-white divide-y divide-gray-200';
+            annotations.forEach(annotation => {
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${annotation.line}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${annotation.type}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${annotation.content}</td>
+                `;
+            });
+            table.appendChild(tbody);
+            tableContainer.appendChild(table);
+            card.appendChild(tableContainer);
+            cardsContainer.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error('Error loading annotation status:', error);
+        detailsContainer.classList.add('hidden');
+        chartContainer.classList.add('hidden');
+        noAnnotationMessage.classList.remove('hidden');
+        noAnnotationMessage.innerHTML = '<p class="text-red-500">Could not load annotation details.</p>';
+    }
+}
+
+/**
  * Main function to load data and set up the application.
  */
 document.addEventListener('DOMContentLoaded', async () => {
@@ -495,6 +654,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  * Loads all necessary data for the component analyzer.
  */
 async function loadComponentAnalyzerData() {
+    loadAnnotationStatus(); // Load annotation status
     const loadingMessage = document.getElementById('loading-message');
     const searchInput = document.getElementById('search-input');
 
