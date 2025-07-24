@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tooltip logic
     if (chartTooltipTrigger && tooltip) {
         chartTooltipTrigger.addEventListener('mouseenter', (event) => {
-            tooltip.textContent = 'Click on a file label to scroll to its annotation card.';
+            tooltip.textContent = '라벨을 클릭하면 해당 내용으로 이동합니다.';
             tooltip.classList.remove('hidden');
             const rect = event.target.getBoundingClientRect();
             tooltip.style.left = `${rect.left + window.scrollX}px`;
