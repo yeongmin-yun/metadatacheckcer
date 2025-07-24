@@ -85,29 +85,74 @@
                 <h1 class="text-2xl font-bold text-gray-800 mb-8 whitespace-nowrap">Nexacro Utils</h1>
                 <nav id="tab-container">
                     <ul class="space-y-2">
+                        <!-- Home -->
                         <li>
-                            <a href="#" id="home-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group whitespace-nowrap">
+                            <a href="#" id="home-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
                                 <span class="ml-3 font-semibold">Home</span>
                             </a>
                         </li>
+                        
+                        <!-- Separator -->
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
+
+                        <!-- Metainfo -->
+                        <li class="pt-2">
+                            <span class="ml-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Metainfo</span>
+                        </li>
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
                         <li>
-                            <a href="#" id="metainfo-analyzer-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group whitespace-nowrap">
-                                <span class="ml-3 font-semibold">Metainfo 분석기</span>
+                            <a href="#" id="metainfo-analyzer-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">Metainfo 분석기</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="component-analyzer-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group whitespace-nowrap">
-                                <span class="ml-3 font-semibold">Component 분석기</span>
+                            <a href="#" id="metainfo-maker-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">Metainfo Generator</span>
+                            </a>
+                        </li>
+
+                        <!-- Separator -->
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
+
+                        <!-- Component -->
+                        <li class="pt-2">
+                            <span class="ml-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">Component</span>
+                        </li>
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
+                        <li>
+                            <a href="#" id="component-analyzer-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">Component 분석기</span>
+                            </a>
+                        </li>
+
+                        <!-- Separator -->
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
+
+                        <!-- CATS -->
+                        <li class="pt-2">
+                            <span class="ml-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">CATS</span>
+                        </li>
+                        <li class="pt-2">
+                            <hr class="border-gray-200">
+                        </li>
+                        <li>
+                            <a href="#" id="cats-sampler-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">CATS SAMPLER</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="cats-sample-maker-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group whitespace-nowrap">
-                                <span class="ml-3 font-semibold">CATS SAMPLE Generator</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" id="metainfo-maker-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group whitespace-nowrap">
-                                <span class="ml-3 font-semibold">MetaInfo Generator</span>
+                            <a href="#" id="cats-sample-maker-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">CATS SAMPLE REPLACER</span>
                             </a>
                         </li>
                     </ul>
@@ -278,7 +323,7 @@
 
             <!-- CATS Sample Maker Content -->
             <div id="cats-sample-maker-content" class="hidden">
-                <h2 class="text-3xl font-bold text-gray-800">CATS SAMPLE Generator</h2>
+                <h2 class="text-3xl font-bold text-gray-800">CATS SAMPLE REPLACER</h2>
                         <div id="catsSamplingTab" class="tab-content space-y-8  mt-8 bg-white">
                             <div class="p-6 border border-gray-200 rounded-lg space-y-6">
                                 <div class="flex justify-between items-center">
@@ -581,7 +626,7 @@
 
     <script src="./js/features/csv-generator.js"></script>
     <script src="./js/features/test-generator.js"></script>
-    <script src="./js/features/cats-sampler.js"></script>
+    <script src="./js/features/cats-sample-replacer.js"></script>
     <script src="./js/features/metainfo-maker.js"></script>
     <script src="animations.js" defer></script>
     <script type="module" src="main.js" defer></script>
