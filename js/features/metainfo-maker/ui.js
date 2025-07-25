@@ -34,8 +34,45 @@ export function renderButtons(type, items) {
         button.dataset.item = JSON.stringify(item);
         button.addEventListener('click', () => handleItemSelection(type, item));
 
-        if (item.description) {
-            button.title = item.description;
+        if (item.description && dom.tooltip) {
+            button.addEventListener('mouseenter', (e) => {
+                if (!item.description) return;
+
+                let description = item.description;
+                const words = description.split(' ');
+                if (words.length > 0 && state.componentNames.has(words[0])) {
+                    words[0] = 'Component';
+                    description = words.join(' ');
+                }
+                dom.tooltip.textContent = description;
+                
+                const rect = e.target.getBoundingClientRect();
+                
+                dom.tooltip.style.visibility = 'hidden';
+                dom.tooltip.classList.remove('hidden');
+                
+                const tooltipRect = dom.tooltip.getBoundingClientRect();
+                
+                let top = rect.bottom + 5;
+                let left = rect.left + (rect.width / 2) - (tooltipRect.width / 2);
+
+                if (left < 0) left = 5;
+                if (left + tooltipRect.width > window.innerWidth) {
+                    left = window.innerWidth - tooltipRect.width - 5;
+                }
+                if (top + tooltipRect.height > window.innerHeight) {
+                    top = rect.top - tooltipRect.height - 5;
+                }
+                
+                dom.tooltip.style.top = `${top}px`;
+                dom.tooltip.style.left = `${left}px`;
+                dom.tooltip.style.visibility = 'visible';
+            });
+
+            button.addEventListener('mouseleave', () => {
+                dom.tooltip.classList.add('hidden');
+                dom.tooltip.style.visibility = 'hidden';
+            });
         }
 
         container.appendChild(button);
