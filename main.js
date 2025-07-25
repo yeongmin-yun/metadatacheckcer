@@ -432,7 +432,10 @@ function switchTab(tabId) {
 
     // Show the selected content container
     const contentId = tabId.replace('-tab', '-content');
-    document.getElementById(contentId).classList.remove('hidden');
+    const contentElement = document.getElementById(contentId);
+    if (contentElement) {
+        contentElement.classList.remove('hidden');
+    }
 
     // Update active tab styles
     document.querySelectorAll('#tab-container a').forEach(tab => {

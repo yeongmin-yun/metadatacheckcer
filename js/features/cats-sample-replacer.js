@@ -171,38 +171,31 @@ document.addEventListener('DOMContentLoaded', () => {
 function modifyScript(script, author, date, originalComp, newComp) {
     let modifiedScript = script;
 
-    // First, perform replacements for existing tags
-    if (author && /@author/.test(modifiedScript)) {
-        modifiedScript = modifiedScript.replace(/(@author\s+).*/, `$1${author}`);
-    }
-    if (date && /@creation/.test(modifiedScript)) {
-        modifiedScript = modifiedScript.replace(/(@creation\s+).*/, `$1${date}`);
-    }
-
-    // Then, find what tags are still missing and need to be added
-    const linesToAdd = [];
-    if (author && !/@author/.test(modifiedScript)) {
-        linesToAdd.push(` * @author      ${author}`);
-    }
-    if (date && !/@creation/.test(modifiedScript)) {
-        linesToAdd.push(` * @creation    ${date}`);
-    }
-
-    // Add missing tags to a JSDoc block
-    if (linesToAdd.length > 0) {
-        const newLines = linesToAdd.join('\n') + '\n';
-        const jsdocRegex = /(\/\*[\s\S]*?)(\s*\*\/)/;
-        
-        if (jsdocRegex.test(modifiedScript)) {
-            // If a JSDoc block exists, add the new lines inside it
-            modifiedScript = modifiedScript.replace(jsdocRegex, `$1${newLines}$2`);
-        } else {
-            // Otherwise, create a new JSDoc block at the top of the script
-            modifiedScript = `/**\n${newLines} */\n\n${modifiedScript}`;
+    // --- Author Replacement ---
+    if (author) {
+        // Try replacing "작성자 : value" format
+        if (/\*\s*작성자\s*:/.test(modifiedScript)) {
+            modifiedScript = modifiedScript.replace(/(\*\s*작성자\s*:\s*).*/, `$1${author}`);
+        } 
+        // Else, try replacing "@author value" format
+        else if (/@author/.test(modifiedScript)) {
+            modifiedScript = modifiedScript.replace(/(@author\s+).*/, `$1${author}`);
         }
     }
 
-    // Finally, handle component name replacement
+    // --- Date Replacement ---
+    if (date) {
+        // Try replacing "작성일 : value" format
+        if (/\*\s*작성일\s*:/.test(modifiedScript)) {
+            modifiedScript = modifiedScript.replace(/(\*\s*작성일\s*:\s*).*/, `$1${date}`);
+        }
+        // Else, try replacing "@creation value" format
+        else if (/@creation/.test(modifiedScript)) {
+            modifiedScript = modifiedScript.replace(/(@creation\s+).*/, `$1${date}`);
+        }
+    }
+
+    // --- Component Name Replacement ---
     if (originalComp && newComp && originalComp !== newComp) {
         const compRegex = new RegExp(originalComp, 'g');
         modifiedScript = modifiedScript.replace(compRegex, newComp);
