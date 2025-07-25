@@ -12,7 +12,8 @@ export function showToast(message, type = 'info') {
     const typeClasses = {
         info: 'bg-blue-500',
         success: 'bg-green-500',
-        error: 'bg-red-500'
+        error: 'bg-red-500',
+        warning: 'bg-yellow-500 text-black'
     };
     toast.className = `${baseClasses} ${typeClasses[type] || typeClasses.info}`;
     toast.textContent = message;

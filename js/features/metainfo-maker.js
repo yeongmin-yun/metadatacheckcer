@@ -1,4 +1,4 @@
-// js/features/metainfo-maker.js
+import { showToast } from '../app/ui-helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- UI Elements ---
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderAllButtons();
         } catch (error) {
             console.error("Failed to load initial data:", error);
-            window.showToast('초기 데이터 로딩에 실패했습니다.', 'error');
+            showToast('초기 데이터 로딩에 실패했습니다.', 'error');
         }
 
         // --- Event Listeners ---
@@ -203,13 +203,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (!newItem.name) {
-            window.showToast('Item name is required.', 'error');
+            showToast('Item name is required.', 'error');
             return;
         }
 
         const targetArray = userSelections[currentCustomItemType];
         if (targetArray.some(item => item.name === newItem.name)) {
-            window.showToast(`'${newItem.name}' is already in the list.`, 'warning');
+            showToast(`'${newItem.name}' is already in the list.`, 'warning');
             return;
         }
         
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         targetArray.push(newItem);
-        window.showToast(`Custom item '${newItem.name}' added.`, 'success');
+        showToast(`Custom item '${newItem.name}' added.`, 'success');
         
         renderSelections();
         customItemModal.classList.add('hidden');
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const value = event.target.value;
         if (userSelections[type][index]) {
             userSelections[type][index].unused = value;
-            window.showToast(`Property '${userSelections[type][index].name}' unused status updated to ${value}.`, 'info');
+            showToast(`Property '${userSelections[type][index].name}' unused status updated to ${value}.`, 'info');
             renderSelections();
         }
     }
@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rawInfoFileContent = null;
         
         renderSelections();
-        window.showToast('빈 템플릿으로 시작합니다. 항목을 추가하세요.', 'info');
+        showToast('빈 템플릿으로 시작합니다. 항목을 추가하세요.', 'info');
         setNextButtonState(true);
         
         for (const key in searchInputs) {
@@ -447,19 +447,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!targetArray.some(selected => selected.name === item.name)) {
             const newItem = { ...item, fromFile: false };
             targetArray.push(newItem);
-            window.showToast(`'${item.name}'이(가) 템플릿에 추가되었습니다.`, 'success');
+            showToast(`'${item.name}'이(가) 템플릿에 추가되었습니다.`, 'success');
             renderSelections();
             const searchTerm = searchInputs[type].value;
             filterButtons(type, searchTerm);
         } else {
-            window.showToast(`'${item.name}'은(는) 이미 추가된 항목입니다.`, 'warning');
+            showToast(`'${item.name}'은(는) 이미 추가된 항목입니다.`, 'warning');
         }
     }
 
     function handleItemRemoval(type, index) {
         if (userSelections[type] && userSelections[type][index]) {
             const removedItem = userSelections[type].splice(index, 1);
-            window.showToast(`'${removedItem[0].name}'이(가) 제거되었습니다.`, 'info');
+            showToast(`'${removedItem[0].name}'이(가) 제거되었습니다.`, 'info');
             renderSelections();
 
             let searchType;
@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 renderSelections();
-                window.showToast('.info 파일의 내용이 로드되었습니다.', 'success');
+                showToast('.info 파일의 내용이 로드되었습니다.', 'success');
                 setNextButtonState(true);
 
                 for (const key in searchInputs) {
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderAllButtons();
             } catch (error) {
                 console.error("Error parsing .info file:", error);
-                window.showToast(`Info 파일 파싱 오류: ${error.message}`, 'error');
+                showToast(`Info 파일 파싱 오류: ${error.message}`, 'error');
                 setNextButtonState(false);
             }
         };
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const replaceRegex = new RegExp(originalComponentName, 'g');
                 contentToParse = rawInfoFileContent.replace(replaceRegex, newComponentName);
                 finalFilename = `${newComponentName}.info.xlsx`;
-                window.showToast(`'${originalComponentName}'이(가) '${newComponentName}'(으)로 대체되었습니다.`, 'info');
+                showToast(`'${originalComponentName}'이(가) '${newComponentName}'(으)로 대체되었습니다.`, 'info');
             } else if (originalComponentName) {
                  finalFilename = `${originalComponentName}.info.xlsx`;
             }
@@ -551,7 +551,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tempData = parseInfoFile(contentToParse);
                 dataForXlsx.ObjectInfo = tempData.ObjectInfo;
             } catch (error) {
-                window.showToast(`파일 처리 오류: ${error.message}`, 'error');
+                showToast(`파일 처리 오류: ${error.message}`, 'error');
                 return;
             }
         } else if (newComponentName) {
@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         Object.assign(dataForXlsx, processedSelections);
         generateXlsxFromData(dataForXlsx, finalFilename);
-        window.showToast('XLSX 템플릿 다운로드가 시작됩니다.', 'success');
+        showToast('XLSX 템플릿 다운로드가 시작됩니다.', 'success');
         showSteps(4);
         steps.step4.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -674,7 +674,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function processXlsxAndGenerateInfo() {
         const file = infoFileInput.files[0];
         if (!file) {
-            window.showToast('먼저 XLSX 파일을 선택해주세요.', 'warning');
+            showToast('먼저 XLSX 파일을 선택해주세요.', 'warning');
             return;
         }
         const reader = new FileReader();
@@ -685,10 +685,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const objectInfo = XLSX.utils.sheet_to_json(workbook.Sheets["ObjectInfo"])[0];
                 const fileName = objectInfo ? `${objectInfo.shorttypename || 'Component'}.info` : 'Generated.info';
                 downloadFile(fileName, xmlString);
-                window.showToast('.info 파일이 성공적으로 생성되었습니다.', 'success');
+                showToast('.info 파일이 성공적으로 생성되었습니다.', 'success');
             } catch (error) {
                 console.error("Error processing XLSX file:", error);
-                window.showToast(`XLSX 처리 중 오류가 발생했습니다: ${error.message}`, 'error');
+                showToast(`XLSX 처리 중 오류가 발생했습니다: ${error.message}`, 'error');
             }
         };
         reader.readAsArrayBuffer(file);
@@ -754,9 +754,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(element);
         element.click();
         document.body.removeChild(element);
-    }
-
-    if (typeof window.showToast === 'undefined') {
-        window.showToast = (message, type = 'info') => console.log(`[${type.toUpperCase()}] ${message}`);
     }
 });

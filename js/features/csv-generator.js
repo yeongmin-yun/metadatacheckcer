@@ -1,43 +1,6 @@
-// Note: This script is self-contained and does not export/import modules.
-// It uses a DOMContentLoaded listener to attach its functionality.
+import { showToast } from '../app/ui-helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- UI Helper Functions (previously in utils.js) ---
-
-    /**
-     * Displays a toast message.
-     * @param {string} message - The message to display.
-     * @param {string} [type='info'] - The type of message ('success', 'error', 'info').
-     */
-    const showToast = (message, type = 'info') => {
-        const container = document.getElementById('toast-container');
-        if (!container) return;
-
-        const toast = document.createElement('div');
-        const baseClasses = 'p-4 rounded-lg shadow-lg text-white transition-all duration-300 ease-in-out transform';
-        const typeClasses = {
-            info: 'bg-blue-500',
-            success: 'bg-green-500',
-            error: 'bg-red-500'
-        };
-        toast.className = `${baseClasses} ${typeClasses[type] || typeClasses.info}`;
-        toast.textContent = message;
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateY(-20px)';
-        container.appendChild(toast);
-
-        setTimeout(() => {
-            toast.style.opacity = '1';
-            toast.style.transform = 'translateY(0)';
-        }, 100);
-
-        setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transform = 'translateY(20px)';
-            setTimeout(() => toast.remove(), 300);
-        }, 3000);
-    };
-
     // --- CSV Generation Logic (previously in utils.js) ---
 
     const escapeCsvField = (field) => {
