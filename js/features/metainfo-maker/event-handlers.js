@@ -217,13 +217,13 @@ export function handleSaveCustomItem() {
     });
 
     if (!newItem.name) {
-        showToast('Item name is required.', 'error');
+        showToast('항목의 이름을 작성해야합니다.', 'error');
         return;
     }
 
     const targetArray = state.userSelections[state.currentCustomItemType];
     if (targetArray.some(item => item.name === newItem.name)) {
-        showToast(`'${newItem.name}' is already in the list.`, 'warning');
+        showToast(`'${newItem.name}' 이미 존재하는 항목입니다..`, 'warning');
         return;
     }
     
@@ -234,7 +234,7 @@ export function handleSaveCustomItem() {
     }
 
     targetArray.push(newItem);
-    showToast(`Custom item '${newItem.name}' added.`, 'success');
+    showToast(`작성된 항목: '${newItem.name}' 추가.`, 'success');
     
     renderSelections();
     dom.customItemModal.classList.add('hidden');
@@ -246,7 +246,7 @@ export function handleUnusedChange(event) {
     const value = event.target.value;
     if (state.userSelections[type][index]) {
         state.userSelections[type][index].unused = value;
-        showToast(`Property '${state.userSelections[type][index].name}' unused status updated to ${value}.`, 'info');
+        showToast(`Property '${state.userSelections[type][index].name}' unused status 업데이트 되었습니다.[${value}].`, 'info');
         renderSelections();
     }
 }

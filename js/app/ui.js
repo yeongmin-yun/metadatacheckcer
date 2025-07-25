@@ -142,6 +142,7 @@ export function switchTab(tabId) {
     document.getElementById('home-content').classList.add('hidden');
     document.getElementById('metainfo-analyzer-content').classList.add('hidden');
     document.getElementById('component-analyzer-content').classList.add('hidden');
+    document.getElementById('cats-sampler-content').classList.add('hidden');
     document.getElementById('cats-sample-maker-content').classList.add('hidden');
     document.getElementById('metainfo-maker-content').classList.add('hidden');
 
