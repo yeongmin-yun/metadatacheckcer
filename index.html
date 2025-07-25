@@ -7,11 +7,6 @@
     <title>Component Explorer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- D3.js CDN for visualization -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- SheetJS CDN for XLSX generation -->
-    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-    <!-- JSZip CDN for ZIP file generation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
@@ -628,14 +623,10 @@
         </main>
     </div>
 
-    <script src="./js/features/csv-generator.js"></script>
-    <script src="./js/features/test-generator.js"></script>
+    <script type="module" src="main.js"></script>
     <script src="./js/features/cats-sample-replacer.js"></script>
+    <script src="./js/features/csv-generator.js"></script>
     <script src="./js/features/metainfo-maker.js"></script>
-    <script src="animations.js" defer></script>
-    <script type="module" src="main.js" defer></script>
-    <script type="module" src="utils.js" defer></script>
-    <div id="tooltip" class="hidden fixed z-50 p-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm max-w-xs" role="tooltip"></div>
+    <script src="./js/features/test-generator.js"></script>
 </body>
-
 </html>
