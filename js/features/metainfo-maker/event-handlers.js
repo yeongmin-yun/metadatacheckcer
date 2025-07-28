@@ -1,7 +1,8 @@
+import * as XLSX from "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/xlsx.mjs";
 import { dom } from './dom-elements.js';
 import { state, setCurrentCustomItemType } from './state.js';
 import { showToast } from '../../app/ui-helpers.js';
-import { parseInfoFile, downloadFile, getSheetHeaders } from './logic.js';
+import { parseInfoFile, downloadFile, getSheetHeaders, generateXlsxFromData, convertWorkbookToInfoXml } from './logic.js';
 import { renderSelections, renderAllButtons, filterButtons, showSteps, setNextButtonState, openCustomItemModal } from './ui.js';
 
 export function handleCreateNew() {

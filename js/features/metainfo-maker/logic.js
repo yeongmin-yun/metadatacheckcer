@@ -1,3 +1,4 @@
+import * as XLSX from "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/xlsx.mjs";
 import { state, booleanAttributes } from './state.js';
 import { dom } from './dom-elements.js';
 import { showToast } from '../../app/ui-helpers.js';
@@ -53,7 +54,7 @@ export function getSheetHeaders() {
     };
 }
 
-function generateXlsxFromData(data, filename) {
+export function generateXlsxFromData(data, filename) {
     const wb = XLSX.utils.book_new();
     const sheetHeaders = getSheetHeaders();
 
@@ -79,7 +80,7 @@ function generateXlsxFromData(data, filename) {
     XLSX.writeFile(wb, filename);
 }
 
-function convertWorkbookToInfoXml(workbook) {
+export function convertWorkbookToInfoXml(workbook) {
     let xml = `<?xml version="1.0" encoding="utf-8"?>\n<MetaInfo version="2.0">\n`;
     const objectInfoSheet = workbook.Sheets["ObjectInfo"];
     if (!objectInfoSheet) throw new Error("ObjectInfo 시트를 찾을 수 없습니다.");
