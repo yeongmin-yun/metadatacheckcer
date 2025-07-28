@@ -299,11 +299,25 @@
                         </div>
                     </div>
 
-                    <!-- Bottom section with Inheritance Graph -->
-                    <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Inheritance Graph</h3>
-                        <div id="graph-container" class="relative bg-gray-50 rounded-lg w-full" style="height: 600px;">
-                            <svg id="inheritance-graph-svg" class="w-full h-full border border-gray-200 rounded-md"></svg>
+                    <!-- Bottom section with Inheritance and Sub-elements Graphs -->
+                    <div class="flex flex-wrap -mx-4 mb-8">
+                        <!-- Left: Inheritance Graph -->
+                        <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Inheritance Graph</h3>
+                                <div id="graph-container" class="relative bg-gray-50 rounded-lg w-full" style="height: 600px;">
+                                    <svg id="inheritance-graph-svg" class="w-full h-full border border-gray-200 rounded-md"></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right: Sub-elements Graph -->
+                        <div class="w-full lg:w-1/2 px-4">
+                            <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">Sub-elements Graph</h3>
+                                <div id="sub-elements-graph-container" class="relative bg-gray-50 rounded-lg w-full" style="height: 600px;">
+                                    <svg id="sub-elements-graph-svg" class="w-full h-full border border-gray-200 rounded-md"></svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
