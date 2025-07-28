@@ -164,7 +164,15 @@ export function showAnalysisView(clickedNodeName) {
 
     drawPropertyPieChart(clickedNodeName);
     drawEventPieChart(clickedNodeName);
+    showInheritanceGraph(clickedNodeName);
+    drawSubElementsGraph(clickedNodeName);
+}
 
+/**
+ * Draws the inheritance graph for a given component.
+ * @param {string} clickedNodeName - The name of the component to display the graph for.
+ */
+export function showInheritanceGraph(clickedNodeName) {
     const svg = d3.select("#inheritance-graph-svg");
     svg.selectAll("*").remove();
 
@@ -198,6 +206,72 @@ export function showAnalysisView(clickedNodeName) {
         .style("text-anchor", "middle")
         .text(d => d.data.name.split('.').pop());
 }
+
+
+/**
+ * Draws the sub-elements graph for a given component.
+ * This graph shows components that inherit from the selected component.
+ * @param {string} clickedNodeName - The name of the component to display the graph for.
+ */
+export function drawSubElementsGraph(clickedNodeName) {
+    const svg = d3.select("#sub-elements-graph-svg");
+    svg.selectAll("*").remove();
+
+    const container = document.getElementById('sub-elements-graph-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    const margin = { top: 20, right: 120, bottom: 20, left: 120 };
+
+    // Find all components that have the clickedNodeName as their parent
+    const childrenNodes = state.allInheritanceDataRaw.filter(node => node.parent === clickedNodeName);
+
+    if (childrenNodes.length === 0) {
+        svg.append("text").attr("x", width / 2).attr("y", height / 2).attr("text-anchor", "middle").attr("fill", "#666")
+            .text("No sub-elements found.");
+        return;
+    }
+
+    // Build the tree structure for the graph
+    const treeData = {
+        name: clickedNodeName,
+        children: childrenNodes.map(node => ({ name: node.child, children: [] }))
+    };
+
+    const root = d3.hierarchy(treeData);
+    // Use size with swapped width and height for a horizontal layout
+    const treeLayout = d3.tree().size([height - margin.top - margin.bottom, width - margin.left - margin.right]);
+    treeLayout(root);
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Create links using a horizontal link generator with a linear curve
+    g.selectAll(".link")
+        .data(root.links())
+        .enter().append("path")
+        .attr("class", "link")
+        .attr("d", d => {
+            return `M${d.source.y},${d.source.x}` +
+                   `L${d.target.y},${d.target.x}`;
+        });
+
+    // Create nodes
+    const node = g.selectAll(".node")
+        .data(root.descendants())
+        .enter().append("g")
+        .attr("class", d => "node" + (d.children && d.children.length > 0 ? " node--internal" : " node--leaf"))
+        // Swap x and y in the transform
+        .attr("transform", d => `translate(${d.y},${d.x})`);
+
+    node.append("circle").attr("r", 5).attr("fill", d => d.data.name === clickedNodeName ? "#ff7f0e" : "#999");
+    
+    // Adjust text positioning for horizontal layout
+    node.append("text")
+        .attr("dy", "0.31em")
+        .attr("x", d => d.children ? -10 : 10)
+        .style("text-anchor", d => d.children ? "end" : "start")
+        .text(d => d.data.name.split('.').pop());
+}
+
 
 
 /**
