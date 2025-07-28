@@ -340,3 +340,122 @@ export function drawAnnotationBarChart(data) {
         .style("fill", "#333")
         .text(d => d.count);
 }
+
+/**
+ * Draws stacked horizontal bar charts for all components' property and event analysis.
+ */
+export function drawAllComponentsReport() {
+    const container = document.getElementById('report-charts-container');
+    container.innerHTML = '<div class="text-center py-8"><p class="text-lg font-semibold text-gray-600">Generating report...</p></div>';
+
+    // Use a timeout to allow the "Generating..." message to render before the main thread is blocked.
+    setTimeout(() => {
+        container.innerHTML = ''; // Clear the loading message
+
+        const allComponents = state.aggregatedComponentNames.sort();
+        const keys = ['common', 'missing', 'extra'];
+        const colors = {
+            common: '#4bc0c0',
+            missing: '#ff6384',
+            extra: '#ffcd56'
+        };
+
+        allComponents.forEach(componentShortName => {
+            // --- Data Calculation ---
+            const codebaseProps = state.allComponentPropertiesData.find(c => c.componentname === componentShortName)?.properties || [];
+            const metainfoProps = state.metainfoPropertyData.find(c => c.componentname === componentShortName)?.properties || [];
+            const propData = {
+                group: 'Properties',
+                common: codebaseProps.filter(p => metainfoProps.includes(p)).length,
+                missing: codebaseProps.filter(p => !metainfoProps.includes(p)).length,
+                extra: metainfoProps.filter(p => !codebaseProps.includes(p)).length,
+            };
+            propData.total = propData.common + propData.missing + propData.extra;
+
+            const codebaseEvents = state.allComponentEventsData.find(c => c.componentname === componentShortName)?.events || [];
+            const metainfoEvents = state.metainfoEventData.find(c => c.componentname === componentShortName)?.events || [];
+            const eventData = {
+                group: 'Events',
+                common: codebaseEvents.filter(e => metainfoEvents.includes(e)).length,
+                missing: codebaseEvents.filter(e => !metainfoEvents.includes(e)).length,
+                extra: metainfoEvents.filter(e => !codebaseEvents.includes(e)).length,
+            };
+            eventData.total = eventData.common + eventData.missing + eventData.extra;
+            
+            if (propData.total === 0 && eventData.total === 0) return;
+
+            // --- D3 Chart Drawing ---
+            const chartData = [propData, eventData];
+            const stack = d3.stack().keys(keys);
+            const series = stack(chartData);
+
+            const margin = { top: 40, right: 20, bottom: 20, left: 80 };
+            const height = 120;
+            const width = container.clientWidth - margin.left - margin.right;
+
+            const componentWrapper = document.createElement('div');
+            componentWrapper.className = 'bg-white p-4 rounded-lg shadow border border-gray-200';
+            
+            const title = document.createElement('h3');
+            title.className = 'text-xl font-bold text-gray-800 mb-2 text-center';
+            title.textContent = componentShortName; // Use short name for title
+            componentWrapper.appendChild(title);
+
+            const svg = d3.select(componentWrapper).append('svg')
+                .attr('width', width + margin.left + margin.right)
+                .attr('height', height + margin.top + margin.bottom)
+                .append('g')
+                .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+            const y = d3.scaleBand()
+                .domain(chartData.map(d => d.group))
+                .range([0, height])
+                .padding(0.2);
+
+            const x = d3.scaleLinear()
+                .domain([0, Math.max(propData.total, eventData.total)])
+                .range([0, width]);
+
+            svg.append('g')
+                .selectAll('g')
+                .data(series)
+                .join('g')
+                    .attr('fill', d => colors[d.key])
+                .selectAll('rect')
+                .data(d => d)
+                .join('rect')
+                    .attr('y', d => y(d.data.group))
+                    .attr('x', d => x(d[0]))
+                    .attr('width', d => x(d[1]) - x(d[0]))
+                    .attr('height', y.bandwidth());
+
+            // Add labels inside the bars
+            svg.append('g')
+                .selectAll('g')
+                .data(series)
+                .join('g')
+                .selectAll('.text')
+                .data(d => d)
+                .join('text')
+                    .attr('class', 'bar-label')
+                    .attr('x', d => x(d[0]) + (x(d[1]) - x(d[0])) / 2)
+                    .attr('y', d => y(d.data.group) + y.bandwidth() / 2)
+                    .attr('dy', '0.35em')
+                    .attr('text-anchor', 'middle')
+                    .style('fill', 'white')
+                    .style('font-size', '12px')
+                    .text(d => {
+                        const value = d[1] - d[0];
+                        return value > 0 ? value : '';
+                    });
+
+            svg.append('g')
+                .call(d3.axisLeft(y));
+
+            container.appendChild(componentWrapper);
+        });
+         if (container.innerHTML === '') {
+            container.innerHTML = '<div class="text-center py-8"><p class="text-lg font-semibold text-gray-500">No component data to display.</p></div>';
+        }
+    }, 10);
+}

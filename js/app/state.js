@@ -10,4 +10,5 @@ export const state = {
     isComponentDataLoaded: false,
     isMetainfoAnalyzerSetup: false,
     isMetainfoMakerSetup: false,
+    aggregatedComponentNames: [],
 };

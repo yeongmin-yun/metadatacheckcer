@@ -21,7 +21,7 @@ async function loadAnnotationStatus() {
         const fileNames = Object.keys(data);
 
         const chartData = fileNames.map(fileName => ({
-            file: fileName,
+            file: fileName.replace(/\.js$/, ''), // Remove .js extension
             count: data[fileName].length
         })).filter(d => d.count > 0);
 
@@ -43,13 +43,14 @@ async function loadAnnotationStatus() {
             const annotations = data[fileName];
             if (annotations.length === 0) return;
 
+            const componentName = fileName.replace(/\.js$/, ''); // Remove .js extension
             const card = document.createElement('div');
             card.className = 'bg-white rounded-lg shadow-md p-6 border border-gray-200';
-            card.id = `annotation-card-${fileName.replace(/\./g, '-')}`;
+            card.id = `annotation-card-${componentName.replace(/\./g, '-')}`;
 
             const header = document.createElement('h4');
             header.className = 'text-xl font-bold text-gray-800 mb-4';
-            header.textContent = fileName;
+            header.textContent = componentName; // Use the modified name
             card.appendChild(header);
 
             const tableContainer = document.createElement('div');
@@ -107,7 +108,8 @@ export async function loadComponentAnalyzerData() {
         const responses = await Promise.all([
             fetch(C.JSON_FILE_PATH), fetch(C.PROPERTY_JSON_FILE_PATH), fetch(C.EVENT_JSON_FILE_PATH),
             fetch(C.METAINFO_PROPERTY_JSON_FILE_PATH), fetch(C.ALL_COMPONENT_PROPERTIES_JSON_FILE_PATH),
-            fetch(C.METAINFO_EVENT_JSON_FILE_PATH), fetch(C.ALL_COMPONENT_EVENTS_JSON_FILE_PATH)
+            fetch(C.METAINFO_EVENT_JSON_FILE_PATH), fetch(C.ALL_COMPONENT_EVENTS_JSON_FILE_PATH),
+            fetch(C.AGGREGATED_NAMES_JSON_FILE_PATH)
         ]);
 
         for (const res of responses) {
@@ -117,7 +119,8 @@ export async function loadComponentAnalyzerData() {
         const [
             allInheritanceDataRaw, propertyData, eventData,
             metainfoPropertyData, allComponentPropertiesData,
-            metainfoEventData, allComponentEventsData
+            metainfoEventData, allComponentEventsData,
+            aggregatedComponentNames
         ] = await Promise.all(responses.map(res => res.json()));
         
         // Update state
@@ -128,6 +131,7 @@ export async function loadComponentAnalyzerData() {
         state.allComponentPropertiesData = allComponentPropertiesData;
         state.metainfoEventData = metainfoEventData;
         state.allComponentEventsData = allComponentEventsData;
+        state.aggregatedComponentNames = aggregatedComponentNames;
 
         const childToParentMap = new Map(state.allInheritanceDataRaw.map(d => [d.child, d.parent]));
         const allChildNames = [...new Set(state.allInheritanceDataRaw.map(item => item.child))];

@@ -1,6 +1,6 @@
 import { state } from './state.js';
 import { GROUP_ORDER } from './constants.js';
-import { showAnalysisView } from './chart-drawer.js';
+import { showAnalysisView, drawAllComponentsReport } from './chart-drawer.js';
 import { loadComponentAnalyzerData } from './data-loader.js';
 
 /**
@@ -137,11 +137,12 @@ export function updateEventTable(title, events) {
  * Switches the visible content based on the selected tab.
  * @param {string} tabId - The ID of the tab to switch to.
  */
-export function switchTab(tabId) {
+export async function switchTab(tabId) {
     // Hide all content containers
     document.getElementById('home-content').classList.add('hidden');
     document.getElementById('metainfo-analyzer-content').classList.add('hidden');
     document.getElementById('component-analyzer-content').classList.add('hidden');
+    document.getElementById('component-report-content').classList.add('hidden');
     document.getElementById('cats-sampler-content').classList.add('hidden');
     document.getElementById('cats-sample-maker-content').classList.add('hidden');
     document.getElementById('metainfo-maker-content').classList.add('hidden');
@@ -164,10 +165,19 @@ export function switchTab(tabId) {
         activeTab.classList.remove('text-gray-700');
     }
 
-    // Load component analyzer data only when its tab is selected for the first time
-    if (tabId === 'component-analyzer-tab' && !state.isComponentDataLoaded) {
-        loadComponentAnalyzerData();
-        state.isComponentDataLoaded = true;
+    // --- Tab-specific logic ---
+
+    // Load data for Component Analyzer or Component Report if not already loaded
+    if (tabId === 'component-analyzer-tab' || tabId === 'component-report-tab') {
+        if (!state.isComponentDataLoaded) {
+            await loadComponentAnalyzerData();
+            state.isComponentDataLoaded = true;
+        }
+    }
+    
+    // Draw report charts when the report tab is selected
+    if (tabId === 'component-report-tab' && state.isComponentDataLoaded) {
+        drawAllComponentsReport();
     }
 
     // Set up metainfo analyzer only when its tab is selected for the first time

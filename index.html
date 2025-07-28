@@ -128,6 +128,11 @@
                                 <span class="ml-6 font-semibold">Component 분석기</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="#" id="component-report-tab" class="flex items-center p-3 text-gray-700 rounded-lg hover:bg-gray-100 group">
+                                <span class="ml-6 font-semibold">Component 보고서</span>
+                            </a>
+                        </li>
 
                         <!-- Separator -->
                         <li class="pt-2">
@@ -328,6 +333,23 @@
                             <pre id="log-content"></pre>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Component Report Content -->
+            <div id="component-report-content" class="hidden">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Component-wise Analysis Report</h2>
+                <p class="text-gray-600 mb-8">A summary of property and event analysis for all components.</p>
+                
+                <!-- Legend for the charts -->
+                <div class="flex justify-center space-x-6 mb-8 text-sm text-gray-700">
+                    <div class="flex items-center"><span class="w-4 h-4 inline-block mr-2 rounded-sm" style="background-color: #4bc0c0;"></span>Common</div>
+                    <div class="flex items-center"><span class="w-4 h-4 inline-block mr-2 rounded-sm" style="background-color: #ff6384;"></span>Missing in Metainfo</div>
+                    <div class="flex items-center"><span class="w-4 h-4 inline-block mr-2 rounded-sm" style="background-color: #ffcd56;"></span>Extra in Metainfo</div>
+                </div>
+
+                <div id="report-charts-container" class="space-y-10">
+                    <!-- Stacked bar charts will be dynamically inserted here -->
                 </div>
             </div>
 
