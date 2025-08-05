@@ -1,0 +1,1422 @@
+{
+  "AbstractComp.js": [
+    {
+      "line": 100,
+      "type": "TODO",
+      "content": "// TODO : Create a string in the format of innerhtml by calling the createCommnad() function of control.",
+      "reason": ": Create a string in the format of innerhtml by calling the createCommnad() function of control."
+    },
+    {
+      "line": 111,
+      "type": "TODO",
+      "content": "// TODO : Call attachHandle() function of control to attach actual node handle to handle of nexacro.Element.",
+      "reason": ": Call attachHandle() function of control to attach actual node handle to handle of nexacro.Element."
+    },
+    {
+      "line": 203,
+      "type": "TODO",
+      "content": "this._setPropertyMap(\"innerdataset\", valueid); // TODO : allocateProperty 공통함수 분리",
+      "reason": ": allocateProperty 공통함수 분리"
+    },
+    {
+      "line": 993,
+      "type": "TODO",
+      "content": "// TODO : 바인딩된 dataset이 변경되어 바인딩이 끊어지는 경우 갱신",
+      "reason": ": 바인딩된 dataset이 변경되어 바인딩이 끊어지는 경우 갱신"
+    }
+  ],
+  "AbstractSelectAny.js": [
+    {
+      "line": 28,
+      "type": "TODO",
+      "content": "// TODO : controltype 별 property map depth 분리 (auto, multicombo, listbox, checkboxset)",
+      "reason": ": controltype 별 property map depth 분리 (auto, multicombo, listbox, checkboxset)"
+    },
+    {
+      "line": 39,
+      "type": "TODO",
+      "content": "// TODO : property init",
+      "reason": ": property init"
+    },
+    {
+      "line": 82,
+      "type": "TODO",
+      "content": "// TODO : checkboxset",
+      "reason": ": checkboxset"
+    },
+    {
+      "line": 142,
+      "type": "TODO",
+      "content": "_pAbstractSelectAny._properties = [{ name: \"selectmulticombo\" }, { name: \"selectlistbox\" }, { name: \"selectcheckboxset\" }]; // TODO : ctrlobj setter",
+      "reason": ": ctrlobj setter"
+    },
+    {
+      "line": 196,
+      "type": "TODO",
+      "content": "// TODO : CheckboxSet direction 기준",
+      "reason": ": CheckboxSet direction 기준"
+    },
+    {
+      "line": 226,
+      "type": "TODO",
+      "content": "// TODO : innerdataset type check",
+      "reason": ": innerdataset type check"
+    },
+    {
+      "line": 231,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 373,
+      "type": "TODO",
+      "content": "// TODO : multiselect = true (readonly)",
+      "reason": ": multiselect = true (readonly)"
+    },
+    {
+      "line": 386,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 394,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 404,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    }
+  ],
+  "AbstractSelectOne.js": [
+    {
+      "line": 28,
+      "type": "TODO",
+      "content": "// TODO : controltype 별 property map depth 분리 (auto, combo, listbox, radio)",
+      "reason": ": controltype 별 property map depth 분리 (auto, combo, listbox, radio)"
+    },
+    {
+      "line": 39,
+      "type": "TODO",
+      "content": "// TODO : property init",
+      "reason": ": property init"
+    },
+    {
+      "line": 127,
+      "type": "TODO",
+      "content": "_pAbstractSelectOne._properties = [{ name: \"selectcombo\" }, { name: \"selectlistbox\" }, { name: \"selectradio\" }]; // TODO : ctrlobj setter",
+      "reason": ": ctrlobj setter"
+    },
+    {
+      "line": 156,
+      "type": "TODO",
+      "content": "// TODO : Radio direction 기준",
+      "reason": ": Radio direction 기준"
+    },
+    {
+      "line": 186,
+      "type": "TODO",
+      "content": "// TODO : innerdataset type check",
+      "reason": ": innerdataset type check"
+    },
+    {
+      "line": 324,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 332,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 341,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    }
+  ],
+  "Animation.js": [
+    {
+      "line": 1655,
+      "type": "DEPRECATED",
+      "content": "// deprecated",
+      "reason": ""
+    },
+    {
+      "line": 1931,
+      "type": "DEPRECATED",
+      "content": "// deprecated",
+      "reason": ""
+    }
+  ],
+  "Calendar.js": [
+    {
+      "line": 3103,
+      "type": "TODO",
+      "content": "// TODO Element의 bottom 좌표를 바로 얻는 API로 바꾸는게 바람직 (현재 없음)",
+      "reason": "Element의 bottom 좌표를 바로 얻는 API로 바꾸는게 바람직 (현재 없음)"
+    }
+  ],
+  "Cell.js": [
+    {
+      "line": 3170,
+      "type": "TODO",
+      "content": "// todo : tree",
+      "reason": ": tree"
+    },
+    {
+      "line": 6055,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 6343,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9331,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9477,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9642,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9704,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9900,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 10156,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 10950,
+      "type": "TODO",
+      "content": "// todo : want key",
+      "reason": ": want key"
+    },
+    {
+      "line": 11992,
+      "type": "TODO",
+      "content": "// todo",
+      "reason": ""
+    },
+    {
+      "line": 11998,
+      "type": "TODO",
+      "content": "// todo",
+      "reason": ""
+    },
+    {
+      "line": 12439,
+      "type": "NOTE",
+      "content": "//notEqual",
+      "reason": "qual"
+    }
+  ],
+  "CheckBoxSet.js": [
+    {
+      "line": 3397,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    }
+  ],
+  "Combo.js": [
+    {
+      "line": 2636,
+      "type": "TODO",
+      "content": "// TODO------------------------------",
+      "reason": "------------------------------"
+    },
+    {
+      "line": 3025,
+      "type": "TODO",
+      "content": "// TODO : ondropdown에서 index변경경우 필요.",
+      "reason": ": ondropdown에서 index변경경우 필요."
+    }
+  ],
+  "CompBase.js": [
+    {
+      "line": 48,
+      "type": "TODO",
+      "content": "// TODO2 : %pixel 처리 필요",
+      "reason": "2 : %pixel 처리 필요"
+    },
+    {
+      "line": 1233,
+      "type": "TODO",
+      "content": "// TODO2 validation 필요해보임",
+      "reason": "2 validation 필요해보임"
+    },
+    {
+      "line": 2379,
+      "type": "TODO",
+      "content": "this._setAccessibilityAction(this._getAccessibilityAction()); // TODO : 접근성 우선순위 고려",
+      "reason": ": 접근성 우선순위 고려"
+    },
+    {
+      "line": 3296,
+      "type": "TODO",
+      "content": "// TODO ControlElement.recreate 같은 인터페이스가 만들어져야 할듯.",
+      "reason": "ControlElement.recreate 같은 인터페이스가 만들어져야 할듯."
+    },
+    {
+      "line": 3686,
+      "type": "TODO",
+      "content": "//TODO : set direction attribute at Element's style.",
+      "reason": ": set direction attribute at Element's style."
+    },
+    {
+      "line": 4709,
+      "type": "TODO",
+      "content": "// TODO2 validation 필요해보임",
+      "reason": "2 validation 필요해보임"
+    },
+    {
+      "line": 6441,
+      "type": "TODO",
+      "content": "// TODO : process ExpandBar arrange with ScrollBar",
+      "reason": ": process ExpandBar arrange with ScrollBar"
+    },
+    {
+      "line": 6463,
+      "type": "TODO",
+      "content": "// TODO : Expand Info 처리",
+      "reason": ": Expand Info 처리"
+    },
+    {
+      "line": 9887,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    }
+  ],
+  "CompEventBase.js": [
+    {
+      "line": 1384,
+      "type": "TODO",
+      "content": "// TODO:",
+      "reason": ""
+    },
+    {
+      "line": 1826,
+      "type": "TODO",
+      "content": "// TODO:",
+      "reason": ""
+    },
+    {
+      "line": 2174,
+      "type": "TODO",
+      "content": "// TODO:",
+      "reason": ""
+    },
+    {
+      "line": 2777,
+      "type": "TODO",
+      "content": "// TODO check 확인필요 drag with enableevent",
+      "reason": "check 확인필요 drag with enableevent"
+    },
+    {
+      "line": 2814,
+      "type": "TODO",
+      "content": "// TODO check 확인필요 drag with enableevent",
+      "reason": "check 확인필요 drag with enableevent"
+    },
+    {
+      "line": 2858,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 2991,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 3265,
+      "type": "TODO",
+      "content": "// TODO check Drag동작은 BasicAction인가??",
+      "reason": "check Drag동작은 BasicAction인가??"
+    },
+    {
+      "line": 6343,
+      "type": "TODO",
+      "content": "var bubble = this.on_extendedcommand_basic_action(eventid, eventtype, deviceid, data, refer_comp);\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t//TODO",
+      "reason": ""
+    }
+  ],
+  "Data.js": [
+    {
+      "line": 3460,
+      "type": "TODO",
+      "content": "else if (value instanceof Date) return new nexacro.Decimal(value.getTime());    //TODO : nexacro.Date ??",
+      "reason": ": nexacro.Date ??"
+    },
+    {
+      "line": 8884,
+      "type": "TODO",
+      "content": "// TODO : level < max_level : this key is ??",
+      "reason": ": level < max_level : this key is ??"
+    },
+    {
+      "line": 18821,
+      "type": "TODO",
+      "content": "case 8: // TODO: blob",
+      "reason": "blob"
+    },
+    {
+      "line": 20782,
+      "type": "TODO",
+      "content": "// TODO: compress 인 경우에도 FakeXMLHttpRequest를 사용한다.",
+      "reason": "compress 인 경우에도 FakeXMLHttpRequest를 사용한다."
+    }
+  ],
+  "DataObject.js": [
+    {
+      "line": 191,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 196,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 254,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 260,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 321,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 348,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 416,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 422,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 1195,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 1210,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    }
+  ],
+  "Dataset.js": [
+    {
+      "line": 245,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 471,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    }
+  ],
+  "DateField.js": [
+    {
+      "line": 2706,
+      "type": "TODO",
+      "content": "// TODO Element의 bottom 좌표를 바로 얻는 API로 바꾸는게 바람직 (현재 없음)",
+      "reason": "Element의 bottom 좌표를 바로 얻는 API로 바꾸는게 바람직 (현재 없음)"
+    }
+  ],
+  "DatePicker.js": [
+    {
+      "line": 328,
+      "type": "TODO",
+      "content": "//todo 키액션 작업 필요",
+      "reason": "키액션 작업 필요"
+    }
+  ],
+  "Div.js": [
+    {
+      "line": 1184,
+      "type": "TODO",
+      "content": "// TODO parse xml",
+      "reason": "parse xml"
+    },
+    {
+      "line": 1198,
+      "type": "TODO",
+      "content": "//TODO : generate contents",
+      "reason": ": generate contents"
+    }
+  ],
+  "EditBase.js": [
+    {
+      "line": 2656,
+      "type": "TODO",
+      "content": "// TODO : ddd 에대한 처리",
+      "reason": ": ddd 에대한 처리"
+    }
+  ],
+  "Element_HTML5.js": [
+    {
+      "line": 6420,
+      "type": "TODO",
+      "content": "// TODO : non composition, composition autoskip",
+      "reason": ": non composition, composition autoskip"
+    },
+    {
+      "line": 6585,
+      "type": "TODO",
+      "content": "// TODO : non composition, composition autoskip",
+      "reason": ": non composition, composition autoskip"
+    },
+    {
+      "line": 7326,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 8033,
+      "type": "TODO",
+      "content": "//Todo, displayInvalidtext",
+      "reason": ", displayInvalidtext"
+    },
+    {
+      "line": 8049,
+      "type": "TODO",
+      "content": "//Todo, displayInvalidtext",
+      "reason": ", displayInvalidtext"
+    },
+    {
+      "line": 8077,
+      "type": "TODO",
+      "content": "//Todo, displayInvalidtext",
+      "reason": ", displayInvalidtext"
+    },
+    {
+      "line": 10599,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 13223,
+      "type": "TODO",
+      "content": "// TODO check element.create가 두번 타는 case가 있음. (frame 동적생성시)",
+      "reason": "check element.create가 두번 타는 case가 있음. (frame 동적생성시)"
+    },
+    {
+      "line": 13289,
+      "type": "TODO",
+      "content": "// TODO check",
+      "reason": "check"
+    },
+    {
+      "line": 13390,
+      "type": "TODO",
+      "content": "cursor = nexacro.CursorObject(\"arrow\"); // TODO check default로 되돌릴 방법??",
+      "reason": "check default로 되돌릴 방법??"
+    },
+    {
+      "line": 13395,
+      "type": "TODO",
+      "content": "//// TODO statusbar grip image",
+      "reason": "statusbar grip image"
+    },
+    {
+      "line": 20948,
+      "type": "TODO",
+      "content": "//TODO translate to class",
+      "reason": "translate to class"
+    }
+  ],
+  "Element_Runtime.js": [
+    {
+      "line": 3720,
+      "type": "TODO",
+      "content": "// TODO : set keypad type (android runtime)",
+      "reason": ": set keypad type (android runtime)"
+    },
+    {
+      "line": 4408,
+      "type": "TODO",
+      "content": "// TODO Runtime버젼 미구현!!!!",
+      "reason": "Runtime버젼 미구현!!!!"
+    },
+    {
+      "line": 4566,
+      "type": "TODO",
+      "content": "// TODO2 동적 set검토 필요",
+      "reason": "2 동적 set검토 필요"
+    },
+    {
+      "line": 5433,
+      "type": "TODO",
+      "content": "//TODO2",
+      "reason": "2"
+    },
+    {
+      "line": 6043,
+      "type": "TODO",
+      "content": "// TODO check element.create가 두번 타는 case가 있음. (frame 동적생성시)",
+      "reason": "check element.create가 두번 타는 case가 있음. (frame 동적생성시)"
+    },
+    {
+      "line": 6103,
+      "type": "TODO",
+      "content": "// TODO check",
+      "reason": "check"
+    },
+    {
+      "line": 6223,
+      "type": "TODO",
+      "content": "cursor = nexacro.CursorObject(\"arrow\"); // TODO check default로 되돌릴 방법??",
+      "reason": "check default로 되돌릴 방법??"
+    },
+    {
+      "line": 6243,
+      "type": "TODO",
+      "content": "// TODO statusbar grip image",
+      "reason": "statusbar grip image"
+    },
+    {
+      "line": 6592,
+      "type": "TODO",
+      "content": "// TODO Runtime버젼 미구현!!!!",
+      "reason": "Runtime버젼 미구현!!!!"
+    },
+    {
+      "line": 11521,
+      "type": "TODO",
+      "content": "//    //Todo..",
+      "reason": ".."
+    }
+  ],
+  "ExportObject.js": [
+    {
+      "line": 597,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 600,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 2402,
+      "type": "TODO",
+      "content": "// todo?",
+      "reason": "?"
+    },
+    {
+      "line": 4571,
+      "type": "TODO",
+      "content": "// TODO : dataset , xml",
+      "reason": ": dataset , xml"
+    }
+  ],
+  "FileDownTransfer.js": [
+    {
+      "line": 204,
+      "type": "TODO",
+      "content": "// TODO : XML response 처리용.",
+      "reason": ": XML response 처리용."
+    }
+  ],
+  "FileUpload.js": [
+    {
+      "line": 725,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    }
+  ],
+  "FormBase.js": [
+    {
+      "line": 978,
+      "type": "TODO",
+      "content": "// TODO LAYOUT",
+      "reason": "LAYOUT"
+    },
+    {
+      "line": 1873,
+      "type": "TODO",
+      "content": "//Todo JSON",
+      "reason": "JSON"
+    },
+    {
+      "line": 2020,
+      "type": "TODO",
+      "content": "// TODO check Form계열 close Event 버블링여부는 논의중.",
+      "reason": "check Form계열 close Event 버블링여부는 논의중."
+    },
+    {
+      "line": 2055,
+      "type": "TODO",
+      "content": "// TODO check Form계열 close Event 버블링여부는 논의중.",
+      "reason": "check Form계열 close Event 버블링여부는 논의중."
+    },
+    {
+      "line": 2209,
+      "type": "TODO",
+      "content": "// TODO check 한번에 여러 Step 넘어갈 수 있게 할까?",
+      "reason": "check 한번에 여러 Step 넘어갈 수 있게 할까?"
+    },
+    {
+      "line": 2966,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 3363,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 4116,
+      "type": "TODO",
+      "content": "// TODO API로?",
+      "reason": "API로?"
+    },
+    {
+      "line": 4639,
+      "type": "TODO",
+      "content": "// TODO check Tab,Enter,Esc는 keydown보다 먼저 처리되어야 하는것이 아닌지? (PretranslateMsg)",
+      "reason": "check Tab,Enter,Esc는 keydown보다 먼저 처리되어야 하는것이 아닌지? (PretranslateMsg)"
+    },
+    {
+      "line": 5127,
+      "type": "TODO",
+      "content": "// todo",
+      "reason": ""
+    },
+    {
+      "line": 5438,
+      "type": "TODO",
+      "content": "// TODO check 컴포넌트에서 사용하는곳이 있을지",
+      "reason": "check 컴포넌트에서 사용하는곳이 있을지"
+    },
+    {
+      "line": 5441,
+      "type": "TODO",
+      "content": "// TODO Form내 focus를 얻는것이 아니고 Platform전체에서 Focus를 가진 컴포넌트를 리턴해야함.",
+      "reason": "Form내 focus를 얻는것이 아니고 Platform전체에서 Focus를 가진 컴포넌트를 리턴해야함."
+    },
+    {
+      "line": 5656,
+      "type": "TODO",
+      "content": "// TODO check DefaultButton remove시 null 처리. 9.2확인 필요",
+      "reason": "check DefaultButton remove시 null 처리. 9.2확인 필요"
+    },
+    {
+      "line": 5906,
+      "type": "TODO",
+      "content": "// TODO getFocus로 가져와야 하는게 아닌지?",
+      "reason": "getFocus로 가져와야 하는게 아닌지?"
+    },
+    {
+      "line": 6875,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 6997,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    }
+  ],
+  "FrameBase.js": [
+    {
+      "line": 367,
+      "type": "TODO",
+      "content": "// TODO check TitlebarHeight를 셋팅하는 코드가 여러번 호출됨. (setTitlebarHeight) Sequence 확인 필요..좀 정리해야할듯함",
+      "reason": "check TitlebarHeight를 셋팅하는 코드가 여러번 호출됨. (setTitlebarHeight) Sequence 확인 필요..좀 정리해야할듯함"
+    },
+    {
+      "line": 381,
+      "type": "TODO",
+      "content": "// TODO 스펙 재검토 후 삭제",
+      "reason": "스펙 재검토 후 삭제"
+    },
+    {
+      "line": 440,
+      "type": "TODO",
+      "content": "// TODO check on_create에서 이동됨. ControlElem.handle까지 생성된 후 호출되어야함.",
+      "reason": "check on_create에서 이동됨. ControlElem.handle까지 생성된 후 호출되어야함."
+    },
+    {
+      "line": 1182,
+      "type": "TODO",
+      "content": "// TODO check 이렇게 체크를 했는데도 runtime버젼에서 getOwnerFrame이 application이 나오는 경우가 있는데 왜?",
+      "reason": "check 이렇게 체크를 했는데도 runtime버젼에서 getOwnerFrame이 application이 나오는 경우가 있는데 왜?"
+    },
+    {
+      "line": 1281,
+      "type": "TODO",
+      "content": "// TODO insert to Z-orderMap",
+      "reason": "insert to Z-orderMap"
+    },
+    {
+      "line": 1282,
+      "type": "TODO",
+      "content": "// TODO check activeframe 체크rmfj",
+      "reason": "check activeframe 체크rmfj"
+    },
+    {
+      "line": 1319,
+      "type": "TODO",
+      "content": "// TODO find next order frame",
+      "reason": "find next order frame"
+    },
+    {
+      "line": 1785,
+      "type": "TODO",
+      "content": "// TODO close windowed",
+      "reason": "close windowed"
+    },
+    {
+      "line": 1915,
+      "type": "TODO",
+      "content": "///if (nexacro._isTouchInteraction) // TODO check 허용하게 되면 maximize등에서 오류가 나는듯.(이벤트가 다르게 나옴)",
+      "reason": "check 허용하게 되면 maximize등에서 오류가 나는듯.(이벤트가 다르게 나옴)"
+    },
+    {
+      "line": 1921,
+      "type": "TODO",
+      "content": "// TODO check is_visible.. is_enable..",
+      "reason": "check is_visible.. is_enable.."
+    },
+    {
+      "line": 1923,
+      "type": "TODO",
+      "content": "// TODO check dragmovetype Property (none)",
+      "reason": "check dragmovetype Property (none)"
+    },
+    {
+      "line": 1927,
+      "type": "TODO",
+      "content": "// TODO check autofitframe (mainframe's child)",
+      "reason": "check autofitframe (mainframe's child)"
+    },
+    {
+      "line": 1954,
+      "type": "TODO",
+      "content": "if (nexacro._isTouchInteraction) // TODO check 허용하게 되면 maximize등에서 오류가 나는듯.(이벤트가 다르게 나옴)",
+      "reason": "check 허용하게 되면 maximize등에서 오류가 나는듯.(이벤트가 다르게 나옴)"
+    },
+    {
+      "line": 1960,
+      "type": "TODO",
+      "content": "if (nexacro._Browser != \"Runtime\" && this._is_window) // TODO check! Resize Window",
+      "reason": "check! Resize Window"
+    },
+    {
+      "line": 1966,
+      "type": "TODO",
+      "content": "// TODO check is_visible.. is_enable..",
+      "reason": "check is_visible.. is_enable.."
+    },
+    {
+      "line": 1968,
+      "type": "TODO",
+      "content": "// TODO check autofitframe (mainframe's child)",
+      "reason": "check autofitframe (mainframe's child)"
+    },
+    {
+      "line": 2030,
+      "type": "TODO",
+      "content": "// TODO 이벤트 버블링 다시 확인",
+      "reason": "이벤트 버블링 다시 확인"
+    },
+    {
+      "line": 2064,
+      "type": "TODO",
+      "content": "// TODO check 메뉴얼상 onactivate,ondeactivate 모두 child->parent 순으로 발생한다고 되어있으나",
+      "reason": "check 메뉴얼상 onactivate,ondeactivate 모두 child->parent 순으로 발생한다고 되어있으나"
+    },
+    {
+      "line": 2068,
+      "type": "TODO",
+      "content": "// TODO check fromobject/fromreferenceobject가 모두 자기자신이다 (9.2)",
+      "reason": "check fromobject/fromreferenceobject가 모두 자기자신이다 (9.2)"
+    },
+    {
+      "line": 2085,
+      "type": "TODO",
+      "content": "// TODO check fromobject/fromreferenceobject가 모두 자기자신이다 (9.2)",
+      "reason": "check fromobject/fromreferenceobject가 모두 자기자신이다 (9.2)"
+    },
+    {
+      "line": 2356,
+      "type": "TODO",
+      "content": "// TODO check ModalAsync시 키 입력을 막기위해 넣었으나, tab처리는 브라우저단에서 처리되는듯하다.",
+      "reason": "check ModalAsync시 키 입력을 막기위해 넣었으나, tab처리는 브라우저단에서 처리되는듯하다."
+    },
+    {
+      "line": 2432,
+      "type": "TODO",
+      "content": "// TODO check 임시",
+      "reason": "check 임시"
+    },
+    {
+      "line": 2467,
+      "type": "TODO",
+      "content": "// TODO check object typecheck 방법?",
+      "reason": "check object typecheck 방법?"
+    },
+    {
+      "line": 4021,
+      "type": "TODO",
+      "content": "// TODO Widget, Tray에서 메소드 실행시 에러 발생. (사용불가)",
+      "reason": "Widget, Tray에서 메소드 실행시 에러 발생. (사용불가)"
+    },
+    {
+      "line": 4208,
+      "type": "TODO",
+      "content": "// TODO Widget, Tray에서 메소드 실행시 에러 발생. (사용불가)",
+      "reason": "Widget, Tray에서 메소드 실행시 에러 발생. (사용불가)"
+    },
+    {
+      "line": 4415,
+      "type": "TODO",
+      "content": "// TODO this.winlevel,this.layered,this.openstatus",
+      "reason": "this.winlevel,this.layered,this.openstatus"
+    },
+    {
+      "line": 4436,
+      "type": "TODO",
+      "content": "// TODO focus된 object를 기본 opener로 갖고가는 코드",
+      "reason": "focus된 object를 기본 opener로 갖고가는 코드"
+    },
+    {
+      "line": 4660,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 4665,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 5330,
+      "type": "TODO",
+      "content": "// TODO API로?",
+      "reason": "API로?"
+    },
+    {
+      "line": 5465,
+      "type": "TODO",
+      "content": "// TODO check 모니터 관련 API 미지원 (html5)",
+      "reason": "check 모니터 관련 API 미지원 (html5)"
+    },
+    {
+      "line": 5519,
+      "type": "TODO",
+      "content": "// TODO IE8에서 window생성직후에 clientWidth,Height값이 0이다.. offsetWidth,Height는 정상",
+      "reason": "IE8에서 window생성직후에 clientWidth,Height값이 0이다.. offsetWidth,Height는 정상"
+    },
+    {
+      "line": 5716,
+      "type": "TODO",
+      "content": "// TODO check modal로 막혀있는 도중 객체가 파괴됐을 경우?? 어쩌나??",
+      "reason": "check modal로 막혀있는 도중 객체가 파괴됐을 경우?? 어쩌나??"
+    },
+    {
+      "line": 5859,
+      "type": "TODO",
+      "content": "this._zordermap = new nexacro.Collection(); // TODO check element zorder API exist?",
+      "reason": "check element zorder API exist?"
+    },
+    {
+      "line": 5904,
+      "type": "TODO",
+      "content": "if (frame.set_resizable) // TODO check childframe만 해야 함. 나머지는 resizable이 없음.",
+      "reason": "check childframe만 해야 함. 나머지는 resizable이 없음."
+    },
+    {
+      "line": 6208,
+      "type": "TODO",
+      "content": "// TODO 차후변경 (9.2에 반영된 후)",
+      "reason": "차후변경 (9.2에 반영된 후)"
+    },
+    {
+      "line": 6577,
+      "type": "TODO",
+      "content": "// TODO check frameset내 frame중 right가 frameset의 client를 벗어나는 frame은 0크기를 갖는다. -> 안보임. 9.2도 동일",
+      "reason": "check frameset내 frame중 right가 frameset의 client를 벗어나는 frame은 0크기를 갖는다. -> 안보임. 9.2도 동일"
+    },
+    {
+      "line": 7954,
+      "type": "TODO",
+      "content": "// TODO minimize된 위치로 이동",
+      "reason": "minimize된 위치로 이동"
+    },
+    {
+      "line": 7956,
+      "type": "TODO",
+      "content": "//var minwidth = 25 * 5; // TODO get from styleprop",
+      "reason": "get from styleprop"
+    },
+    {
+      "line": 7958,
+      "type": "TODO",
+      "content": "var minheight = this._p_minimizeheight; // TODO get from styleprop",
+      "reason": "get from styleprop"
+    },
+    {
+      "line": 8753,
+      "type": "TODO",
+      "content": "// TODO check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요",
+      "reason": "check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요"
+    },
+    {
+      "line": 8765,
+      "type": "TODO",
+      "content": "// TODO check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요",
+      "reason": "check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요"
+    },
+    {
+      "line": 8874,
+      "type": "TODO",
+      "content": "// TODO check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요",
+      "reason": "check 바로 바꾸면 될런지. syscommand 처리를 해야 하는지 검토필요"
+    },
+    {
+      "line": 8961,
+      "type": "TODO",
+      "content": "var defaultminwidth = this._p_minimizewidth ? this._p_minimizewidth : 150; //150; // TODO <--get from styleprop",
+      "reason": "<--get from styleprop"
+    },
+    {
+      "line": 8973,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 9118,
+      "type": "TODO",
+      "content": "//\t// TODO _is_visible",
+      "reason": "_is_visible"
+    },
+    {
+      "line": 9120,
+      "type": "TODO",
+      "content": "//\t// TODO 상위로 올라가면서 minimizedwidth 값을 검사",
+      "reason": "상위로 올라가면서 minimizedwidth 값을 검사"
+    },
+    {
+      "line": 9137,
+      "type": "TODO",
+      "content": "// TODO _is_visible",
+      "reason": "_is_visible"
+    },
+    {
+      "line": 9139,
+      "type": "TODO",
+      "content": "// TODO 상위로 올라가면서 minimizedwidth 값을 검사",
+      "reason": "상위로 올라가면서 minimizedwidth 값을 검사"
+    }
+  ],
+  "ListBox.js": [
+    {
+      "line": 2327,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 2645,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    }
+  ],
+  "MultiCombo.js": [
+    {
+      "line": 4676,
+      "type": "TODO",
+      "content": "// TODO : ondropdown에서 index변경경우 필요.",
+      "reason": ": ondropdown에서 index변경경우 필요."
+    },
+    {
+      "line": 4706,
+      "type": "TODO",
+      "content": "// TODO.. index 수정 후 재작업 필요함",
+      "reason": ".. index 수정 후 재작업 필요함"
+    },
+    {
+      "line": 6963,
+      "type": "TODO",
+      "content": "// todo 안쓰는 이벤트 지워야 할지",
+      "reason": "안쓰는 이벤트 지워야 할지"
+    },
+    {
+      "line": 8814,
+      "type": "TODO",
+      "content": "// todo 이벤트 호출 방식",
+      "reason": "이벤트 호출 방식"
+    }
+  ],
+  "Panel.js": [
+    {
+      "line": 402,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 434,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 541,
+      "type": "TODO",
+      "content": "//TODO:",
+      "reason": ""
+    },
+    {
+      "line": 572,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1015,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 1089,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 1224,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1544,
+      "type": "TODO",
+      "content": "//Todo",
+      "reason": ""
+    },
+    {
+      "line": 1910,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1920,
+      "type": "TODO",
+      "content": "//todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1945,
+      "type": "TODO",
+      "content": "//todo..",
+      "reason": ".."
+    }
+  ],
+  "Sketch.js": [
+    {
+      "line": 97,
+      "type": "TODO",
+      "content": "// TODO expr, usedecorate",
+      "reason": "expr, usedecorate"
+    },
+    {
+      "line": 1009,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1014,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1019,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1024,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1029,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    },
+    {
+      "line": 1034,
+      "type": "TODO",
+      "content": "//Todo..",
+      "reason": ".."
+    }
+  ],
+  "StatusBar.js": [
+    {
+      "line": 217,
+      "type": "TODO",
+      "content": "// TODO ControlElement 상속받은 Element로 교체? (ImageElem은 cursor, hittest_type API없음)",
+      "reason": "ControlElement 상속받은 Element로 교체? (ImageElem은 cursor, hittest_type API없음)"
+    }
+  ],
+  "Step.js": [
+    {
+      "line": 399,
+      "type": "TODO",
+      "content": "// TODO2 : positionstep -1 인 경우 처리 필요",
+      "reason": "2 : positionstep -1 인 경우 처리 필요"
+    }
+  ],
+  "Tab.js": [
+    {
+      "line": 75,
+      "type": "TODO",
+      "content": "_pTab._p_usetabbutton = true;  // todo",
+      "reason": ""
+    },
+    {
+      "line": 556,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 561,
+      "type": "TODO",
+      "content": "//TODO",
+      "reason": ""
+    },
+    {
+      "line": 2158,
+      "type": "TODO",
+      "content": "// var brotatetext = this.rotatetext & false;  //TODO brotatetext = false;",
+      "reason": "brotatetext = false;"
+    },
+    {
+      "line": 2740,
+      "type": "TODO",
+      "content": "//TODO rotatetext",
+      "reason": "rotatetext"
+    },
+    {
+      "line": 3705,
+      "type": "TODO",
+      "content": "// TODO Accessibility API로 연결",
+      "reason": "Accessibility API로 연결"
+    },
+    {
+      "line": 3718,
+      "type": "TODO",
+      "content": "// TODO Accessibility API로 연결",
+      "reason": "Accessibility API로 연결"
+    },
+    {
+      "line": 3757,
+      "type": "TODO",
+      "content": "// TODO Accessibility API로 연결",
+      "reason": "Accessibility API로 연결"
+    },
+    {
+      "line": 3770,
+      "type": "TODO",
+      "content": "// TODO Accessibility API로 연결",
+      "reason": "Accessibility API로 연결"
+    }
+  ],
+  "TabBar.js": [
+    {
+      "line": 2256,
+      "type": "TODO",
+      "content": "if (hScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2270,
+      "type": "TODO",
+      "content": "if (vScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2293,
+      "type": "TODO",
+      "content": "if (hScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2303,
+      "type": "TODO",
+      "content": "if (vScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    }
+  ],
+  "TextArea.js": [
+    {
+      "line": 1481,
+      "type": "TODO",
+      "content": "// todo?",
+      "reason": "?"
+    },
+    {
+      "line": 1520,
+      "type": "TODO",
+      "content": "// todo?",
+      "reason": "?"
+    },
+    {
+      "line": 1603,
+      "type": "TODO",
+      "content": ";   // todo?",
+      "reason": "?"
+    }
+  ],
+  "TitleBar.js": [
+    {
+      "line": 410,
+      "type": "TODO",
+      "content": "//TODO system icon",
+      "reason": "system icon"
+    },
+    {
+      "line": 489,
+      "type": "TODO",
+      "content": "// TODO TextElement 현재 회전 시킬 방법이 없음.",
+      "reason": "TextElement 현재 회전 시킬 방법이 없음."
+    }
+  ],
+  "View.js": [
+    {
+      "line": 126,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 300,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    }
+  ],
+  "VirtualFile.js": [
+    {
+      "line": 79,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    },
+    {
+      "line": 84,
+      "type": "TODO",
+      "content": "// TODO",
+      "reason": ""
+    }
+  ],
+  "WebBrowser.js": [
+    {
+      "line": 51,
+      "type": "TODO",
+      "content": "// TODO expr, usedecorate",
+      "reason": "expr, usedecorate"
+    }
+  ],
+  "WebView.js": [
+    {
+      "line": 59,
+      "type": "TODO",
+      "content": "// TODO expr, usedecorate",
+      "reason": "expr, usedecorate"
+    }
+  ]
+}

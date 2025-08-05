@@ -1,5 +1,4 @@
 import { state } from './state.js';
-import * as C from './constants.js';
 import { filterButtons } from './ui.js';
 import { drawAnnotationBarChart } from './chart-drawer.js';
 
@@ -13,7 +12,8 @@ async function loadAnnotationStatus() {
     const chartContainer = document.getElementById('annotation-chart-container');
 
     try {
-        const response = await fetch(C.ANNOTATIONS_JSON_FILE_PATH);
+        const ANNOTATIONS_JSON_FILE_PATH = `./parsers/json/${state.currentWorkVersion}/codebase/output_annotations.json`;
+        const response = await fetch(ANNOTATIONS_JSON_FILE_PATH);
         if (!response.ok) {
             throw new Error('Annotation data not found');
         }
@@ -104,12 +104,18 @@ export async function loadComponentAnalyzerData() {
     const loadingMessage = document.getElementById('loading-message');
     const searchInput = document.getElementById('search-input');
 
+    const version = state.currentWorkVersion;
+    const basePath = `./parsers/json/${version}`;
+
     try {
         const responses = await Promise.all([
-            fetch(C.JSON_FILE_PATH), fetch(C.PROPERTY_JSON_FILE_PATH), fetch(C.EVENT_JSON_FILE_PATH),
-            fetch(C.METAINFO_PROPERTY_JSON_FILE_PATH), fetch(C.ALL_COMPONENT_PROPERTIES_JSON_FILE_PATH),
-            fetch(C.METAINFO_EVENT_JSON_FILE_PATH), fetch(C.ALL_COMPONENT_EVENTS_JSON_FILE_PATH),
-            fetch(C.AGGREGATED_NAMES_JSON_FILE_PATH)
+            fetch(`${basePath}/codebase/output.json`),
+            fetch(`${basePath}/codebase/output_property.json`),
+            fetch(`${basePath}/codebase/output_event.json`),
+            fetch(`${basePath}/metainfo/output_property_metainfo.json`),
+            fetch(`${basePath}/codebase/all_component_properties.json`),
+            fetch(`${basePath}/metainfo/output_event_metainfo.json`),
+            fetch(`${basePath}/aggregated_component_names.json`)
         ]);
 
         for (const res of responses) {

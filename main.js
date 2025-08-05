@@ -1,4 +1,7 @@
 import { switchTab, filterButtons } from './js/app/ui.js';
+import { setCurrentWorkVersion, state } from './js/app/state.js';
+import { loadComponentAnalyzerData } from './js/app/data-loader.js';
+import { showAnalysisView } from './js/app/chart-drawer.js';
 
 /**
  * Main function to load data and set up the application.
@@ -7,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sidebarContent = document.getElementById('sidebar-content');
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const searchInput = document.getElementById('search-input');
+    const workVersionSelector = document.getElementById('work-version-selector');
 
     // --- Event Listeners ---
 
@@ -32,6 +36,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. Search Input
     searchInput.addEventListener('input', filterButtons);
 
+    // 4. Work Version Change
+    workVersionSelector.addEventListener('click', async (e) => {
+        const button = e.target.closest('.work-version-btn');
+        if (!button) return;
+
+        const newVersion = button.dataset.version;
+        if (newVersion === state.currentWorkVersion) return; // Do nothing if the same version is clicked
+
+        setCurrentWorkVersion(newVersion);
+
+        // Update button styles
+        document.querySelectorAll('.work-version-btn').forEach(btn => {
+            btn.classList.remove('bg-white', 'text-blue-600', 'shadow');
+            btn.classList.add('text-gray-600');
+        });
+        button.classList.add('bg-white', 'text-blue-600', 'shadow');
+        button.classList.remove('text-gray-600');
+
+        // Reload component data
+        await loadComponentAnalyzerData();
+        
+        // Re-filter buttons if there is a search term
+        filterButtons();
+
+        // If a component was being viewed, refresh its analysis view
+        if (state.currentSelectedComponent) {
+            showAnalysisView(state.currentSelectedComponent);
+        }
+    });
 
     // --- Initial Setup ---
     

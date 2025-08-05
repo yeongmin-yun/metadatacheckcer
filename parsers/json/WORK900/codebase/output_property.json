@@ -1,0 +1,1277 @@
+[
+  {
+    "componentname": "AbstractComponent",
+    "properties": [
+      "cssclass",
+      "initvalueid",
+      "codecolumn",
+      "datacolumn",
+      "innerdataset",
+      "background",
+      "border",
+      "borderRadius",
+      "boxShadow",
+      "color",
+      "cursor",
+      "edge",
+      "font",
+      "letterSpacing",
+      "opacity",
+      "padding",
+      "wordSpacing",
+      "enable",
+      "enableevent",
+      "hotkey",
+      "index",
+      "rtl",
+      "taborder",
+      "tabstop",
+      "text",
+      "tooltiptext",
+      "tooltiptype",
+      "value",
+      "visible",
+      "positionstep",
+      "left",
+      "top",
+      "width",
+      "height",
+      "right",
+      "bottom",
+      "minwidth",
+      "minheight",
+      "maxwidth",
+      "maxheight",
+      "flexgrow",
+      "flexshrink",
+      "layoutorder",
+      "tablecellarea",
+      "acceptvaluetype",
+      "readonly",
+      "controltype",
+      "accessibilityaction",
+      "accessibilitydesclevel",
+      "accessibilitydescription",
+      "accessibilityenable",
+      "accessibilitylabel",
+      "accessibilityrole"
+    ],
+    "filename": "AbstractComp.js"
+  },
+  {
+    "componentname": "AbstractSelectAny",
+    "properties": [
+      "selectmulticombo",
+      "selectlistbox",
+      "selectcheckboxset"
+    ],
+    "filename": "AbstractSelectAny.js"
+  },
+  {
+    "componentname": "AbstractSelectOne",
+    "properties": [
+      "selectcombo",
+      "selectlistbox",
+      "selectradio"
+    ],
+    "filename": "AbstractSelectOne.js"
+  },
+  {
+    "componentname": "Action",
+    "properties": [
+      "targetview",
+      "name"
+    ],
+    "filename": "Action.js"
+  },
+  {
+    "componentname": "AnimationItem",
+    "properties": [
+      "componentid"
+    ],
+    "filename": "Animation.js"
+  },
+  {
+    "componentname": "Button",
+    "properties": [
+      "defaultbutton",
+      "escapebutton"
+    ],
+    "filename": "Button.js"
+  },
+  {
+    "componentname": "Calendar",
+    "properties": [
+      "text",
+      "value",
+      "displaynulltext",
+      "displayinvalidtext",
+      "readonly",
+      "autoselect",
+      "autoskip",
+      "type",
+      "datepickerchangetype",
+      "popuptype",
+      "locale",
+      "usecontextmenu",
+      "usesoftkeyboard",
+      "innerdataset",
+      "backgroundcolumn",
+      "bordercolumn",
+      "datecolumn",
+      "textcolorcolumn",
+      "buttonsize",
+      "headheight",
+      "daysize",
+      "popupsize",
+      "dateformat",
+      "editformat",
+      "headformat",
+      "weekformat",
+      "monthformat",
+      "yearformat",
+      "usetrailingday",
+      "showmonthspin",
+      "showyearspin",
+      "visible",
+      "calendaredit",
+      "calendarspindownbutton",
+      "calendarspinupbutton",
+      "datepicker",
+      "dropbutton"
+    ],
+    "filename": "Calendar.js"
+  },
+  {
+    "componentname": "CellBar",
+    "properties": [
+      "pos"
+    ],
+    "filename": "Cell.js"
+  },
+  {
+    "componentname": "CheckBox",
+    "properties": [
+      "value",
+      "readonly",
+      "falsevalue",
+      "truevalue"
+    ],
+    "filename": "CheckBox.js"
+  },
+  {
+    "componentname": "CheckBoxSet",
+    "properties": [
+      "itemheight",
+      "columncount",
+      "codecolumn",
+      "datacolumn",
+      "direction",
+      "index",
+      "innerdataset",
+      "rowcount",
+      "readonly",
+      "readonlycolumn",
+      "value",
+      "text",
+      "textseparator",
+      "locale",
+      "backgroundcolumn",
+      "bordercolumn",
+      "datecolumn",
+      "textcolorcolumn",
+      "acceptvaluetype",
+      "multiselect",
+      "accessibilityrole",
+      "accessibilityaction",
+      "accessibilitydesclevel",
+      "accessibilitydescription",
+      "accessibilityenable",
+      "accessibilitylabel",
+      "itemaccessibility",
+      "itemaccessibilityrole",
+      "itemaccessibilityenable",
+      "itemaccessibilitylabel",
+      "itemaccessibilitydescription",
+      "itemaccessibilityaction",
+      "itemaccessibilitydesclevel"
+    ],
+    "filename": "CheckBoxSet.js"
+  },
+  {
+    "componentname": "Combo",
+    "properties": [
+      "value",
+      "index",
+      "text",
+      "codecolumn",
+      "datacolumn",
+      "innerdataset",
+      "autoselect",
+      "autoskip",
+      "usesoftkeyboard",
+      "displaynulltext",
+      "imemode",
+      "readonly",
+      "usecontextmenu",
+      "displayrowcount",
+      "buttonsize",
+      "itemheight",
+      "type",
+      "popuptype",
+      "popupsize",
+      "acceptvaluetype",
+      "scrollbarbarminsize",
+      "scrollbardecbuttonsize",
+      "scrollbarsize",
+      "scrollbarbaroutsize ",
+      "scrollbarincbuttonsize",
+      "scrollbartrackbarsize",
+      "selectbyarrowkey",
+      "combolist",
+      "comboedit",
+      "dropbutton"
+    ],
+    "filename": "Combo.js"
+  },
+  {
+    "componentname": "Component",
+    "properties": [
+      "expr",
+      "cssclass",
+      "visible",
+      "enable",
+      "taborder",
+      "tabstop",
+      "enableredraw",
+      "enableevent",
+      "tooltiptype",
+      "tooltiptext",
+      "fittocontents",
+      "hotkey",
+      "rtl",
+      "positionstep",
+      "resizertype",
+      "resizerdirection",
+      "scrollbartype",
+      "scrolltype",
+      "scrollbarsize",
+      "scrollindicatorsize",
+      "scrollbarbarminsize",
+      "scrollbarbaroutsize",
+      "scrollbardecbuttonsize",
+      "scrollbarincbuttonsize",
+      "scrollbartrackbarsize",
+      "spinbardecbuttonsize",
+      "spinbarincbuttonsize",
+      "spinbartype",
+      "left",
+      "top",
+      "right",
+      "bottom",
+      "width",
+      "height",
+      "minwidth",
+      "maxwidth",
+      "minheight",
+      "maxheight",
+      "color",
+      "font",
+      "wordSpacing",
+      "letterSpacing",
+      "textDecoration",
+      "wordWrap",
+      "borderRadius",
+      "border",
+      "background",
+      "edge",
+      "cursor",
+      "opacity",
+      "boxShadow",
+      "padding",
+      "textAlign",
+      "verticalAlign",
+      "accessibilityrole",
+      "accessibilityenable",
+      "accessibilitylabel",
+      "accessibilitydescription",
+      "accessibilityaction",
+      "accessibilitydesclevel",
+      "itemaccessibilityenable",
+      "flexgrow",
+      "flexshrink",
+      "layoutorder",
+      "tablecellarea",
+      "initvalueid",
+      "hittesttype",
+      "name",
+      "text",
+      "hscrollbar",
+      "vscrollbar",
+      "hspinbar",
+      "vspinbar"
+    ],
+    "filename": "CompBase.js"
+  },
+  {
+    "componentname": "DSColumnInfo",
+    "properties": [
+      "name",
+      "size",
+      "type",
+      "prop",
+      "sumtext",
+      "datapath"
+    ],
+    "filename": "Data.js"
+  },
+  {
+    "componentname": "DataObject",
+    "properties": [
+      "url",
+      "enableevent",
+      "preload",
+      "data"
+    ],
+    "filename": "DataObject.js"
+  },
+  {
+    "componentname": "Dataset",
+    "properties": [
+      "arguments",
+      "binddataobject",
+      "colcount",
+      "colinfos",
+      "collation",
+      "constcount",
+      "dataobjectbindmode",
+      "dataobjectpath",
+      "enableevent",
+      "filterstr",
+      "keystring",
+      "loadfiltermode",
+      "loadkeymode",
+      "name",
+      "preload",
+      "progressload",
+      "reversesubsum",
+      "rowcount",
+      "rowposition",
+      "saveinfinity",
+      "saveinvaliddate",
+      "savenan",
+      "serverdatasetid",
+      "updatecontrol",
+      "url",
+      "useclientlayout"
+    ],
+    "filename": "Dataset.js"
+  },
+  {
+    "componentname": "DateField",
+    "properties": [
+      "value",
+      "text",
+      "format",
+      "inputtype",
+      "usedropbutton",
+      "datetimepicker",
+      "popuptype",
+      "popupsize",
+      "displayformat",
+      "innerdataset",
+      "backgroundcolumn",
+      "bordercolumn",
+      "datecolumn",
+      "textcolorcolumn",
+      "hintingcolumn",
+      "readonlycolumn",
+      "headlinedateformat",
+      "headlinetimeformat",
+      "headlineposition",
+      "headlinesize",
+      "useheadline",
+      "maskchar",
+      "invalidvalueaction",
+      "locale",
+      "visible",
+      "closebuttontext",
+      "okbuttontext",
+      "cancelbuttontext",
+      "closebuttonsize"
+    ],
+    "filename": "DateField.js"
+  },
+  {
+    "componentname": "DatePickerControl",
+    "properties": [
+      "readonly"
+    ],
+    "filename": "DatePicker.js"
+  },
+  {
+    "componentname": "DateRangePicker",
+    "properties": [
+      "type",
+      "displaytype",
+      "useheadline",
+      "datepickerheadheight",
+      "displaymonthcount",
+      "value",
+      "startdate",
+      "enddate",
+      "mindate",
+      "maxdate",
+      "okbuttontext",
+      "cancelbuttontext",
+      "closebuttontext",
+      "headlinedateformat",
+      "headlinetimeformat",
+      "defaultrangeposition",
+      "rangeposition",
+      "innerdataset",
+      "backgroundcolumn",
+      "bordercolumn",
+      "datecolumn",
+      "textcolorcolumn",
+      "hintingcolumn",
+      "readonlycolumn",
+      "tabbuttonheight",
+      "closebuttonsize",
+      "headlinestartdatenulltext",
+      "headlineenddatenulltext",
+      "readonly",
+      "datetabbuttontext",
+      "timetabbuttontext",
+      "headlineposition",
+      "direction",
+      "locale",
+      "headlinesize"
+    ],
+    "filename": "DateRangePicker.js"
+  },
+  {
+    "componentname": "Div",
+    "properties": [
+      "async",
+      "semantictag",
+      "url",
+      "urlchangeeffect",
+      "text",
+      "textAlign",
+      "verticalAlign",
+      "formscrollbarbarminsize",
+      "formscrollbarbaroutsize",
+      "formscrollbardecbuttonsize",
+      "formscrollbarincbuttonsize",
+      "formscrollindicatorsize",
+      "formscrolltype",
+      "form",
+      "formscrollbarsize",
+      "formscrollbartrackbarsize",
+      "formscrollbartype"
+    ],
+    "filename": "Div.js"
+  },
+  {
+    "componentname": "Edit",
+    "properties": [
+      "value",
+      "displaynulltext",
+      "readonly",
+      "password",
+      "autoselect",
+      "autoskip",
+      "maxlength",
+      "usesoftkeyboard",
+      "inputmode",
+      "inputtype",
+      "inputfilter",
+      "imeaction",
+      "imemode",
+      "cursor",
+      "text",
+      "usecontextmenu"
+    ],
+    "filename": "Edit.js"
+  },
+  {
+    "componentname": "ExcelExport",
+    "properties": [
+      "exporturl",
+      "exportactivemode",
+      "exporteventtype",
+      "exportfilename",
+      "exportfilepath",
+      "exportmessagealert",
+      "exportmessagecomplete",
+      "exportmessageprocess",
+      "exportmessagready",
+      "exporttype",
+      "exportuitype",
+      "templatefilename",
+      "commdataformat",
+      "commandversion",
+      "commcompress",
+      "separator",
+      "quotechar",
+      "transferrowcount",
+      "exportfilepassword",
+      "exportmessageready",
+      "exportwordwrap",
+      "filefilter",
+      "filefilterindex"
+    ],
+    "filename": "ExportObject.js"
+  },
+  {
+    "componentname": "FileDialog",
+    "properties": [
+      "accept",
+      "defaultextension",
+      "filter",
+      "filterindex",
+      "id",
+      "name",
+      "parent"
+    ],
+    "filename": "FileDialog.js"
+  },
+  {
+    "componentname": "FileDownload",
+    "properties": [
+      "tabstop",
+      "downloadurl",
+      "downloadfilename",
+      "filefilter",
+      "filefilterindex"
+    ],
+    "filename": "FileDownload.js"
+  },
+  {
+    "componentname": "FileDownTransfer",
+    "properties": [
+      "downloadfilename",
+      "id",
+      "name",
+      "postdatalist",
+      "url"
+    ],
+    "filename": "FileDownTransfer.js"
+  },
+  {
+    "componentname": "FileUpload",
+    "properties": [
+      "text",
+      "value",
+      "buttonsize",
+      "buttontext",
+      "index",
+      "itemcount",
+      "itemheight",
+      "multiselect",
+      "uploadurl",
+      "filefilter",
+      "filefilterindex"
+    ],
+    "filename": "FileUpload.js"
+  },
+  {
+    "componentname": "FileUpTransfer",
+    "properties": [
+      "filelist",
+      "postdatalist",
+      "url"
+    ],
+    "filename": "FileUpTransfer.js"
+  },
+  {
+    "componentname": "BindItem",
+    "properties": [
+      "compid",
+      "propid",
+      "datasetid",
+      "columnid"
+    ],
+    "filename": "FormBase.js"
+  },
+  {
+    "componentname": "Frame",
+    "properties": [
+      "left",
+      "top",
+      "colcount",
+      "right",
+      "bottom",
+      "width",
+      "height",
+      "openstatus",
+      "showcascadestatustext",
+      "showcascadetitletext",
+      "showstatusbar",
+      "showtitlebar",
+      "showtitleicon",
+      "statustext",
+      "titletext",
+      "topmost",
+      "visible",
+      "statusbar",
+      "titlebar",
+      "frames",
+      "all"
+    ],
+    "filename": "FrameBase.js"
+  },
+  {
+    "componentname": "GoogleMap",
+    "properties": [
+      "apikey",
+      "items",
+      "language",
+      "latitude",
+      "longitude",
+      "region",
+      "showzoom",
+      "viewmode",
+      "zoomlevel",
+      "enable",
+      "visible"
+    ],
+    "filename": "GoogleMap.js"
+  },
+  {
+    "componentname": "GroupBox",
+    "properties": [
+      "titlealign",
+      "titlegap"
+    ],
+    "filename": "GroupBox.js"
+  },
+  {
+    "componentname": "ImageViewer",
+    "properties": [
+      "imagewidth",
+      "imageheight",
+      "image",
+      "stretch",
+      "imagealign"
+    ],
+    "filename": "ImageViewer.js"
+  },
+  {
+    "componentname": "ExcelImport",
+    "properties": [
+      "importtype",
+      "separator",
+      "quotechar",
+      "importurl",
+      "commdataformat",
+      "commcompress",
+      "importfilemode",
+      "userawdatevalue",
+      "userawnumbervalue",
+      "filefilter",
+      "filefilterindex",
+      "commandversion"
+    ],
+    "filename": "ImportObject.js"
+  },
+  {
+    "componentname": "ListBox",
+    "properties": [
+      "codecolumn",
+      "datacolumn",
+      "multiselect",
+      "innerdataset",
+      "readonly",
+      "index",
+      "text",
+      "value",
+      "dragscrolltype",
+      "selectscrollmode",
+      "itemheight",
+      "acceptvaluetypeowinvalid",
+      "itemaccessibilityrole",
+      "itemaccessibilityenable",
+      "itemaccessibilitylabel",
+      "itemaccessibilitydescription",
+      "itemaccessibilityaction",
+      "itemaccessibilitydesclevel"
+    ],
+    "filename": "ListBox.js"
+  },
+  {
+    "componentname": "MaskEdit",
+    "properties": [
+      "text",
+      "value",
+      "displaynulltext",
+      "displayinvalidtext",
+      "readonly",
+      "autoselect",
+      "autoskip",
+      "clipmode",
+      "limitbymask",
+      "format",
+      "maskchar",
+      "trimtype",
+      "type",
+      "locale",
+      "usesoftkeyboard",
+      "usecontextmenu",
+      "cursor",
+      "postfixtext",
+      "imeaction"
+    ],
+    "filename": "MaskEdit.js"
+  },
+  {
+    "componentname": "Menu",
+    "properties": [
+      "autohotkey",
+      "popupitemheight",
+      "popuptype",
+      "navigationbuttonsize",
+      "popupnavigationbuttonsize",
+      "captioncolumn",
+      "checkboxcolumn",
+      "enablecolumn",
+      "hotkeycolumn",
+      "iconcolumn",
+      "idcolumn",
+      "levelcolumn",
+      "userdatacolumn",
+      "innerdataset",
+      "hotkeytextgap"
+    ],
+    "filename": "Menu.js"
+  },
+  {
+    "componentname": "FlexibleComponent",
+    "properties": [
+      "flexcrossaxisalign",
+      "flexmainaxisalign",
+      "flexwrap"
+    ],
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "componentname": "MultiCombo",
+    "properties": [
+      "value",
+      "index",
+      "text",
+      "codecolumn",
+      "datacolumn",
+      "readonlycolumn",
+      "innerdataset",
+      "autoselect",
+      "autoskip",
+      "usesoftkeyboard",
+      "displaynulltext",
+      "imemode",
+      "readonly",
+      "usecontextmenu",
+      "displayrowcount",
+      "buttonsize",
+      "itemheight",
+      "type",
+      "popuptype",
+      "popupsize",
+      "acceptvaluetype",
+      "tagboxitemhorizontalgap",
+      "tagboxitemverticalgap",
+      "tagboxscrollbartype",
+      "tagboxscrollbarsize",
+      "tagboxscrollindicatorsize",
+      "tagbuttonsize",
+      "showselectallcheckbox",
+      "selectallcheckboxheight",
+      "edittype",
+      "textseparator",
+      "counttextformat",
+      "scrollbarbarminsize",
+      "scrollbardecbuttonsize",
+      "scrollbarsize",
+      "scrollbarbaroutsize",
+      "scrollbarincbuttonsize",
+      "scrollbartrackbarsize",
+      "dropbutton",
+      "multicombolist",
+      "multicombotagbox",
+      "multicombotext"
+    ],
+    "filename": "MultiCombo.js"
+  },
+  {
+    "componentname": "MultiLineTextField",
+    "properties": [
+      "acceptstab",
+      "text",
+      "value",
+      "scrollbarsize",
+      "scrollbarbarminsize",
+      "scrollbarbaroutsize",
+      "scrollbardecbuttonsize",
+      "scrollbarincbuttonsize",
+      "scrollbartrackbarsize",
+      "scrollindicatorsize",
+      "dragscrolltype",
+      "autoselect",
+      "autoskip",
+      "readonly",
+      "scrollbartype",
+      "cursor",
+      "maxlength",
+      "usesoftkeyboard",
+      "usecontextmenu"
+    ],
+    "filename": "MultiLineTextField.js"
+  },
+  {
+    "componentname": "Paginator",
+    "properties": [
+      "pagecount",
+      "pagesize",
+      "datacount",
+      "page",
+      "showprevnextbutton",
+      "showfirstlastbutton",
+      "innerdataset",
+      "navibuttongap",
+      "pagebuttongap",
+      "outsidegap",
+      "pagesiblingmaxcount",
+      "prevbuttontext",
+      "nextbuttontext",
+      "firstbuttontext",
+      "lastbuttontext"
+    ],
+    "filename": "Paginator.js"
+  },
+  {
+    "componentname": "Panel",
+    "properties": [
+      "flexcrossaxisalign",
+      "flexcrossaxiswrapalign",
+      "flexmainaxisalign",
+      "flexwrap",
+      "horizontalgap",
+      "spacing",
+      "tablecellalign",
+      "tablecellincompalign",
+      "tabledirection",
+      "tabletemplate",
+      "tabletemplatearea",
+      "verticalgap",
+      "items",
+      "type",
+      "fittocontents"
+    ],
+    "filename": "Panel.js"
+  },
+  {
+    "componentname": "Plugin",
+    "properties": [
+      "classid",
+      "classid64",
+      "codebase",
+      "code",
+      "archive",
+      "mimetype",
+      "pluginsrc",
+      "pluginpage",
+      "license",
+      "lpkpath",
+      "contents",
+      "adjustalpha",
+      "usepersistdata",
+      "windowed",
+      "popupstyle"
+    ],
+    "filename": "Plugin.js"
+  },
+  {
+    "componentname": "PopupDateRangePicker",
+    "properties": [
+      "useclosebutton",
+      "visible"
+    ],
+    "filename": "PopupDateRangePicker.js"
+  },
+  {
+    "componentname": "PopupDiv",
+    "properties": [
+      "visible",
+      "returnvalue"
+    ],
+    "filename": "PopupDiv.js"
+  },
+  {
+    "componentname": "PopupMenu",
+    "properties": [
+      "autohotkey",
+      "captioncolumn",
+      "checkboxcolumn",
+      "enablecolumn",
+      "hotkeycolumn",
+      "iconcolumn",
+      "idcolumn",
+      "innerdataset",
+      "itemheight",
+      "levelcolumn",
+      "navigationbuttonsize",
+      "popuptype",
+      "userdatacolumn"
+    ],
+    "filename": "PopupMenu.js"
+  },
+  {
+    "componentname": "ProgressBar",
+    "properties": [
+      "smooth",
+      "direction",
+      "pos",
+      "step",
+      "max",
+      "min",
+      "blocksize",
+      "blockgap",
+      "progressstartcap",
+      "progressendcap"
+    ],
+    "filename": "ProgressBar.js"
+  },
+  {
+    "componentname": "Radio",
+    "properties": [
+      "text",
+      "value",
+      "index",
+      "readonly",
+      "datacolumn",
+      "codecolumn",
+      "innerdataset",
+      "columncount",
+      "rowcount",
+      "direction",
+      "itemaccessibilityrole",
+      "itemaccessibilitylabel",
+      "itemaccessibilityenable",
+      "itemaccessibilitydescription",
+      "itemaccessibilityaction",
+      "itemaccessibilitydesclevel",
+      "acceptvaluetype"
+    ],
+    "filename": "Radio.js"
+  },
+  {
+    "componentname": "ResizerGripperControl",
+    "properties": [
+      "direction"
+    ],
+    "filename": "Resizer.js"
+  },
+  {
+    "componentname": "ScrollBar",
+    "properties": [
+      "barminsize",
+      "baroutsize",
+      "decbutton",
+      "decbuttonsize",
+      "direction",
+      "imgoutsize",
+      "incbutton",
+      "incbuttonsize",
+      "line",
+      "max",
+      "page",
+      "pos",
+      "trackbar",
+      "trackbarsize"
+    ],
+    "filename": "ScrollBar.js"
+  },
+  {
+    "componentname": "Sketch",
+    "properties": [
+      "editmode",
+      "enableredraw",
+      "redoable",
+      "undoable",
+      "usecontextmenu",
+      "readonly",
+      "value"
+    ],
+    "filename": "Sketch.js"
+  },
+  {
+    "componentname": "Spin",
+    "properties": [
+      "buttonposition",
+      "buttonsize",
+      "circulation",
+      "displaycomma",
+      "displaynulltext",
+      "displayinvalidtext",
+      "increment",
+      "locale",
+      "max",
+      "min",
+      "readonly",
+      "text",
+      "type",
+      "usecontextmenu",
+      "value",
+      "usesoftkeyboard",
+      "spinedit",
+      "spinupbutton",
+      "spindownbutton"
+    ],
+    "filename": "Spin.js"
+  },
+  {
+    "componentname": "SpinnerControl",
+    "properties": [
+      "value",
+      "currentrow"
+    ],
+    "filename": "SpinnerControl.js"
+  },
+  {
+    "componentname": "SplitterControl",
+    "properties": [
+      "direction",
+      "movetype",
+      "zindex"
+    ],
+    "filename": "Splitter.js"
+  },
+  {
+    "componentname": "IconText",
+    "properties": [
+      "icon",
+      "iconPosition",
+      "textPadding",
+      "textwidth"
+    ],
+    "filename": "Static.js"
+  },
+  {
+    "componentname": "StatusBarControl",
+    "properties": [
+      "progressbardirection",
+      "progressbargap",
+      "progressbarsize",
+      "progressbarsmooth"
+    ],
+    "filename": "StatusBar.js"
+  },
+  {
+    "componentname": "StepControl",
+    "properties": [
+      "stepitemsize",
+      "stepitemgap",
+      "stepcount",
+      "stepindex"
+    ],
+    "filename": "Step.js"
+  },
+  {
+    "componentname": "Switch",
+    "properties": [
+      "value",
+      "truevalue",
+      "falsevalue",
+      "readonly",
+      "switchbuttonwidth",
+      "textposition",
+      "textAlign",
+      "bartype"
+    ],
+    "filename": "Switch.js"
+  },
+  {
+    "componentname": "Tab",
+    "properties": [
+      "extrabuttonsize",
+      "focusacceptable",
+      "multiline",
+      "nextbutton",
+      "preload",
+      "prevbutton",
+      "roatatetext",
+      "selectchangetype",
+      "selectedtabbuttonheight",
+      "selectedtabbuttonwidth",
+      "showextrabutton",
+      "showtabbuttonicon",
+      "tabbuttongap",
+      "tabbuttonheight",
+      "tabbuttoniconsize",
+      "tabbuttonstartgap",
+      "tabbuttonwidth",
+      "tabindex",
+      "tabjustify",
+      "tabpages",
+      "tabposition",
+      "tabstyle",
+      "usecontrolkey",
+      "usetabbutton"
+    ],
+    "filename": "Tab.js"
+  },
+  {
+    "componentname": "TabBarItemControl",
+    "properties": [
+      "icontext",
+      "pinbutton",
+      "closebutton"
+    ],
+    "filename": "TabBar.js"
+  },
+  {
+    "componentname": "TextArea",
+    "properties": [
+      "maxlength",
+      "acceptstab",
+      "autoselect",
+      "autoskip",
+      "displaynulltext",
+      "dragscrolltype",
+      "imemode",
+      "inputfilter",
+      "inputmode",
+      "inputtype",
+      "scrollbartype",
+      "usecontextmenu",
+      "usesoftkeyboard",
+      "cursor",
+      "readonly",
+      "value",
+      "text"
+    ],
+    "filename": "TextArea.js"
+  },
+  {
+    "componentname": "TextField",
+    "properties": [
+      "value",
+      "readonly",
+      "autoselect",
+      "autoskip",
+      "maxlength",
+      "usesoftkeyboard",
+      "inputtype",
+      "text",
+      "usecontextmenu",
+      "pattern",
+      "prefixtext",
+      "postfixtext",
+      "useleadingbutton",
+      "usetrailingbutton",
+      "iconbuttonsize",
+      "leadingbuttonsize",
+      "trailingbuttonsize",
+      "cursor"
+    ],
+    "filename": "TextField.js"
+  },
+  {
+    "componentname": "TimePickerControl",
+    "properties": [
+      "value",
+      "useampm",
+      "usesecond",
+      "locale"
+    ],
+    "filename": "TimePickerControl.js"
+  },
+  {
+    "componentname": "TitleBarControl",
+    "properties": [
+      "buttongap",
+      "closebutton",
+      "maxbutton",
+      "minbutton",
+      "normalbutton",
+      "titleicon"
+    ],
+    "filename": "TitleBar.js"
+  },
+  {
+    "componentname": "Tray",
+    "properties": [
+      "icon",
+      "name",
+      "items",
+      "tooltip"
+    ],
+    "filename": "Tray.js"
+  },
+  {
+    "componentname": "Video",
+    "properties": [
+      "aspectratio",
+      "autoplay",
+      "duration",
+      "currenttime",
+      "mute",
+      "repeat",
+      "showcontrolbar",
+      "url",
+      "videosize",
+      "volume"
+    ],
+    "filename": "VideoPlayer.js"
+  },
+  {
+    "componentname": "View",
+    "properties": [
+      "form",
+      "viewdataset",
+      "viewtype",
+      "sourceview",
+      "semantictag"
+    ],
+    "filename": "View.js"
+  },
+  {
+    "componentname": "VirtualFile",
+    "properties": [
+      "filename",
+      "fullpath",
+      "path",
+      "async"
+    ],
+    "filename": "VirtualFile.js"
+  },
+  {
+    "componentname": "WebBrowser",
+    "properties": [
+      "text",
+      "enable",
+      "visible",
+      "cookiesynctype",
+      "url",
+      "useurlhistory",
+      "accessibilityleavemessage"
+    ],
+    "filename": "WebBrowser.js"
+  },
+  {
+    "componentname": "WebView",
+    "properties": [
+      "text",
+      "enable",
+      "visible",
+      "cookiesynctype",
+      "url",
+      "setupurl",
+      "useurlhistory",
+      "accessibilityleavemessage",
+      "sandbox"
+    ],
+    "filename": "WebView.js"
+  }
+]

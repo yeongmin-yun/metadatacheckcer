@@ -149,6 +149,7 @@ function drawEventPieChart(clickedNodeName) {
  * @param {string} clickedNodeName - The selected component name.
  */
 export function showAnalysisView(clickedNodeName) {
+    state.currentSelectedComponent = clickedNodeName; // Set the current component
     const buttonContainer = document.getElementById('button-container');
     const visualizationContainer = document.getElementById('visualization-container');
     const logContainer = document.getElementById('log-container');

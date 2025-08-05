@@ -3,16 +3,20 @@ import { state, booleanAttributes } from './state.js';
 import { dom } from './dom-elements.js';
 import { showToast } from '../../app/ui-helpers.js';
 import { renderSelections, renderAllButtons } from './ui.js';
-import * as C from '../../app/constants.js';
+import { state as globalState } from '../../app/state.js';
 
 export async function loadInitialData() {
     try {
-        const response = await fetch(C.AGGREGATED_METAINFO_JSON_FILE_PATH);
+        const version = globalState.currentWorkVersion;
+        const aggregatedMetainfoPath = `./parsers/json/${version}/aggregated_metainfo.json`;
+        const aggregatedNamesPath = `./parsers/json/${version}/aggregated_component_names.json`;
+
+        const response = await fetch(aggregatedMetainfoPath);
         if (!response.ok) throw new Error('Could not fetch aggregated metainfo.');
         const data = await response.json();
         state.aggregatedData = data;
 
-        const componentNamesResponse = await fetch(C.AGGREGATED_NAMES_JSON_FILE_PATH);
+        const componentNamesResponse = await fetch(aggregatedNamesPath);
         if(!componentNamesResponse.ok) throw new Error('Could not fetch component names.');
         const componentNames = await componentNamesResponse.json();
         state.componentNames = new Set(componentNames);
