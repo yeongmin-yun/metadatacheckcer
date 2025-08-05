@@ -1098,6 +1098,39 @@
     "filename": "MultiLineTextField.js"
   },
   {
+    "componentname": "Paginator",
+    "events": [
+      "onpagesizechanged",
+      "onpagechanged",
+      "onclick",
+      "ondrag",
+      "ondragenter",
+      "ondragmove",
+      "ondragleave",
+      "ondrop",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onsetfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onmousedown",
+      "onmouseup",
+      "onmouseenter",
+      "onmousemove",
+      "onmouseleave",
+      "onmove",
+      "onsize",
+      "oncontextmenu",
+      "ontouchstart",
+      "ontouchmove",
+      "ontouchend"
+    ],
+    "filename": "Paginator.js"
+  },
+  {
     "componentname": "Panel",
     "events": [
       "onclick",
@@ -1435,6 +1468,43 @@
     "filename": "Step.js"
   },
   {
+    "componentname": "Switch",
+    "events": [
+      "onclick",
+      "ondblclick",
+      "onkillfocus",
+      "onsetfocus",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onmousedown",
+      "onmouseup",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmousewheel",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "onmove",
+      "onsize",
+      "oncontextmenu",
+      "onchanged",
+      "canchange",
+      "ontouchstart",
+      "ontouchmove",
+      "ontouchend",
+      "ondevicebuttonup"
+    ],
+    "filename": "Switch.js"
+  },
+  {
     "componentname": "Tab",
     "events": [
       "onclick",
@@ -1471,6 +1541,14 @@
       "ontouchend"
     ],
     "filename": "Tab.js"
+  },
+  {
+    "componentname": "TabBarItemSetControl",
+    "events": [
+      "onvscroll",
+      "onhscroll"
+    ],
+    "filename": "TabBar.js"
   },
   {
     "componentname": "TextArea",

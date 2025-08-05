@@ -82,9 +82,15 @@
                 <nav id="tab-container">
                     <ul class="space-y-2">
                         <!-- Work Version Selector -->
-                        <li id="work-version-selector" class="flex justify-around p-1 bg-gray-200 rounded-lg">
-                            <button id="work800-btn" data-version="WORK800" class="work-version-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md bg-white text-blue-600 shadow">WORK800</button>
-                            <button id="work900-btn" data-version="WORK900" class="work-version-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md text-gray-600">WORK900</button>
+                        <li id="work-version-selector" class="p-1 bg-gray-200 rounded-lg space-y-1">
+                            <div class="flex justify-around">
+                                <button id="work800-btn" data-version="WORK800" class="work-version-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md bg-white text-blue-600 shadow">WORK800</button>
+                                <button id="work900-btn" data-version="WORK900" class="work-version-btn flex-1 py-2 px-4 text-sm font-semibold rounded-md text-gray-600">WORK900</button>
+                            </div>
+                            <div class="flex justify-around text-xs text-gray-500 pt-1">
+                                <span id="work800-date" class="flex-1 text-center"></span>
+                                <span id="work900-date" class="flex-1 text-center"></span>
+                            </div>
                         </li>
 
                         <!-- Home -->

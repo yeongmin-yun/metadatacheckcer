@@ -62,7 +62,8 @@
       "calendarspinupbutton",
       "datepicker",
       "dropbutton",
-      "useautocalibration"
+      "useautocalibration",
+      "restoreonblur"
     ],
     "filename": "Calendar.js"
   },
@@ -746,6 +747,27 @@
     "filename": "MultiLineTextField.js"
   },
   {
+    "componentname": "Paginator",
+    "properties": [
+      "pagecount",
+      "pagesize",
+      "datacount",
+      "page",
+      "showprevnextbutton",
+      "showfirstlastbutton",
+      "innerdataset",
+      "navibuttongap",
+      "pagebuttongap",
+      "outsidegap",
+      "pagesiblingmaxcount",
+      "prevbuttontext",
+      "nextbuttontext",
+      "firstbuttontext",
+      "lastbuttontext"
+    ],
+    "filename": "Paginator.js"
+  },
+  {
     "componentname": "Panel",
     "properties": [
       "flexcrossaxisalign",
@@ -862,6 +884,13 @@
     "filename": "Radio.js"
   },
   {
+    "componentname": "ResizerGripperControl",
+    "properties": [
+      "direction"
+    ],
+    "filename": "Resizer.js"
+  },
+  {
     "componentname": "ScrollBar",
     "properties": [
       "barminsize",
@@ -945,6 +974,15 @@
     "filename": "SpinnerControl.js"
   },
   {
+    "componentname": "SplitterControl",
+    "properties": [
+      "direction",
+      "movetype",
+      "zindex"
+    ],
+    "filename": "Splitter.js"
+  },
+  {
     "componentname": "IconText",
     "properties": [
       "icon",
@@ -975,6 +1013,20 @@
     "filename": "Step.js"
   },
   {
+    "componentname": "Switch",
+    "properties": [
+      "value",
+      "truevalue",
+      "falsevalue",
+      "readonly",
+      "switchbuttonwidth",
+      "textposition",
+      "textAlign",
+      "bartype"
+    ],
+    "filename": "Switch.js"
+  },
+  {
     "componentname": "Tab",
     "properties": [
       "extrabuttonsize",
@@ -1003,6 +1055,15 @@
       "usetabbutton"
     ],
     "filename": "Tab.js"
+  },
+  {
+    "componentname": "TabBarItemControl",
+    "properties": [
+      "icontext",
+      "pinbutton",
+      "closebutton"
+    ],
+    "filename": "TabBar.js"
   },
   {
     "componentname": "TextArea",

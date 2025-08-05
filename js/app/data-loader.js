@@ -119,13 +119,16 @@ export async function loadComponentAnalyzerData() {
         ]);
 
         for (const res of responses) {
-            if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+            if (!res.ok) {
+                console.error(`Failed to fetch ${res.url}: ${res.statusText}`);
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
         }
 
         const [
             allInheritanceDataRaw, propertyData, eventData,
             metainfoPropertyData, allComponentPropertiesData,
-            metainfoEventData, allComponentEventsData,
+            metainfoEventData,
             aggregatedComponentNames
         ] = await Promise.all(responses.map(res => res.json()));
         
@@ -136,7 +139,7 @@ export async function loadComponentAnalyzerData() {
         state.metainfoPropertyData = metainfoPropertyData;
         state.allComponentPropertiesData = allComponentPropertiesData;
         state.metainfoEventData = metainfoEventData;
-        state.allComponentEventsData = allComponentEventsData;
+        state.allComponentEventsData = eventData; // Use eventData for both
         state.aggregatedComponentNames = aggregatedComponentNames;
 
         const childToParentMap = new Map(state.allInheritanceDataRaw.map(d => [d.child, d.parent]));
@@ -163,11 +166,13 @@ export async function loadComponentAnalyzerData() {
 
         if (loadingMessage) loadingMessage.remove();
         searchInput.addEventListener('input', filterButtons);
+        return true; // Indicate success
 
     } catch (error) {
         console.error('Error loading JSON data:', error);
         if (loadingMessage) loadingMessage.remove();
         document.getElementById('button-container').innerHTML =
             '<p class="text-center text-red-500 col-span-full">Failed to load data. Please check file paths and network.</p>';
+        return false; // Indicate failure
     }
 }

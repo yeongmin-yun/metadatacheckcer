@@ -4,6 +4,27 @@ import { loadComponentAnalyzerData } from './js/app/data-loader.js';
 import { showAnalysisView } from './js/app/chart-drawer.js';
 
 /**
+ * Fetches and displays the last updated date for each work version.
+ */
+async function displayUpdateDates() {
+    const versions = ['WORK800', 'WORK900'];
+    for (const version of versions) {
+        try {
+            const response = await fetch(`./parsers/json/${version}/update_log.json`);
+            if (response.ok) {
+                const data = await response.json();
+                const dateElement = document.getElementById(`${version.toLowerCase()}-date`);
+                if (dateElement) {
+                    dateElement.textContent = `${data.lastUpdated}`;
+                }
+            }
+        } catch (error) {
+            console.error(`Could not load update log for ${version}:`, error);
+        }
+    }
+}
+
+/**
  * Main function to load data and set up the application.
  */
 document.addEventListener('DOMContentLoaded', async () => {
@@ -11,6 +32,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const sidebarToggle = document.getElementById('sidebar-toggle');
     const searchInput = document.getElementById('search-input');
     const workVersionSelector = document.getElementById('work-version-selector');
+
+    // --- Initial Setup ---
+    displayUpdateDates(); // Display dates on initial load
 
     // --- Event Listeners ---
 
@@ -55,19 +79,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         button.classList.remove('text-gray-600');
 
         // Reload component data
-        await loadComponentAnalyzerData();
+        const loadSuccess = await loadComponentAnalyzerData();
         
-        // Re-filter buttons if there is a search term
-        filterButtons();
+        // If data loading is successful, proceed with UI updates
+        if (loadSuccess) {
+            // Re-filter buttons if there is a search term
+            filterButtons();
 
-        // If a component was being viewed, refresh its analysis view
-        if (state.currentSelectedComponent) {
-            showAnalysisView(state.currentSelectedComponent);
+            // If a component was being viewed, refresh its analysis view
+            if (state.currentSelectedComponent) {
+                showAnalysisView(state.currentSelectedComponent);
+            }
         }
     });
 
-    // --- Initial Setup ---
-    
     // Set the initial tab to load
     switchTab('component-analyzer-tab');
 });

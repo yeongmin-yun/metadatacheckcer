@@ -18,6 +18,40 @@
     "filename": "ActivateEventInfo.info"
   },
   {
+    "componentname": "AbstractComponent",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "AbstractComponent.info"
+  },
+  {
     "componentname": "Animation",
     "events": [
       "onbegin",
@@ -38,11 +72,6 @@
     "filename": "AnimationItem.info"
   },
   {
-    "componentname": "AnimationTimelineItem",
-    "events": [],
-    "filename": "AnimationTimelineItem.info"
-  },
-  {
     "componentname": "AnimationTimeline",
     "events": [
       "onbegin",
@@ -53,19 +82,91 @@
     "filename": "AnimationTimeline.info"
   },
   {
+    "componentname": "AnimationTimelineItem",
+    "events": [],
+    "filename": "AnimationTimelineItem.info"
+  },
+  {
+    "componentname": "AbstractSelectAny",
+    "events": [
+      "canitemchange",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninnerdatachanged",
+      "onitemchanged",
+      "onitemclick",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "AbstractSelectAny.info"
+  },
+  {
     "componentname": "BindingValueChangedEventInfo",
     "events": [],
     "filename": "BindingValueChangedEventInfo.info"
   },
   {
+    "componentname": "AbstractSelectOne",
+    "events": [
+      "canitemchange",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninnerdatachanged",
+      "onitemchanged",
+      "onitemclick",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "AbstractSelectOne.info"
+  },
+  {
     "componentname": "CalendarCloseUpEventInfo",
     "events": [],
     "filename": "CalendarCloseUpEventInfo.info"
-  },
-  {
-    "componentname": "CalendarDayClickEventInfo",
-    "events": [],
-    "filename": "CalendarDayClickEventInfo.info"
   },
   {
     "componentname": "BindItem",
@@ -78,19 +179,9 @@
     "filename": "CalendarSpinEventInfo.info"
   },
   {
-    "componentname": "CellTreeLineControl",
+    "componentname": "CalendarDayClickEventInfo",
     "events": [],
-    "filename": "CellTreeLineControl.info"
-  },
-  {
-    "componentname": "ChangeEventInfo",
-    "events": [],
-    "filename": "ChangeEventInfo.info"
-  },
-  {
-    "componentname": "CheckBoxChangedEventInfo",
-    "events": [],
-    "filename": "CheckBoxChangedEventInfo.info"
+    "filename": "CalendarDayClickEventInfo.info"
   },
   {
     "componentname": "Button",
@@ -126,6 +217,50 @@
       "ontouchstart"
     ],
     "filename": "Button.info"
+  },
+  {
+    "componentname": "CellRowGroupControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "CellRowGroupControl.info"
+  },
+  {
+    "componentname": "CellTreeLineControl",
+    "events": [],
+    "filename": "CellTreeLineControl.info"
+  },
+  {
+    "componentname": "ChangeEventInfo",
+    "events": [],
+    "filename": "ChangeEventInfo.info"
   },
   {
     "componentname": "Calendar",
@@ -171,9 +306,9 @@
     "filename": "Calendar.info"
   },
   {
-    "componentname": "CloseEventInfo",
+    "componentname": "CheckBoxChangedEventInfo",
     "events": [],
-    "filename": "CloseEventInfo.info"
+    "filename": "CheckBoxChangedEventInfo.info"
   },
   {
     "componentname": "CellTreeItemControl",
@@ -213,43 +348,6 @@
     "componentname": "ClickEventInfo",
     "events": [],
     "filename": "ClickEventInfo.info"
-  },
-  {
-    "componentname": "CheckBox",
-    "events": [
-      "canchange",
-      "onchanged",
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondevicebuttonup",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "CheckBox.info"
   },
   {
     "componentname": "CheckBoxSet",
@@ -292,14 +390,56 @@
     "filename": "CheckBoxSet.info"
   },
   {
-    "componentname": "ColumnInfo",
+    "componentname": "CheckBox",
+    "events": [
+      "canchange",
+      "onchanged",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "CheckBox.info"
+  },
+  {
+    "componentname": "CloseEventInfo",
     "events": [],
-    "filename": "ColumnInfo.info"
+    "filename": "CloseEventInfo.info"
   },
   {
     "componentname": "ComboCloseUpEventInfo",
     "events": [],
     "filename": "ComboCloseUpEventInfo.info"
+  },
+  {
+    "componentname": "ColumnInfo",
+    "events": [],
+    "filename": "ColumnInfo.info"
   },
   {
     "componentname": "ChildFrame",
@@ -342,9 +482,9 @@
     "filename": "ChildFrame.info"
   },
   {
-    "componentname": "ContextMenuEventInfo",
+    "componentname": "ContentErrorEventInfo",
     "events": [],
-    "filename": "ContextMenuEventInfo.info"
+    "filename": "ContentErrorEventInfo.info"
   },
   {
     "componentname": "Combo",
@@ -389,19 +529,24 @@
     "filename": "Combo.info"
   },
   {
+    "componentname": "ContentLoadEventInfo",
+    "events": [],
+    "filename": "ContentLoadEventInfo.info"
+  },
+  {
     "componentname": "DataObjectDataChangedEventInfo",
     "events": [],
     "filename": "DataObjectDataChangedEventInfo.info"
   },
   {
+    "componentname": "ContextMenuEventInfo",
+    "events": [],
+    "filename": "ContextMenuEventInfo.info"
+  },
+  {
     "componentname": "DataObjectErrorEventInfo",
     "events": [],
     "filename": "DataObjectErrorEventInfo.info"
-  },
-  {
-    "componentname": "DataObjectEventInfo",
-    "events": [],
-    "filename": "DataObjectEventInfo.info"
   },
   {
     "componentname": "Component",
@@ -438,9 +583,9 @@
     "filename": "Component.info"
   },
   {
-    "componentname": "DataObjectLoadEventInfo",
+    "componentname": "DataObjectLoadDatasetsEventInfo",
     "events": [],
-    "filename": "DataObjectLoadEventInfo.info"
+    "filename": "DataObjectLoadDatasetsEventInfo.info"
   },
   {
     "componentname": "DataObject",
@@ -455,9 +600,14 @@
     "filename": "DataObject.info"
   },
   {
-    "componentname": "DataObjectLoadDatasetsEventInfo",
+    "componentname": "DataObjectEventInfo",
     "events": [],
-    "filename": "DataObjectLoadDatasetsEventInfo.info"
+    "filename": "DataObjectEventInfo.info"
+  },
+  {
+    "componentname": "DataObjectLoadEventInfo",
+    "events": [],
+    "filename": "DataObjectLoadEventInfo.info"
   },
   {
     "componentname": "DataObjectValueChangedEventInfo",
@@ -468,6 +618,55 @@
     "componentname": "DateFieldCloseUpEventInfo",
     "events": [],
     "filename": "DateFieldCloseUpEventInfo.info"
+  },
+  {
+    "componentname": "DatePickerBodyControl",
+    "events": [],
+    "filename": "DatePickerBodyControl.info"
+  },
+  {
+    "componentname": "DateFieldDayClickEventInfo",
+    "events": [],
+    "filename": "DateFieldDayClickEventInfo.info"
+  },
+  {
+    "componentname": "DateFieldBoxControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "DateFieldBoxControl.info"
+  },
+  {
+    "componentname": "DatePickerControl",
+    "events": [],
+    "filename": "DatePickerControl.info"
   },
   {
     "componentname": "CompositeComponent",
@@ -506,102 +705,9 @@
     "filename": "CompositeComponent.info"
   },
   {
-    "componentname": "DateFieldBoxControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "DateFieldBoxControl.info"
-  },
-  {
-    "componentname": "DateFieldDayClickEventInfo",
-    "events": [],
-    "filename": "DateFieldDayClickEventInfo.info"
-  },
-  {
-    "componentname": "DatePickerBodyControl",
-    "events": [],
-    "filename": "DatePickerBodyControl.info"
-  },
-  {
     "componentname": "DatePickerDayItemControl",
     "events": [],
     "filename": "DatePickerDayItemControl.info"
-  },
-  {
-    "componentname": "DatePickerControl",
-    "events": [],
-    "filename": "DatePickerControl.info"
-  },
-  {
-    "componentname": "DatePickerGroupControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "DatePickerGroupControl.info"
-  },
-  {
-    "componentname": "DatePickerHeadControl",
-    "events": [],
-    "filename": "DatePickerHeadControl.info"
-  },
-  {
-    "componentname": "DatePickerWeekItemControl",
-    "events": [],
-    "filename": "DatePickerWeekItemControl.info"
   },
   {
     "componentname": "DateField",
@@ -648,9 +754,76 @@
     "filename": "DateField.info"
   },
   {
+    "componentname": "DatePickerHeadControl",
+    "events": [],
+    "filename": "DatePickerHeadControl.info"
+  },
+  {
+    "componentname": "DatePickerGroupControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "DatePickerGroupControl.info"
+  },
+  {
     "componentname": "DateRangePickerDayClickEventInfo",
     "events": [],
     "filename": "DateRangePickerDayClickEventInfo.info"
+  },
+  {
+    "componentname": "DatePickerWeekItemControl",
+    "events": [],
+    "filename": "DatePickerWeekItemControl.info"
+  },
+  {
+    "componentname": "DeviceButtonEventInfo",
+    "events": [],
+    "filename": "DeviceButtonEventInfo.info"
+  },
+  {
+    "componentname": "Dataset",
+    "events": [
+      "cancolumnchange",
+      "canrowposchange",
+      "oncolumnchanged",
+      "onload",
+      "onrowposchanged",
+      "onrowsetchanged",
+      "onvaluechanged"
+    ],
+    "filename": "Dataset.info"
+  },
+  {
+    "componentname": "DragEventInfo",
+    "events": [],
+    "filename": "DragEventInfo.info"
   },
   {
     "componentname": "DatePickerYearItemControl",
@@ -687,24 +860,6 @@
     "filename": "DatePickerYearItemControl.info"
   },
   {
-    "componentname": "Dataset",
-    "events": [
-      "cancolumnchange",
-      "canrowposchange",
-      "oncolumnchanged",
-      "onload",
-      "onrowposchanged",
-      "onrowsetchanged",
-      "onvaluechanged"
-    ],
-    "filename": "Dataset.info"
-  },
-  {
-    "componentname": "DeviceButtonEventInfo",
-    "events": [],
-    "filename": "DeviceButtonEventInfo.info"
-  },
-  {
     "componentname": "DSColChangeEventInfo",
     "events": [],
     "filename": "DSColChangeEventInfo.info"
@@ -715,29 +870,9 @@
     "filename": "DSLoadEventInfo.info"
   },
   {
-    "componentname": "DragEventInfo",
-    "events": [],
-    "filename": "DragEventInfo.info"
-  },
-  {
     "componentname": "DSRowPosChangeEventInfo",
     "events": [],
     "filename": "DSRowPosChangeEventInfo.info"
-  },
-  {
-    "componentname": "DSRowsetChangeEventInfo",
-    "events": [],
-    "filename": "DSRowsetChangeEventInfo.info"
-  },
-  {
-    "componentname": "EditClickEventInfo",
-    "events": [],
-    "filename": "EditClickEventInfo.info"
-  },
-  {
-    "componentname": "EventInfo",
-    "events": [],
-    "filename": "EventInfo.info"
   },
   {
     "componentname": "Div",
@@ -777,19 +912,9 @@
     "filename": "Div.info"
   },
   {
-    "componentname": "ExcelExportErrorEventInfo",
+    "componentname": "EditClickEventInfo",
     "events": [],
-    "filename": "ExcelExportErrorEventInfo.info"
-  },
-  {
-    "componentname": "ExcelExportEventInfo",
-    "events": [],
-    "filename": "ExcelExportEventInfo.info"
-  },
-  {
-    "componentname": "ExcelExportProgressEventInfo",
-    "events": [],
-    "filename": "ExcelExportProgressEventInfo.info"
+    "filename": "EditClickEventInfo.info"
   },
   {
     "componentname": "DateRangePicker",
@@ -830,9 +955,34 @@
     "filename": "DateRangePicker.info"
   },
   {
-    "componentname": "ExcelImportErrorEventInfo",
+    "componentname": "DSRowsetChangeEventInfo",
     "events": [],
-    "filename": "ExcelImportErrorEventInfo.info"
+    "filename": "DSRowsetChangeEventInfo.info"
+  },
+  {
+    "componentname": "EnableStatusChangedEventInfo",
+    "events": [],
+    "filename": "EnableStatusChangedEventInfo.info"
+  },
+  {
+    "componentname": "ExcelExportEventInfo",
+    "events": [],
+    "filename": "ExcelExportEventInfo.info"
+  },
+  {
+    "componentname": "ExcelExportErrorEventInfo",
+    "events": [],
+    "filename": "ExcelExportErrorEventInfo.info"
+  },
+  {
+    "componentname": "EventInfo",
+    "events": [],
+    "filename": "EventInfo.info"
+  },
+  {
+    "componentname": "ExcelExportProgressEventInfo",
+    "events": [],
+    "filename": "ExcelExportProgressEventInfo.info"
   },
   {
     "componentname": "ExcelImportEventInfo",
@@ -840,9 +990,9 @@
     "filename": "ExcelImportEventInfo.info"
   },
   {
-    "componentname": "ExportItem",
+    "componentname": "ExcelImportErrorEventInfo",
     "events": [],
-    "filename": "ExportItem.info"
+    "filename": "ExcelImportErrorEventInfo.info"
   },
   {
     "componentname": "ExcelExportObject",
@@ -852,6 +1002,19 @@
       "onsuccess"
     ],
     "filename": "ExcelExportObject.info"
+  },
+  {
+    "componentname": "ExcelImportObject",
+    "events": [
+      "onerror",
+      "onsuccess"
+    ],
+    "filename": "ExcelImportObject.info"
+  },
+  {
+    "componentname": "ExportItemTypes",
+    "events": [],
+    "filename": "ExportItemTypes.info"
   },
   {
     "componentname": "Edit",
@@ -893,14 +1056,9 @@
     "filename": "Edit.info"
   },
   {
-    "componentname": "ExtendedCommandEventInfo",
+    "componentname": "ExportItem",
     "events": [],
-    "filename": "ExtendedCommandEventInfo.info"
-  },
-  {
-    "componentname": "ExportItemTypes",
-    "events": [],
-    "filename": "ExportItemTypes.info"
+    "filename": "ExportItem.info"
   },
   {
     "componentname": "ExportProgressControl",
@@ -913,14 +1071,6 @@
     "filename": "ExportTypes.info"
   },
   {
-    "componentname": "ExcelImportObject",
-    "events": [
-      "onerror",
-      "onsuccess"
-    ],
-    "filename": "ExcelImportObject.info"
-  },
-  {
     "componentname": "FileDialog",
     "events": [
       "onclose"
@@ -928,85 +1078,14 @@
     "filename": "FileDialog.info"
   },
   {
+    "componentname": "ExtendedCommandEventInfo",
+    "events": [],
+    "filename": "ExtendedCommandEventInfo.info"
+  },
+  {
     "componentname": "FileDialogEventInfo",
     "events": [],
     "filename": "FileDialogEventInfo.info"
-  },
-  {
-    "componentname": "FieldBaseIconControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "FieldBaseIconControl.info"
-  },
-  {
-    "componentname": "FileDownTransfer",
-    "events": [
-      "onerror",
-      "onsuccess"
-    ],
-    "filename": "FileDownTransfer.info"
-  },
-  {
-    "componentname": "FieldBaseTextControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "FieldBaseTextControl.info"
   },
   {
     "componentname": "FieldBaseLabelControl",
@@ -1043,9 +1122,72 @@
     "filename": "FieldBaseLabelControl.info"
   },
   {
-    "componentname": "FileDownloadErrorEventInfo",
-    "events": [],
-    "filename": "FileDownloadErrorEventInfo.info"
+    "componentname": "FieldBaseIconControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "FieldBaseIconControl.info"
+  },
+  {
+    "componentname": "FieldBaseTextControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "FieldBaseTextControl.info"
   },
   {
     "componentname": "FileDownloadEventInfo",
@@ -1053,14 +1195,14 @@
     "filename": "FileDownloadEventInfo.info"
   },
   {
+    "componentname": "FileDownloadErrorEventInfo",
+    "events": [],
+    "filename": "FileDownloadErrorEventInfo.info"
+  },
+  {
     "componentname": "FileDownTransferErrorEventInfo",
     "events": [],
     "filename": "FileDownTransferErrorEventInfo.info"
-  },
-  {
-    "componentname": "FileUploadContextMenuEventInfo",
-    "events": [],
-    "filename": "FileUploadContextMenuEventInfo.info"
   },
   {
     "componentname": "FileDownTransferEventInfo",
@@ -1068,9 +1210,27 @@
     "filename": "FileDownTransferEventInfo.info"
   },
   {
+    "componentname": "FileDownTransfer",
+    "events": [
+      "onerror",
+      "onsuccess"
+    ],
+    "filename": "FileDownTransfer.info"
+  },
+  {
     "componentname": "FileUploadErrorEventInfo",
     "events": [],
     "filename": "FileUploadErrorEventInfo.info"
+  },
+  {
+    "componentname": "FileUploadContextMenuEventInfo",
+    "events": [],
+    "filename": "FileUploadContextMenuEventInfo.info"
+  },
+  {
+    "componentname": "FileUploadEventInfo",
+    "events": [],
+    "filename": "FileUploadEventInfo.info"
   },
   {
     "componentname": "FileUploadItemChangeEventInfo",
@@ -1078,9 +1238,9 @@
     "filename": "FileUploadItemChangeEventInfo.info"
   },
   {
-    "componentname": "FileUploadMouseEventInfo",
+    "componentname": "FileUploadItemEventInfo",
     "events": [],
-    "filename": "FileUploadMouseEventInfo.info"
+    "filename": "FileUploadItemEventInfo.info"
   },
   {
     "componentname": "FileDownload",
@@ -1120,14 +1280,33 @@
     "filename": "FileDownload.info"
   },
   {
+    "componentname": "FileUploadMouseEventInfo",
+    "events": [],
+    "filename": "FileUploadMouseEventInfo.info"
+  },
+  {
+    "componentname": "FileUpTransfer",
+    "events": [
+      "onerror",
+      "onprogress",
+      "onsuccess"
+    ],
+    "filename": "FileUpTransfer.info"
+  },
+  {
     "componentname": "FileUpTransferErrorEventInfo",
     "events": [],
     "filename": "FileUpTransferErrorEventInfo.info"
   },
   {
-    "componentname": "FileUploadItemEventInfo",
+    "componentname": "FileUpTransferEventInfo",
     "events": [],
-    "filename": "FileUploadItemEventInfo.info"
+    "filename": "FileUpTransferEventInfo.info"
+  },
+  {
+    "componentname": "FileUpTransferProgressEventInfo",
+    "events": [],
+    "filename": "FileUpTransferProgressEventInfo.info"
   },
   {
     "componentname": "FileUploadItemControl",
@@ -1164,33 +1343,38 @@
     "filename": "FileUploadItemControl.info"
   },
   {
-    "componentname": "FileUpTransferEventInfo",
-    "events": [],
-    "filename": "FileUpTransferEventInfo.info"
-  },
-  {
-    "componentname": "FileUploadEventInfo",
-    "events": [],
-    "filename": "FileUploadEventInfo.info"
-  },
-  {
-    "componentname": "FileUpTransfer",
+    "componentname": "FlexTextControl",
     "events": [
-      "onerror",
-      "onprogress",
-      "onsuccess"
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
     ],
-    "filename": "FileUpTransfer.info"
-  },
-  {
-    "componentname": "FileUpTransferProgressEventInfo",
-    "events": [],
-    "filename": "FileUpTransferProgressEventInfo.info"
-  },
-  {
-    "componentname": "GoogleMapDragEventInfo",
-    "events": [],
-    "filename": "GoogleMapDragEventInfo.info"
+    "filename": "FlexTextControl.info"
   },
   {
     "componentname": "FileUpload",
@@ -1235,7 +1419,37 @@
     "filename": "FileUpload.info"
   },
   {
-    "componentname": "FlexTextControl",
+    "componentname": "GoogleMapClickEventInfo",
+    "events": [],
+    "filename": "GoogleMapClickEventInfo.info"
+  },
+  {
+    "componentname": "GoogleMapDragEventInfo",
+    "events": [],
+    "filename": "GoogleMapDragEventInfo.info"
+  },
+  {
+    "componentname": "GoogleMapMarker",
+    "events": [],
+    "filename": "GoogleMapMarker.info"
+  },
+  {
+    "componentname": "GoogleMapErrorEventInfo",
+    "events": [],
+    "filename": "GoogleMapErrorEventInfo.info"
+  },
+  {
+    "componentname": "GoogleMapCircle",
+    "events": [],
+    "filename": "GoogleMapCircle.info"
+  },
+  {
+    "componentname": "GoogleMapEventInfo",
+    "events": [],
+    "filename": "GoogleMapEventInfo.info"
+  },
+  {
+    "componentname": "GoogleMap",
     "events": [
       "onclick",
       "oncontextmenu",
@@ -1245,12 +1459,17 @@
       "ondragleave",
       "ondragmove",
       "ondrop",
+      "onerror",
       "oninput",
       "onkeydown",
       "onkeyup",
       "onkillfocus",
       "onlbuttondown",
       "onlbuttonup",
+      "onload",
+      "onmapdrag",
+      "onmapdragend",
+      "onmapdragstart",
       "onmousedown",
       "onmouseenter",
       "onmouseleave",
@@ -1260,43 +1479,24 @@
       "onmove",
       "onrbuttondown",
       "onrbuttonup",
+      "onrecvsuccess",
       "onsetfocus",
       "onsize",
       "ontouchend",
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "FlexTextControl.info"
+    "filename": "GoogleMap.info"
   },
   {
-    "componentname": "GoogleMapCircle",
+    "componentname": "GoogleMapPolyline",
     "events": [],
-    "filename": "GoogleMapCircle.info"
-  },
-  {
-    "componentname": "GoogleMapClickEventInfo",
-    "events": [],
-    "filename": "GoogleMapClickEventInfo.info"
-  },
-  {
-    "componentname": "GoogleMapErrorEventInfo",
-    "events": [],
-    "filename": "GoogleMapErrorEventInfo.info"
-  },
-  {
-    "componentname": "GoogleMapEventInfo",
-    "events": [],
-    "filename": "GoogleMapEventInfo.info"
+    "filename": "GoogleMapPolyline.info"
   },
   {
     "componentname": "GoogleMapPolygon",
     "events": [],
     "filename": "GoogleMapPolygon.info"
-  },
-  {
-    "componentname": "GoogleMapMarker",
-    "events": [],
-    "filename": "GoogleMapMarker.info"
   },
   {
     "componentname": "FrameSet",
@@ -1389,124 +1589,6 @@
     "filename": "Form.info"
   },
   {
-    "componentname": "GoogleMapPolyline",
-    "events": [],
-    "filename": "GoogleMapPolyline.info"
-  },
-  {
-    "componentname": "GoogleMap",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "onerror",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onload",
-      "onmapdrag",
-      "onmapdragend",
-      "onmapdragstart",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onrecvsuccess",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "GoogleMap.info"
-  },
-  {
-    "componentname": "IconTextControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "IconTextControl.info"
-  },
-  {
-    "componentname": "IconControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "IconControl.info"
-  },
-  {
-    "componentname": "InnerdataChangedEventInfo",
-    "events": [],
-    "filename": "InnerdataChangedEventInfo.info"
-  },
-  {
     "componentname": "HFrameSet",
     "events": [
       "onactivate",
@@ -1547,9 +1629,75 @@
     "filename": "HFrameSet.info"
   },
   {
-    "componentname": "ImportTypes",
-    "events": [],
-    "filename": "ImportTypes.info"
+    "componentname": "HTMLContentBox",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart",
+      "oncontentloaded",
+      "onvaluechanged",
+      "onenablestatuschanged",
+      "onerror"
+    ],
+    "filename": "HTMLContentBox.info"
+  },
+  {
+    "componentname": "IconTextControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "IconTextControl.info"
   },
   {
     "componentname": "GroupBox",
@@ -1586,9 +1734,24 @@
     "filename": "GroupBox.info"
   },
   {
+    "componentname": "ImportTypes",
+    "events": [],
+    "filename": "ImportTypes.info"
+  },
+  {
+    "componentname": "InnerdataChangedEventInfo",
+    "events": [],
+    "filename": "InnerdataChangedEventInfo.info"
+  },
+  {
     "componentname": "InputEventInfo",
     "events": [],
     "filename": "InputEventInfo.info"
+  },
+  {
+    "componentname": "ItemClickEventInfo",
+    "events": [],
+    "filename": "ItemClickEventInfo.info"
   },
   {
     "componentname": "ItemChangeEventInfo",
@@ -1606,9 +1769,48 @@
     "filename": "KillFocusEventInfo.info"
   },
   {
-    "componentname": "ItemClickEventInfo",
+    "componentname": "IconControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "IconControl.info"
+  },
+  {
+    "componentname": "LayoutChangeEventInfo",
     "events": [],
-    "filename": "ItemClickEventInfo.info"
+    "filename": "LayoutChangeEventInfo.info"
+  },
+  {
+    "componentname": "Layout",
+    "events": [],
+    "filename": "Layout.info"
   },
   {
     "componentname": "ImageAreaControl",
@@ -1645,16 +1847,6 @@
     "filename": "ImageControl.info"
   },
   {
-    "componentname": "Layout",
-    "events": [],
-    "filename": "Layout.info"
-  },
-  {
-    "componentname": "LayoutChangeEventInfo",
-    "events": [],
-    "filename": "LayoutChangeEventInfo.info"
-  },
-  {
     "componentname": "ImageViewer",
     "events": [
       "onclick",
@@ -1689,6 +1881,40 @@
       "ontouchstart"
     ],
     "filename": "ImageViewer.info"
+  },
+  {
+    "componentname": "ListBoxItemControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "ListBoxItemControl.info"
   },
   {
     "componentname": "LoadEventInfo",
@@ -1738,55 +1964,6 @@
     "filename": "ListBox.info"
   },
   {
-    "componentname": "ListBoxItemControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "ListBoxItemControl.info"
-  },
-  {
-    "componentname": "MenuClickEventInfo",
-    "events": [],
-    "filename": "MenuClickEventInfo.info"
-  },
-  {
-    "componentname": "MenuContextMenuEventInfo",
-    "events": [],
-    "filename": "MenuContextMenuEventInfo.info"
-  },
-  {
-    "componentname": "MenuDragEventInfo",
-    "events": [],
-    "filename": "MenuDragEventInfo.info"
-  },
-  {
     "componentname": "MainFrame",
     "events": [
       "onactivate",
@@ -1827,9 +2004,9 @@
     "filename": "MainFrame.info"
   },
   {
-    "componentname": "MouseEventInfo",
+    "componentname": "MenuContextMenuEventInfo",
     "events": [],
-    "filename": "MouseEventInfo.info"
+    "filename": "MenuContextMenuEventInfo.info"
   },
   {
     "componentname": "MaskEdit",
@@ -1871,6 +2048,103 @@
     "filename": "MaskEdit.info"
   },
   {
+    "componentname": "MenuClickEventInfo",
+    "events": [],
+    "filename": "MenuClickEventInfo.info"
+  },
+  {
+    "componentname": "MenuDragEventInfo",
+    "events": [],
+    "filename": "MenuDragEventInfo.info"
+  },
+  {
+    "componentname": "MouseWheelEventInfo",
+    "events": [],
+    "filename": "MouseWheelEventInfo.info"
+  },
+  {
+    "componentname": "MouseEventInfo",
+    "events": [],
+    "filename": "MouseEventInfo.info"
+  },
+  {
+    "componentname": "MenuItemControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "MenuItemControl.info"
+  },
+  {
+    "componentname": "MenuMouseEventInfo",
+    "events": [],
+    "filename": "MenuMouseEventInfo.info"
+  },
+  {
+    "componentname": "MoveEventInfo",
+    "events": [],
+    "filename": "MoveEventInfo.info"
+  },
+  {
+    "componentname": "MultiComboListControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "MultiComboListControl.info"
+  },
+  {
     "componentname": "Menu",
     "events": [
       "onclick",
@@ -1908,19 +2182,14 @@
     "filename": "Menu.info"
   },
   {
-    "componentname": "MoveEventInfo",
+    "componentname": "OrientationChangeEventInfo",
     "events": [],
-    "filename": "MoveEventInfo.info"
+    "filename": "OrientationChangeEventInfo.info"
   },
   {
-    "componentname": "MenuMouseEventInfo",
+    "componentname": "PageChangeEventInfo",
     "events": [],
-    "filename": "MenuMouseEventInfo.info"
-  },
-  {
-    "componentname": "MouseWheelEventInfo",
-    "events": [],
-    "filename": "MouseWheelEventInfo.info"
+    "filename": "PageChangeEventInfo.info"
   },
   {
     "componentname": "MultiComboTagBoxControl",
@@ -1957,71 +2226,9 @@
     "filename": "MultiComboTagBoxControl.info"
   },
   {
-    "componentname": "MultiComboListControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "MultiComboListControl.info"
-  },
-  {
-    "componentname": "MenuItemControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "MenuItemControl.info"
+    "componentname": "PanelItem",
+    "events": [],
+    "filename": "PanelItem.info"
   },
   {
     "componentname": "MultiCombo",
@@ -2100,84 +2307,6 @@
     "filename": "MultiLineTextFieldBoxControl.info"
   },
   {
-    "componentname": "OrientationChangeEventInfo",
-    "events": [],
-    "filename": "OrientationChangeEventInfo.info"
-  },
-  {
-    "componentname": "Panel",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "Panel.info"
-  },
-  {
-    "componentname": "PanelItem",
-    "events": [],
-    "filename": "PanelItem.info"
-  },
-  {
-    "componentname": "PickerHeadLineControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "PickerHeadLineControl.info"
-  },
-  {
     "componentname": "MultiLineTextField",
     "events": [
       "canchange",
@@ -2218,19 +2347,17 @@
     "filename": "MultiLineTextField.info"
   },
   {
-    "componentname": "PopupDiv",
+    "componentname": "Paginator",
     "events": [
       "onclick",
-      "oncloseup",
       "oncontextmenu",
       "ondblclick",
-      "ondevicebuttonup",
+      "ondevicePaginatorup",
       "ondrag",
       "ondragenter",
       "ondragleave",
       "ondragmove",
       "ondrop",
-      "onhscroll",
       "oninput",
       "onkeydown",
       "onkeyup",
@@ -2244,7 +2371,6 @@
       "onmouseup",
       "onmousewheel",
       "onmove",
-      "onpopup",
       "onrbuttondown",
       "onrbuttonup",
       "onsetfocus",
@@ -2252,9 +2378,9 @@
       "ontouchend",
       "ontouchmove",
       "ontouchstart",
-      "onvscroll"
+      "onpagechanged"
     ],
-    "filename": "PopupDiv.info"
+    "filename": "Paginator.info"
   },
   {
     "componentname": "Plugin",
@@ -2289,6 +2415,40 @@
       "ontouchstart"
     ],
     "filename": "Plugin.info"
+  },
+  {
+    "componentname": "Panel",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "Panel.info"
   },
   {
     "componentname": "PopupDateRangePicker",
@@ -2331,7 +2491,7 @@
     "filename": "PopupDateRangePicker.info"
   },
   {
-    "componentname": "PopupMenuItemControl",
+    "componentname": "PickerHeadLineControl",
     "events": [
       "onclick",
       "oncontextmenu",
@@ -2347,6 +2507,7 @@
       "onkillfocus",
       "onlbuttondown",
       "onlbuttonup",
+      "onmousedown",
       "onmouseenter",
       "onmouseleave",
       "onmousemove",
@@ -2361,7 +2522,46 @@
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "PopupMenuItemControl.info"
+    "filename": "PickerHeadLineControl.info"
+  },
+  {
+    "componentname": "PopupDiv",
+    "events": [
+      "onclick",
+      "oncloseup",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "onhscroll",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onpopup",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart",
+      "onvscroll"
+    ],
+    "filename": "PopupDiv.info"
   },
   {
     "componentname": "PopupMenu",
@@ -2402,14 +2602,92 @@
     "filename": "PopupMenu.info"
   },
   {
+    "componentname": "PopupMenuItemControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "PopupMenuItemControl.info"
+  },
+  {
     "componentname": "RangeDateChangedEventInfo",
     "events": [],
     "filename": "RangeDateChangedEventInfo.info"
   },
   {
-    "componentname": "ScrollBarControl",
+    "componentname": "ResizerControl",
     "events": [],
-    "filename": "ScrollBarControl.info"
+    "filename": "ResizerControl.info"
+  },
+  {
+    "componentname": "ProgressBar",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "ProgressBar.info"
+  },
+  {
+    "componentname": "RootCssClassChangeEventInfo",
+    "events": [],
+    "filename": "RootCssClassChangeEventInfo.info"
+  },
+  {
+    "componentname": "ResizerGhostControl",
+    "events": [],
+    "filename": "ResizerGhostControl.info"
   },
   {
     "componentname": "RadioItemControl",
@@ -2451,59 +2729,9 @@
     "filename": "ScrollEventInfo.info"
   },
   {
-    "componentname": "ScrollIndicatorControl",
+    "componentname": "ScrollBarControl",
     "events": [],
-    "filename": "ScrollIndicatorControl.info"
-  },
-  {
-    "componentname": "SetFocusEventInfo",
-    "events": [],
-    "filename": "SetFocusEventInfo.info"
-  },
-  {
-    "componentname": "SizeEventInfo",
-    "events": [],
-    "filename": "SizeEventInfo.info"
-  },
-  {
-    "componentname": "ProgressBar",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondevicebuttonup",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "ProgressBar.info"
-  },
-  {
-    "componentname": "SketchEventInfo",
-    "events": [],
-    "filename": "SketchEventInfo.info"
+    "filename": "ScrollBarControl.info"
   },
   {
     "componentname": "Radio",
@@ -2545,22 +2773,12 @@
     "filename": "Radio.info"
   },
   {
-    "componentname": "SketchLoadEventInfo",
+    "componentname": "ScrollIndicatorControl",
     "events": [],
-    "filename": "SketchLoadEventInfo.info"
+    "filename": "ScrollIndicatorControl.info"
   },
   {
-    "componentname": "SketchErrorEventInfo",
-    "events": [],
-    "filename": "SketchErrorEventInfo.info"
-  },
-  {
-    "componentname": "SpinEventInfo",
-    "events": [],
-    "filename": "SpinEventInfo.info"
-  },
-  {
-    "componentname": "SpinFieldBoxControl",
+    "componentname": "RowGroupExpandButtonControl",
     "events": [
       "onclick",
       "oncontextmenu",
@@ -2591,7 +2809,80 @@
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "SpinFieldBoxControl.info"
+    "filename": "RowGroupExpandButtonControl.info"
+  },
+  {
+    "componentname": "SetFocusEventInfo",
+    "events": [],
+    "filename": "SetFocusEventInfo.info"
+  },
+  {
+    "componentname": "SketchErrorEventInfo",
+    "events": [],
+    "filename": "SketchErrorEventInfo.info"
+  },
+  {
+    "componentname": "SizeEventInfo",
+    "events": [],
+    "filename": "SizeEventInfo.info"
+  },
+  {
+    "componentname": "SketchEventInfo",
+    "events": [],
+    "filename": "SketchEventInfo.info"
+  },
+  {
+    "componentname": "SpinEventInfo",
+    "events": [],
+    "filename": "SpinEventInfo.info"
+  },
+  {
+    "componentname": "SketchLoadEventInfo",
+    "events": [],
+    "filename": "SketchLoadEventInfo.info"
+  },
+  {
+    "componentname": "SpinBarControl",
+    "events": [],
+    "filename": "SpinBarControl.info"
+  },
+  {
+    "componentname": "Sketch",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "onerror",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onload",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "onsuccess",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "Sketch.info"
   },
   {
     "componentname": "Spin",
@@ -2633,87 +2924,9 @@
     "filename": "Spin.info"
   },
   {
-    "componentname": "StepChangeEventInfo",
+    "componentname": "SplitterControl",
     "events": [],
-    "filename": "StepChangeEventInfo.info"
-  },
-  {
-    "componentname": "Sketch",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondevicebuttonup",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "onerror",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onload",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "onsuccess",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "Sketch.info"
-  },
-  {
-    "componentname": "SysCommandEventInfo",
-    "events": [],
-    "filename": "SysCommandEventInfo.info"
-  },
-  {
-    "componentname": "SpinField",
-    "events": [
-      "canchange",
-      "onchanged",
-      "oncontextmenu",
-      "ondevicebuttonup",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oneditclick",
-      "oninput",
-      "oninvalid",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart",
-      "onspin"
-    ],
-    "filename": "SpinField.info"
+    "filename": "SplitterControl.info"
   },
   {
     "componentname": "StatusBarControl",
@@ -2755,9 +2968,48 @@
     "filename": "SpinnerControl.info"
   },
   {
+    "componentname": "StepChangeEventInfo",
+    "events": [],
+    "filename": "StepChangeEventInfo.info"
+  },
+  {
     "componentname": "StepControl",
     "events": [],
     "filename": "StepControl.info"
+  },
+  {
+    "componentname": "SpinFieldBoxControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "SpinFieldBoxControl.info"
   },
   {
     "componentname": "Static",
@@ -2794,89 +3046,156 @@
     "filename": "Static.info"
   },
   {
+    "componentname": "SpinField",
+    "events": [
+      "canchange",
+      "onchanged",
+      "oncontextmenu",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oneditclick",
+      "oninput",
+      "oninvalid",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart",
+      "onspin"
+    ],
+    "filename": "SpinField.info"
+  },
+  {
+    "componentname": "SysCommandEventInfo",
+    "events": [],
+    "filename": "SysCommandEventInfo.info"
+  },
+  {
+    "componentname": "SwitchButtonItemControl",
+    "events": [
+      "canchange",
+      "onchanged",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "SwitchButtonItemControl.info"
+  },
+  {
+    "componentname": "Switch",
+    "events": [
+      "canchange",
+      "onchanged",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "Switch.info"
+  },
+  {
+    "componentname": "TabBarButtonSetControl",
+    "events": [],
+    "filename": "TabBarButtonSetControl.info"
+  },
+  {
+    "componentname": "TabBarControl",
+    "events": [],
+    "filename": "TabBarControl.info"
+  },
+  {
+    "componentname": "TabBarHeadButtonSetControl",
+    "events": [],
+    "filename": "TabBarHeadButtonSetControl.info"
+  },
+  {
+    "componentname": "TabBarItemSetControl",
+    "events": [],
+    "filename": "TabBarItemSetControl.info"
+  },
+  {
     "componentname": "TabIndexChangeEventInfo",
     "events": [],
     "filename": "TabIndexChangeEventInfo.info"
   },
   {
-    "componentname": "TabButtonIconControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "TabButtonIconControl.info"
-  },
-  {
-    "componentname": "TabButtonItemControl",
-    "events": [
-      "onclick",
-      "oncontextmenu",
-      "ondblclick",
-      "ondrag",
-      "ondragenter",
-      "ondragleave",
-      "ondragmove",
-      "ondrop",
-      "oninput",
-      "onkeydown",
-      "onkeyup",
-      "onkillfocus",
-      "onlbuttondown",
-      "onlbuttonup",
-      "onmousedown",
-      "onmouseenter",
-      "onmouseleave",
-      "onmousemove",
-      "onmouseup",
-      "onmousewheel",
-      "onmove",
-      "onrbuttondown",
-      "onrbuttonup",
-      "onsetfocus",
-      "onsize",
-      "ontouchend",
-      "ontouchmove",
-      "ontouchstart"
-    ],
-    "filename": "TabButtonItemControl.info"
-  },
-  {
-    "componentname": "TabMouseEventInfo",
+    "componentname": "TabBarItemControl",
     "events": [],
-    "filename": "TabMouseEventInfo.info"
+    "filename": "TabBarItemControl.info"
   },
   {
-    "componentname": "TagBoxControl",
+    "componentname": "SwitchButtonControl",
     "events": [
+      "canchange",
+      "onchanged",
       "onclick",
       "oncontextmenu",
       "ondblclick",
+      "ondevicebuttonup",
       "ondrag",
       "ondragenter",
       "ondragleave",
@@ -2896,14 +3215,13 @@
       "onmousewheel",
       "onmove",
       "onrbuttondown",
-      "onrbuttonup",
       "onsetfocus",
       "onsize",
       "ontouchend",
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "TagBoxControl.info"
+    "filename": "SwitchButtonControl.info"
   },
   {
     "componentname": "Tab",
@@ -2944,21 +3262,16 @@
     "filename": "Tab.info"
   },
   {
-    "componentname": "TextArea",
+    "componentname": "TabButtonIconControl",
     "events": [
-      "canchange",
-      "onchanged",
       "onclick",
       "oncontextmenu",
       "ondblclick",
-      "ondevicebuttonup",
       "ondrag",
       "ondragenter",
       "ondragleave",
       "ondragmove",
       "ondrop",
-      "oneditclick",
-      "onhscroll",
       "oninput",
       "onkeydown",
       "onkeyup",
@@ -2978,10 +3291,82 @@
       "onsize",
       "ontouchend",
       "ontouchmove",
-      "ontouchstart",
-      "onvscroll"
+      "ontouchstart"
     ],
-    "filename": "TextArea.info"
+    "filename": "TabButtonIconControl.info"
+  },
+  {
+    "componentname": "TabMouseEventInfo",
+    "events": [],
+    "filename": "TabMouseEventInfo.info"
+  },
+  {
+    "componentname": "TabButtonItemControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "TabButtonItemControl.info"
+  },
+  {
+    "componentname": "TagBoxControl",
+    "events": [
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart"
+    ],
+    "filename": "TagBoxControl.info"
   },
   {
     "componentname": "TabpageControl",
@@ -3021,7 +3406,7 @@
     "filename": "TabpageControl.info"
   },
   {
-    "componentname": "TimePickerControl",
+    "componentname": "TextFieldBoxControl",
     "events": [
       "onclick",
       "oncontextmenu",
@@ -3052,7 +3437,7 @@
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "TimePickerControl.info"
+    "filename": "TextFieldBoxControl.info"
   },
   {
     "componentname": "TextField",
@@ -3096,7 +3481,47 @@
     "filename": "TextField.info"
   },
   {
-    "componentname": "TextFieldBoxControl",
+    "componentname": "TextArea",
+    "events": [
+      "canchange",
+      "onchanged",
+      "onclick",
+      "oncontextmenu",
+      "ondblclick",
+      "ondevicebuttonup",
+      "ondrag",
+      "ondragenter",
+      "ondragleave",
+      "ondragmove",
+      "ondrop",
+      "oneditclick",
+      "onhscroll",
+      "oninput",
+      "onkeydown",
+      "onkeyup",
+      "onkillfocus",
+      "onlbuttondown",
+      "onlbuttonup",
+      "onmousedown",
+      "onmouseenter",
+      "onmouseleave",
+      "onmousemove",
+      "onmouseup",
+      "onmousewheel",
+      "onmove",
+      "onrbuttondown",
+      "onrbuttonup",
+      "onsetfocus",
+      "onsize",
+      "ontouchend",
+      "ontouchmove",
+      "ontouchstart",
+      "onvscroll"
+    ],
+    "filename": "TextArea.info"
+  },
+  {
+    "componentname": "TimePickerControl",
     "events": [
       "onclick",
       "oncontextmenu",
@@ -3127,17 +3552,7 @@
       "ontouchmove",
       "ontouchstart"
     ],
-    "filename": "TextFieldBoxControl.info"
-  },
-  {
-    "componentname": "TouchEventInfo",
-    "events": [],
-    "filename": "TouchEventInfo.info"
-  },
-  {
-    "componentname": "TitleBarControl",
-    "events": [],
-    "filename": "TitleBarControl.info"
+    "filename": "TimePickerControl.info"
   },
   {
     "componentname": "TimePickerGroupControl",
@@ -3172,6 +3587,11 @@
       "ontouchstart"
     ],
     "filename": "TimePickerGroupControl.info"
+  },
+  {
+    "componentname": "TitleBarControl",
+    "events": [],
+    "filename": "TitleBarControl.info"
   },
   {
     "componentname": "TileFrameSet",
@@ -3214,6 +3634,26 @@
     "filename": "TileFrameSet.info"
   },
   {
+    "componentname": "TouchEventInfo",
+    "events": [],
+    "filename": "TouchEventInfo.info"
+  },
+  {
+    "componentname": "ValueChangedEventInfo",
+    "events": [],
+    "filename": "ValueChangedEventInfo.info"
+  },
+  {
+    "componentname": "TouchInputInfo",
+    "events": [],
+    "filename": "TouchInputInfo.info"
+  },
+  {
+    "componentname": "TrayBalloonTipHideEventInfo",
+    "events": [],
+    "filename": "TrayBalloonTipHideEventInfo.info"
+  },
+  {
     "componentname": "TitleBarButtonControl",
     "events": [
       "onclick",
@@ -3247,16 +3687,6 @@
       "ontouchstart"
     ],
     "filename": "TitleBarButtonControl.info"
-  },
-  {
-    "componentname": "TrayBalloonTipHideEventInfo",
-    "events": [],
-    "filename": "TrayBalloonTipHideEventInfo.info"
-  },
-  {
-    "componentname": "TouchInputInfo",
-    "events": [],
-    "filename": "TouchInputInfo.info"
   },
   {
     "componentname": "VideoCurrentTimeChangedEventInfo",
@@ -3337,11 +3767,6 @@
     "filename": "TreeItemIconControl.info"
   },
   {
-    "componentname": "VirtualFileErrorEventInfo",
-    "events": [],
-    "filename": "VirtualFileErrorEventInfo.info"
-  },
-  {
     "componentname": "VideoPlayStateChangedEventInfo",
     "events": [],
     "filename": "VideoPlayStateChangedEventInfo.info"
@@ -3387,6 +3812,11 @@
     "filename": "VFrameSet.info"
   },
   {
+    "componentname": "VirtualFileEventInfo",
+    "events": [],
+    "filename": "VirtualFileEventInfo.info"
+  },
+  {
     "componentname": "VideoPlayer",
     "events": [
       "onclick",
@@ -3422,24 +3852,6 @@
       "ontouchstart"
     ],
     "filename": "VideoPlayer.info"
-  },
-  {
-    "componentname": "VirtualFile",
-    "events": [
-      "onerror",
-      "onsuccess"
-    ],
-    "filename": "VirtualFile.info"
-  },
-  {
-    "componentname": "WebLoadCompEventInfo",
-    "events": [],
-    "filename": "WebLoadCompEventInfo.info"
-  },
-  {
-    "componentname": "VirtualFileEventInfo",
-    "events": [],
-    "filename": "VirtualFileEventInfo.info"
   },
   {
     "componentname": "View",
@@ -3479,9 +3891,22 @@
     "filename": "View.info"
   },
   {
-    "componentname": "WebUserNotifyEventInfo",
+    "componentname": "VirtualFileErrorEventInfo",
     "events": [],
-    "filename": "WebUserNotifyEventInfo.info"
+    "filename": "VirtualFileErrorEventInfo.info"
+  },
+  {
+    "componentname": "VirtualFile",
+    "events": [
+      "onerror",
+      "onsuccess"
+    ],
+    "filename": "VirtualFile.info"
+  },
+  {
+    "componentname": "WebLoadCompEventInfo",
+    "events": [],
+    "filename": "WebLoadCompEventInfo.info"
   },
   {
     "componentname": "WebBrowser",
@@ -3519,6 +3944,11 @@
       "onusernotify"
     ],
     "filename": "WebBrowser.info"
+  },
+  {
+    "componentname": "WebUserNotifyEventInfo",
+    "events": [],
+    "filename": "WebUserNotifyEventInfo.info"
   },
   {
     "componentname": "WebView",

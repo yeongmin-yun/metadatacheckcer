@@ -113,31 +113,31 @@
       "reason": "2 validation 필요해보임"
     },
     {
-      "line": 2120,
+      "line": 2117,
       "type": "TODO",
       "content": "this._setAccessibilityAction(this._getAccessibilityAction()); // TODO : 접근성 우선순위 고려",
       "reason": ": 접근성 우선순위 고려"
     },
     {
-      "line": 3033,
+      "line": 3030,
       "type": "TODO",
       "content": "// TODO ControlElement.recreate 같은 인터페이스가 만들어져야 할듯.",
       "reason": "ControlElement.recreate 같은 인터페이스가 만들어져야 할듯."
     },
     {
-      "line": 3372,
+      "line": 3369,
       "type": "TODO",
       "content": "//TODO : set direction attribute at Element's style.",
       "reason": ": set direction attribute at Element's style."
     },
     {
-      "line": 4343,
+      "line": 4340,
       "type": "TODO",
       "content": "// TODO2 validation 필요해보임",
       "reason": "2 validation 필요해보임"
     },
     {
-      "line": 8980,
+      "line": 9041,
       "type": "TODO",
       "content": "//TODO",
       "reason": ""
@@ -213,13 +213,13 @@
       "reason": ": level < max_level : this key is ??"
     },
     {
-      "line": 18314,
+      "line": 18325,
       "type": "TODO",
       "content": "case 8: // TODO: blob",
       "reason": "blob"
     },
     {
-      "line": 20297,
+      "line": 20308,
       "type": "TODO",
       "content": "// TODO: compress 인 경우에도 FakeXMLHttpRequest를 사용한다.",
       "reason": "compress 인 경우에도 FakeXMLHttpRequest를 사용한다."
@@ -341,73 +341,73 @@
   ],
   "Element_HTML5.js": [
     {
-      "line": 6394,
+      "line": 6363,
       "type": "TODO",
       "content": "// TODO : non composition, composition autoskip",
       "reason": ": non composition, composition autoskip"
     },
     {
-      "line": 6559,
+      "line": 6528,
       "type": "TODO",
       "content": "// TODO : non composition, composition autoskip",
       "reason": ": non composition, composition autoskip"
     },
     {
-      "line": 7304,
+      "line": 7273,
       "type": "TODO",
       "content": "// TODO",
       "reason": ""
     },
     {
-      "line": 8058,
+      "line": 8027,
       "type": "TODO",
       "content": "//Todo, displayInvalidtext",
       "reason": ", displayInvalidtext"
     },
     {
-      "line": 8074,
+      "line": 8043,
       "type": "TODO",
       "content": "//Todo, displayInvalidtext",
       "reason": ", displayInvalidtext"
     },
     {
-      "line": 8102,
+      "line": 8071,
       "type": "TODO",
       "content": "//Todo, displayInvalidtext",
       "reason": ", displayInvalidtext"
     },
     {
-      "line": 10616,
+      "line": 10561,
       "type": "TODO",
       "content": "// TODO",
       "reason": ""
     },
     {
-      "line": 12555,
+      "line": 12486,
       "type": "TODO",
       "content": "// TODO check element.create가 두번 타는 case가 있음. (frame 동적생성시)",
       "reason": "check element.create가 두번 타는 case가 있음. (frame 동적생성시)"
     },
     {
-      "line": 12621,
+      "line": 12552,
       "type": "TODO",
       "content": "// TODO check",
       "reason": "check"
     },
     {
-      "line": 12722,
+      "line": 12653,
       "type": "TODO",
       "content": "cursor = nexacro.CursorObject(\"arrow\"); // TODO check default로 되돌릴 방법??",
       "reason": "check default로 되돌릴 방법??"
     },
     {
-      "line": 12727,
+      "line": 12658,
       "type": "TODO",
       "content": "//// TODO statusbar grip image",
       "reason": "statusbar grip image"
     },
     {
-      "line": 20188,
+      "line": 20104,
       "type": "TODO",
       "content": "//TODO translate to class",
       "reason": "translate to class"
@@ -427,49 +427,49 @@
       "reason": "Runtime버젼 미구현!!!!"
     },
     {
-      "line": 4575,
+      "line": 4557,
       "type": "TODO",
       "content": "// TODO2 동적 set검토 필요",
       "reason": "2 동적 set검토 필요"
     },
     {
-      "line": 5451,
+      "line": 5433,
       "type": "TODO",
       "content": "//TODO2",
       "reason": "2"
     },
     {
-      "line": 6055,
+      "line": 6037,
       "type": "TODO",
       "content": "// TODO check element.create가 두번 타는 case가 있음. (frame 동적생성시)",
       "reason": "check element.create가 두번 타는 case가 있음. (frame 동적생성시)"
     },
     {
-      "line": 6115,
+      "line": 6097,
       "type": "TODO",
       "content": "// TODO check",
       "reason": "check"
     },
     {
-      "line": 6235,
+      "line": 6217,
       "type": "TODO",
       "content": "cursor = nexacro.CursorObject(\"arrow\"); // TODO check default로 되돌릴 방법??",
       "reason": "check default로 되돌릴 방법??"
     },
     {
-      "line": 6255,
+      "line": 6237,
       "type": "TODO",
       "content": "// TODO statusbar grip image",
       "reason": "statusbar grip image"
     },
     {
-      "line": 6601,
+      "line": 6583,
       "type": "TODO",
       "content": "// TODO Runtime버젼 미구현!!!!",
       "reason": "Runtime버젼 미구현!!!!"
     },
     {
-      "line": 11186,
+      "line": 11168,
       "type": "TODO",
       "content": "//    //Todo..",
       "reason": ".."
@@ -597,13 +597,13 @@
       "reason": "getFocus로 가져와야 하는게 아닌지?"
     },
     {
-      "line": 6421,
+      "line": 6429,
       "type": "TODO",
       "content": "//Todo",
       "reason": ""
     },
     {
-      "line": 6542,
+      "line": 6550,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
@@ -947,67 +947,67 @@
   ],
   "Panel.js": [
     {
-      "line": 338,
+      "line": 339,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
     },
     {
-      "line": 369,
+      "line": 365,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
     },
     {
-      "line": 468,
+      "line": 464,
       "type": "TODO",
       "content": "//TODO:",
       "reason": ""
     },
     {
-      "line": 499,
+      "line": 495,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
     },
     {
-      "line": 939,
+      "line": 935,
       "type": "TODO",
       "content": "//Todo",
       "reason": ""
     },
     {
-      "line": 1013,
+      "line": 1009,
       "type": "TODO",
       "content": "//Todo",
       "reason": ""
     },
     {
-      "line": 1149,
+      "line": 1143,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
     },
     {
-      "line": 1537,
+      "line": 1529,
       "type": "TODO",
       "content": "//Todo",
       "reason": ""
     },
     {
-      "line": 1894,
+      "line": 1886,
       "type": "TODO",
       "content": "//Todo..",
       "reason": ".."
     },
     {
-      "line": 1904,
+      "line": 1896,
       "type": "TODO",
       "content": "//todo..",
       "reason": ".."
     },
     {
-      "line": 1929,
+      "line": 1921,
       "type": "TODO",
       "content": "//todo..",
       "reason": ".."
@@ -1059,7 +1059,7 @@
   ],
   "SpinField.js": [
     {
-      "line": 1309,
+      "line": 1390,
       "type": "TODO",
       "content": "// todo : refact",
       "reason": ": refact"
@@ -1135,6 +1135,32 @@
       "type": "TODO",
       "content": "// TODO Accessibility API로 연결",
       "reason": "Accessibility API로 연결"
+    }
+  ],
+  "TabBar.js": [
+    {
+      "line": 2256,
+      "type": "TODO",
+      "content": "if (hScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2270,
+      "type": "TODO",
+      "content": "if (vScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2293,
+      "type": "TODO",
+      "content": "if (hScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
+    },
+    {
+      "line": 2303,
+      "type": "TODO",
+      "content": "if (vScrollLimit > 10e-10) // TODO : nexacro._EPSILON 처리할것",
+      "reason": ": nexacro._EPSILON 처리할것"
     }
   ],
   "TextArea.js": [

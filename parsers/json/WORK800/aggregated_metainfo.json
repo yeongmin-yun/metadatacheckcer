@@ -135,12 +135,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 에서 InnerDataset 에 없는 코드값을 스크립트로 value 속성에 설정할 때 처리방식을 결정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에서 InnerDataset 에 없는 코드값을 스크립트로 value 속성에 설정할 때 처리방식을 결정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "acceptvaluetype",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "acceptvaluetype"
     },
     {
       "name": "accessibilityaction",
@@ -163,12 +161,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button에 선택상자 이동 시 accessibilitydescreadtype 속성에 따라 스크린 리더의 음성 출력 대상으로 포함할 action 정보를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilityaction",
-      "stringrc": "true",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilityaction"
     },
     {
       "name": "accessibilitydesclevel",
@@ -177,7 +173,7 @@
       "refreshinfo": "",
       "displayinfo": "",
       "edittype": "Enum",
-      "defaultvalue": "all",
+      "defaultvalue": "\"all\"",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -192,12 +188,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 선택상자 이동 시 하위 컴포넌트의 접근성 출력여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilitydesclevel",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilitydesclevel"
     },
     {
       "name": "accessibilitydescription",
@@ -220,12 +214,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button에 선택상자 이동 시 accessibilitydescreadtype 속성에 따라 스크린 리더의 음성 출력 대상으로 포함할 description 정보를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilitydescription",
-      "stringrc": "true",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilitydescription"
     },
     {
       "name": "accessibilityenable",
@@ -249,12 +241,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 선택상자 이동 시 접근성 관련 속성값 출력여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilityenable",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilityenable"
     },
     {
       "name": "accessibilitylabel",
@@ -277,12 +267,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button에 선택상자 이동 시 accessibilitydescreadtype 속성에 따라 스크린 리더의 음성 출력 대상으로 포함할 label 정보를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilitylabel",
-      "stringrc": "true",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilitylabel"
     },
     {
       "name": "accessibilityleavemessage",
@@ -333,12 +321,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Chrome,Windows NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button에 선택상자 이동 시 스크린 리더가 읽어주는 Role 정보를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "접근성을 지정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "accessibilityrole",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "accessibilityrole"
     },
     {
       "name": "addresses",
@@ -803,7 +789,7 @@
       "subgroup": "background",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "String",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -818,12 +804,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 배경 영역을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 배경 영역을 설정하는 속성입니다.",
       "csspropertyname": "background",
-      "normalpropertyname": "background",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "background"
     },
     {
       "name": "backgroundcolumn",
@@ -910,6 +894,33 @@
       "normalpropertyname": "baroutsize",
       "stringrc": "false",
       "defaultstringrc": "false"
+    },
+    {
+      "name": "bartype",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Enum",
+      "defaultvalue": "fit",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "BarType",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Switch 내부 바의 형태를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "bartype"
     },
     {
       "name": "beziercurve",
@@ -1115,7 +1126,7 @@
       "subgroup": "border",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Border",
+      "edittype": "String",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -1130,12 +1141,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 테두리를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 테두리를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-border",
-      "normalpropertyname": "border",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "border"
     },
     {
       "name": "bordercolumn",
@@ -1186,12 +1195,10 @@
       "enuminfo2": "",
       "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 모서리 모양을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 모서리 모양을 설정하는 속성입니다.",
       "csspropertyname": "border-radius",
-      "normalpropertyname": "borderRadius",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "borderRadius"
     },
     {
       "name": "bottom",
@@ -1212,14 +1219,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "PixelPercent",
+      "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 을(를) 표시하기 위한 하단 좌표값을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 을(를) 표시하기 위한 하단 좌표를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "bottom",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "bottom"
     },
     {
       "name": "box-shadow-control",
@@ -1255,7 +1260,7 @@
       "subgroup": "box-shadow",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "String",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -1270,12 +1275,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 그림자 효과를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 그림자 효과를 설정하는 속성입니다.",
       "csspropertyname": "box-shadow",
-      "normalpropertyname": "boxShadow",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "boxShadow"
     },
     {
       "name": "button",
@@ -2124,12 +2127,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트에서 아이템의 코드값으로 사용될 Column을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 아이템 리스트에서 코드값으로 사용될 Column을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "codecolumn",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "codecolumn"
     },
     {
       "name": "col",
@@ -2251,7 +2252,7 @@
       "subgroup": "color",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Color",
+      "edittype": "Enum",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -2262,16 +2263,14 @@
       "unused": "false",
       "mandatory": "false",
       "objectinfo": "",
-      "enuminfo": "",
+      "enuminfo": "NamedColor",
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트의 색상을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트의 색상을 설정하는 속성입니다.",
       "csspropertyname": "color",
-      "normalpropertyname": "color",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "color"
     },
     {
       "name": "columncount",
@@ -2587,6 +2586,34 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "content",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Contents",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "HTMLContentBox 컴포넌트에 표시될 컨텐츠를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "content",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "contentheight",
       "group": "Appearance",
       "subgroup": "",
@@ -2641,6 +2668,33 @@
       "normalpropertyname": "contents",
       "stringrc": "false",
       "defaultstringrc": "false"
+    },
+    {
+      "name": "controltype",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Enum",
+      "defaultvalue": "auto",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "AbstractSelectAnyControlType",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 영역에서 표시될 마우스 포인터의 종류를 설정하는 속성입니다.",
+      "csspropertyname": "controltype",
+      "normalpropertyname": "controltype"
     },
     {
       "name": "count",
@@ -2701,7 +2755,7 @@
     },
     {
       "name": "cssclass",
-      "group": "Information",
+      "group": "Appearance",
       "subgroup": "",
       "refreshinfo": "",
       "displayinfo": "",
@@ -2721,12 +2775,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 Style 을 XCSS 파일에 정의된 class 로 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 Style을 XCSS 파일에 정의된 class로 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "cssclass",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "cssclass"
     },
     {
       "name": "CSV",
@@ -2836,12 +2888,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역에서 표시될 마우스 포인터의 종류를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역내에서 표시될 마우스 포인터의 종류를 설정하는 속성입니다.",
       "csspropertyname": "cursor",
-      "normalpropertyname": "cursor",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "cursor"
     },
     {
       "name": "curtime",
@@ -2978,10 +3028,37 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트에서 아이템의 데이터값으로 사용될 Column을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 아이템 리스트에서 데이터값으로 사용될 Column을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "datacolumn",
+      "normalpropertyname": "datacolumn"
+    },
+    {
+      "name": "datacount",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 페이징 처리를 위한 총 데이터 개수를 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "datacount",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -4116,12 +4193,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 테두리(Border) 안쪽에 표시될 Edge 이미지를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent의 테두리 안쪽에 edge 이미지를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-edge",
-      "normalpropertyname": "edge",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "edge"
     },
     {
       "name": "editformat",
@@ -4261,12 +4336,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 사용가능 여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 사용가능 여부를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "enable",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "enable"
     },
     {
       "name": "enablecolumn",
@@ -4318,12 +4391,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에서 이벤트를 발생시킬지 여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에서 이벤트를 발생시킬지 여부를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "enableevent",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "enableevent"
     },
     {
       "name": "enableredraw",
@@ -4350,6 +4421,35 @@
       "description": "",
       "csspropertyname": "",
       "normalpropertyname": "enableredraw",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "enablestatus",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "String",
+      "defaultvalue": "",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "enable 속성 값을 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "enablestatus",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -4440,11 +4540,12 @@
     },
     {
       "name": "errormsg",
-      "group": "Eventinfo",
+      "group": "Misc.",
       "subgroup": "",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "",
+      "edittype": "String",
+      "defaultvalue": "",
       "readonly": "true",
       "initonly": "false",
       "hidden": "false",
@@ -4460,7 +4561,7 @@
       "unitinfo": "",
       "delimiter": "",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "발생한 에러에 대한 에러메시지를 갖는 속성입니다.",
+      "description": ".",
       "csspropertyname": "",
       "normalpropertyname": "errormsg",
       "stringrc": "false",
@@ -4496,11 +4597,12 @@
     },
     {
       "name": "errortype",
-      "group": "",
+      "group": "Misc.",
       "subgroup": "",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "",
+      "edittype": "String",
+      "defaultvalue": "",
       "readonly": "true",
       "initonly": "false",
       "hidden": "false",
@@ -4516,7 +4618,7 @@
       "unitinfo": "",
       "delimiter": "",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "발생한 에러에 대한 에러유형을 갖는 속성입니다.",
+      "description": ".",
       "csspropertyname": "",
       "normalpropertyname": "errortype",
       "stringrc": "false",
@@ -5263,12 +5365,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시될 텍스트를 동적으로 생성하는 수식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent 에 표시될 텍스트에 적용할 수식을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "expr",
-      "stringrc": "true",
-      "defaultstringrc": "false"
+      "normalpropertyname": "expr"
     },
     {
       "name": "extrabuttonsize",
@@ -5645,6 +5745,34 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "firstbuttontext",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "String",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 의 처음 버튼에 텍스트를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "firstbuttontext",
+      "stringrc": "true",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "fittocontents",
       "group": "Position",
       "subgroup": "",
@@ -5752,12 +5880,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "Layout 컨테이너 내 Main Axis(type 속성값이 \"horizontal\"이면 수평축, type 속성값이 \"vertical\"이면 수직축) 여백을 설정한 비율만큼 나누어 컴포넌트의 크기를 재조정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "flexgrow",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "flexgrow"
     },
     {
       "name": "flexmainaxisalign",
@@ -5809,12 +5935,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "Layout 컨테이너 내 Main Axis(type 속성값이 \"horizontal\"이면 수평축, type 속성값이 \"vertical\"이면 수직축)에 컴포넌트가 배치되는 영역이 컨테이너 영역을 초과하지 않도록 설정한 비율만큼 나누어 컴포넌트의 크기를 재조정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "flexshrink",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "flexshrink"
     },
     {
       "name": "flexwrap",
@@ -5893,14 +6017,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "",
+      "unitinfo": "FontSize2",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에서 사용하는 폰트를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent에서 사용하는 폰트를 설정하는 속성입니다.",
       "csspropertyname": "font",
-      "normalpropertyname": "font",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "font"
     },
     {
       "name": "footerheight",
@@ -6468,6 +6590,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "gripmargin",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "Size",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "SplitterControl 의 margin 을 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "gripmargin",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "HANCELL2010",
       "group": "",
       "subgroup": "",
@@ -6785,7 +6936,7 @@
       "subgroup": "position",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "PositionBase",
+      "edittype": "Position",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -6800,12 +6951,10 @@
       "enuminfo2": "",
       "unitinfo": "PixelPercent",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 을(를) 표시하기 위한 높이를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent 을(를) 표시하기 위한 높이를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "height",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "height"
     },
     {
       "name": "helpertext",
@@ -6912,12 +7061,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 기본 액션을 수행하기 위한 단축키를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 기본 액션을 수행하기 위한 단축키를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "hotkey",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "hotkey"
     },
     {
       "name": "hotkeycolumn",
@@ -7109,12 +7256,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Action의 고유 식별자를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent의 고유 식별자를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "id",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "id"
     },
     {
       "name": "idcolumn",
@@ -7578,7 +7723,7 @@
       "subgroup": "",
       "refreshinfo": "selectitem",
       "displayinfo": "",
-      "edittype": "String",
+      "edittype": "Number",
       "defaultvalue": "-1",
       "readonly": "false",
       "initonly": "false",
@@ -7594,12 +7739,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트의 아이템 중 선택된 아이템의 인덱스를 갖는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 아이템 중 선택된 아이템의 인덱스를 갖는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "index",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "index"
     },
     {
       "name": "infoarray",
@@ -7650,12 +7793,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 적용될 InitValue 의 ID 를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "",
       "csspropertyname": "",
-      "normalpropertyname": "initvalueid",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "initvalueid"
     },
     {
       "name": "innerdataset",
@@ -7678,12 +7819,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 에 특정날짜를 표시하기 위해 DataSet 컴포넌트를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 아이템 리스트를 구성할 DataSet 의 ID를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "innerdataset",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "innerdataset"
     },
     {
       "name": "inputfilter",
@@ -8345,6 +8484,34 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "lastbuttontext",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "String",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 의 마지막 버튼에 텍스트를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "lastbuttontext",
+      "stringrc": "true",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "latitude",
       "group": "Information",
       "subgroup": "",
@@ -8424,12 +8591,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "Layout 컨테이너 내 Main Axis(type 속성값이 \"horizontal\"이면 수평축, type 속성값이 \"vertical\"이면 수직축)에 컴포넌트가 배치되는 순서를 설정합니다.",
       "csspropertyname": "",
-      "normalpropertyname": "layoutorder",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "layoutorder"
     },
     {
       "name": "leadingbuttonsize",
@@ -8465,7 +8630,7 @@
       "subgroup": "position",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "PositionBase",
+      "edittype": "Position",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -8480,12 +8645,10 @@
       "enuminfo2": "",
       "unitinfo": "PixelPercent",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 을(를) 표시하기 위한 좌측 좌표값을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 을(를) 표시하기 위한 좌측 좌표를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "left",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "left"
     },
     {
       "name": "letterSpacing",
@@ -8493,7 +8656,7 @@
       "subgroup": "letter-spacing",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -8506,14 +8669,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "PixelNegative",
+      "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 문자의 간격(자간)을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 문자의 간격을 설정하는 속성입니다.",
       "csspropertyname": "letter-spacing",
-      "normalpropertyname": "letterSpacing",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "letterSpacing"
     },
     {
       "name": "level",
@@ -9117,9 +9278,9 @@
       "name": "maxheight",
       "group": "Position",
       "subgroup": "",
-      "refreshinfo": "boundheight",
+      "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -9132,14 +9293,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "Pixel",
+      "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 이(가) 화면에 표시되는 최대 높이를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "",
       "csspropertyname": "",
-      "normalpropertyname": "maxheight",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "maxheight"
     },
     {
       "name": "maxlength",
@@ -9174,9 +9333,9 @@
       "name": "maxwidth",
       "group": "Position",
       "subgroup": "",
-      "refreshinfo": "boundwidth",
+      "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -9189,14 +9348,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "Pixel",
+      "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 이(가) 화면에 표시되는 최대 너비를 설정하는 속성입니다.",
+      "requirement": "",
+      "description": "",
       "csspropertyname": "",
-      "normalpropertyname": "maxwidth",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "maxwidth"
     },
     {
       "name": "message",
@@ -9399,9 +9556,9 @@
       "name": "minheight",
       "group": "Position",
       "subgroup": "",
-      "refreshinfo": "boundheight",
+      "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -9414,14 +9571,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "Pixel",
+      "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 이(가) 화면에 표시되는 최소 높이를 설정하는 속성입니다.",
+      "requirement": "",
+      "description": "",
       "csspropertyname": "",
-      "normalpropertyname": "minheight",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "minheight"
     },
     {
       "name": "minimizedchildposition",
@@ -9512,9 +9667,9 @@
       "name": "minwidth",
       "group": "Position",
       "subgroup": "",
-      "refreshinfo": "boundwidth",
+      "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -9527,14 +9682,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "Pixel",
+      "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 이(가) 화면에 표시되는 최소 너비를 설정하는 속성입니다.",
+      "requirement": "",
+      "description": "",
       "csspropertyname": "",
-      "normalpropertyname": "minwidth",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "minwidth"
     },
     {
       "name": "mobileorientation",
@@ -9562,6 +9715,35 @@
       "description": "모바일 환경에서 LayOut 이 표시될 디바이스의 방향값을 설정하는 속성입니다.",
       "csspropertyname": "",
       "normalpropertyname": "mobileorientation",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "movetype",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Enum",
+      "defaultvalue": "self",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "SplitterMoveType",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "SplitterControl 의 이동 형태를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "movetype",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -9729,10 +9911,37 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Action 의 이름을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 이름을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "name",
+      "normalpropertyname": "name"
+    },
+    {
+      "name": "navibuttongap",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 처음버튼의 오른쪽, 마지막버튼의 왼쪽 간격을 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "navibuttongap",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -10019,6 +10228,34 @@
       "csspropertyname": "",
       "normalpropertyname": "nextbutton",
       "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "nextbuttontext",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "String",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 의 다음 버튼에 텍스트를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "nextbuttontext",
+      "stringrc": "true",
       "defaultstringrc": "false"
     },
     {
@@ -10356,12 +10593,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역의 투명도를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역의 투명도를 설정하는 속성입니다.",
       "csspropertyname": "opacity",
-      "normalpropertyname": "opacity",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "opacity"
     },
     {
       "name": "openalign",
@@ -10477,6 +10712,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "outsidegap",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 바깥 영역 간격을 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "outsidegap",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "overlaycolor",
       "group": "Appearance",
       "subgroup": "",
@@ -10525,12 +10789,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 과 내부 컨텐츠영역 사이의 여백을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역의 안쪽 여백을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-padding",
-      "normalpropertyname": "padding",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "padding"
     },
     {
       "name": "page",
@@ -10539,8 +10801,8 @@
       "refreshinfo": "",
       "displayinfo": "",
       "edittype": "Number",
-      "defaultvalue": "3",
-      "readonly": "true",
+      "defaultvalue": "1",
+      "readonly": "false",
       "initonly": "false",
       "hidden": "false",
       "control": "false",
@@ -10555,9 +10817,125 @@
       "unitinfo": "",
       "delimiter": "",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "ScrollBarControl 에서 Page 단위로 스크롤 될 때 pos 속성값에 적용될 값을 갖는 읽기전용 속성입니다.",
+      "description": "Paginator 의 현재 페이지 값을 갖는 속성입니다.",
       "csspropertyname": "",
       "normalpropertyname": "page",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "pagebuttongap",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 page번호 사이 간격을 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "pagebuttongap",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "pagecount",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "1",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "true",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 페이지 버튼의 최대 개수를 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "pagecount",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "pagesiblingmaxcount",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "2",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 페이지 앞 뒤 페이지 최대 개수를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "pagesiblingmaxcount",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "pagesize",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 페이지당 표시할 데이터의 개수를 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "pagesize",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -10582,12 +10960,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Action 의 부모 오브젝트를 갖는 읽기전용 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 부모 오브젝트를 갖는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "parent",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "parent"
     },
     {
       "name": "password",
@@ -10923,10 +11299,36 @@
       "enuminfo2": "",
       "unitinfo": "PositionStep",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 오브젝트가 화면분할기능을 사용할 때 Button 이(가) 표시될 화면의 인덱스를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "부모 오브젝트가 스텝기능을 사용할 때 XComponent 이(가) 표시될 스텝을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "positionstep",
+      "normalpropertyname": "positionstep"
+    },
+    {
+      "name": "postcssclass",
+      "group": "",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "변경된 Css Class 이름을 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "postcssclass",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -11044,6 +11446,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "postpage",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "새로 변경된 페이지값을 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "postpage",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "poststartdate",
       "group": "",
       "subgroup": "",
@@ -11126,6 +11557,35 @@
       "description": "새로 변경된 value 값을 갖는 속성입니다.",
       "csspropertyname": "",
       "normalpropertyname": "postvalue",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "precssclass",
+      "group": "",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "",
+      "defaultvalue": "",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "변경되기 전 Css Class 이름을 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "precssclass",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -11243,6 +11703,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "prepage",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "0",
+      "readonly": "true",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "변경 전 페이지값을 갖는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "prepage",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "prestartdate",
       "group": "",
       "subgroup": "",
@@ -11354,6 +11843,34 @@
       "csspropertyname": "",
       "normalpropertyname": "prevbutton",
       "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "prevbuttontext",
+      "group": "Action",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "String",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 의 이전 버튼에 텍스트를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "prevbuttontext",
+      "stringrc": "true",
       "defaultstringrc": "false"
     },
     {
@@ -11749,12 +12266,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 에서 편집을 허용할 지 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에서 아이템 변경을 허용할 지 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "readonly",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "readonly"
     },
     {
       "name": "readonlycolumn",
@@ -12161,7 +12676,7 @@
       "subgroup": "position",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "PositionBase",
+      "edittype": "Position",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -12176,12 +12691,10 @@
       "enuminfo2": "",
       "unitinfo": "PixelPercent",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 를 표시하기 위한 우측 좌표값을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 를 표시하기 위한 우측 좌표를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "right",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "right"
     },
     {
       "name": "row",
@@ -12290,12 +12803,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에서 내부 컨텐츠 또는 컴포넌트의 표시 기준을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Component 에서 내부 컨텐츠 또는 컴포넌트의 표시 기준을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "rtl",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "rtl"
     },
     {
       "name": "saveinfinity",
@@ -13263,6 +13774,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "showfirstlastbutton",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Boolean",
+      "defaultvalue": "true",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "true",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 처음, 마지막 버튼을 표시할 지 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "showfirstlastbutton",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "showmonthspin",
       "group": "Appearance",
       "subgroup": "",
@@ -13316,6 +13856,35 @@
       "description": "open() 메소드로 ChildFrame 이 Modeless로 표시될 때 윈도우의 TaskBar 에 표시할 지 여부를 설정하는 속성입니다.",
       "csspropertyname": "",
       "normalpropertyname": "showontaskbar",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
+      "name": "showprevnextbutton",
+      "group": "Misc.",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Boolean",
+      "defaultvalue": "true",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "true",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 이전, 다음 버튼을 표시할 지 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "showprevnextbutton",
       "stringrc": "false",
       "defaultstringrc": "false"
     },
@@ -14290,6 +14859,32 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "switchbuttonwidth",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "Pixel",
+      "delimiter": "",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Switch 에 표시되는 버튼의 출력영역 너비를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "switchbuttonwidth"
+    },
+    {
       "name": "systemcommand",
       "group": "",
       "subgroup": "",
@@ -14622,12 +15217,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "Layout 컨테이너 내 가상의 Table Cell 영역 내에서 컴포넌트가 배치되는 영역을 설정합니다.",
       "csspropertyname": "",
-      "normalpropertyname": "tablecellarea",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "tablecellarea"
     },
     {
       "name": "tablecellincompalign",
@@ -14752,6 +15345,7 @@
       "refreshinfo": "",
       "displayinfo": "",
       "edittype": "Number",
+      "defaultvalue": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -14766,12 +15360,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "탭키 입력으로 컴포넌트간 포커스를 이동할 때 Button 의 순서를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "탭키 입력으로 컴포넌트간 포커스를 이동할 때 XComponent 의 순서를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "taborder",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "taborder"
     },
     {
       "name": "tabpages",
@@ -14852,12 +15444,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "탭키 입력으로 컴포넌트간 포커스를 이동할 때 Button 이(가) 포커스를 받을 지 여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "탭키 입력으로 컴포넌트간 포커스를 이동할 때 XComponent 이(가) 포커스를 받을 지 여부를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "tabstop",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "tabstop"
     },
     {
       "name": "tabstyle",
@@ -15143,11 +15733,12 @@
     },
     {
       "name": "text",
-      "group": "Action",
+      "group": "Appearance",
       "subgroup": "",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "MultilineString",
+      "edittype": "String",
+      "defaultvalue": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -15156,18 +15747,16 @@
       "bind": "false",
       "deprecated": "false",
       "unused": "false",
-      "mandatory": "true",
+      "mandatory": "false",
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시될 텍스트를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent 에 표시될 텍스트를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "text",
-      "stringrc": "true",
-      "defaultstringrc": "true"
+      "normalpropertyname": "text"
     },
     {
       "name": "textAlign",
@@ -15190,12 +15779,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트 또는 컨텐츠의 가로 정렬 방식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트 또는 컨텐츠의 가로 정렬 방식을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-text-align",
-      "normalpropertyname": "textAlign",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "textAlign"
     },
     {
       "name": "textcolorcolumn",
@@ -15260,7 +15847,7 @@
       "subgroup": "text-decoration",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Enum",
+      "edittype": "MultiEnum",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -15275,12 +15862,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트에 적용할 효과를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트에 적용할 효과를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-text-decoration",
-      "normalpropertyname": "textDecoration",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "textDecoration"
     },
     {
       "name": "textPadding",
@@ -15309,6 +15894,33 @@
       "normalpropertyname": "textPadding",
       "stringrc": "false",
       "defaultstringrc": "false"
+    },
+    {
+      "name": "textposition",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Enum",
+      "defaultvalue": "right",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "false",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "TextPosition",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Switch text의 위치를 설정하는 속성입니다. 기본 값으로 Right가 적용됩니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "textPosition"
     },
     {
       "name": "textseparator",
@@ -15671,12 +16283,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE",
-      "description": "Button 에 마우스 포인터를 올려 놓았을 때 표시되는 풍선도움말을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 마우스 포인터를 올려 놓았을 때 표시되는 풍선도움말을 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "tooltiptext",
-      "stringrc": "true",
-      "defaultstringrc": "false"
+      "normalpropertyname": "tooltiptext"
     },
     {
       "name": "tooltiptype",
@@ -15700,12 +16310,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Windows NRE",
-      "description": "Button 에서 풍선도움말이 표시될 위치와 방식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XCompenet 에서 풍선도움말이 표시될 위치를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "tooltiptype",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "tooltiptype"
     },
     {
       "name": "top",
@@ -15713,7 +16321,7 @@
       "subgroup": "position",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "PositionBase",
+      "edittype": "Position",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -15728,12 +16336,10 @@
       "enuminfo2": "",
       "unitinfo": "PixelPercent",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 을(를) 표시하기 위한 상단 좌표값을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 을(를) 표시하기 위한 상단 좌표를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "top",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "top"
     },
     {
       "name": "topmost",
@@ -16831,7 +17437,7 @@
       "name": "value",
       "group": "Action",
       "subgroup": "",
-      "refreshinfo": "",
+      "refreshinfo": "selectitem",
       "displayinfo": "",
       "edittype": "String",
       "readonly": "false",
@@ -16848,12 +17454,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 에 표시되는 날짜의 원본값을 갖는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에서 선택된 아이템의 코드값을 갖는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "value",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "value"
     },
     {
       "name": "valuetypebandid",
@@ -16932,12 +17536,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트 또는 컨텐츠의 세로 정렬 방식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent에 표시되는 텍스트 또는 컨텐츠의 세로 정렬 방식을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-vertical-align",
-      "normalpropertyname": "verticalAlign",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "verticalAlign"
     },
     {
       "name": "verticalgap",
@@ -17131,12 +17733,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 이(가) 화면에 표시될지 여부를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 이(가) 화면에 표시될지 여부를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "visible",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "visible"
     },
     {
       "name": "volume",
@@ -17257,7 +17857,7 @@
       "subgroup": "position",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "PositionBase",
+      "edittype": "Position",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17272,12 +17872,10 @@
       "enuminfo2": "",
       "unitinfo": "PixelPercent",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 을(를) 표시하기 위한 너비를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent 을(를) 표시하기 위한 너비를 설정하는 속성입니다.",
       "csspropertyname": "",
-      "normalpropertyname": "width",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "width"
     },
     {
       "name": "windowed",
@@ -17314,7 +17912,7 @@
       "subgroup": "word-spacing",
       "refreshinfo": "",
       "displayinfo": "",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17327,14 +17925,12 @@
       "objectinfo": "",
       "enuminfo": "",
       "enuminfo2": "",
-      "unitinfo": "PixelNegative",
+      "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트의 단어 사이 간격을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트의 자간을 설정하는 속성입니다.",
       "csspropertyname": "word-spacing",
-      "normalpropertyname": "wordSpacing",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "wordSpacing"
     },
     {
       "name": "wordWrap",
@@ -17357,12 +17953,10 @@
       "enuminfo2": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트가 출력영역보다 길 경우 자동으로 줄바꿈 되도록 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트가 출력영역보다 길 경우 자동으로 줄바꿈 되도록 설정하는 속성입니다.",
       "csspropertyname": "-nexa-word-wrap",
-      "normalpropertyname": "wordWrap",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "wordWrap"
     },
     {
       "name": "x",
@@ -17423,6 +18017,35 @@
       "defaultstringrc": "false"
     },
     {
+      "name": "zindex",
+      "group": "Appearance",
+      "subgroup": "",
+      "refreshinfo": "",
+      "displayinfo": "",
+      "edittype": "Number",
+      "defaultvalue": "",
+      "readonly": "false",
+      "initonly": "false",
+      "hidden": "true",
+      "control": "false",
+      "expr": "false",
+      "bind": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "mandatory": "false",
+      "objectinfo": "",
+      "enuminfo": "",
+      "enuminfo2": "",
+      "unitinfo": "",
+      "delimiter": "",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "SplitterControl 의 zindex 를 설정하는 속성입니다.",
+      "csspropertyname": "",
+      "normalpropertyname": "zindex",
+      "stringrc": "false",
+      "defaultstringrc": "false"
+    },
+    {
       "name": "zoomlevel",
       "group": "Appearance",
       "subgroup": "",
@@ -17457,7 +18080,7 @@
       "name": "-nexa-border",
       "group": "Style",
       "subgroup": "border",
-      "edittype": "Border",
+      "edittype": "String",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17472,12 +18095,10 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 테두리를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 테두리를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-border",
-      "normalpropertyname": "border",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "border"
     },
     {
       "name": "-nexa-edge",
@@ -17498,12 +18119,10 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 테두리(Border) 안쪽에 표시될 Edge 이미지를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent의 테두리 안쪽에 edge 이미지를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-edge",
-      "normalpropertyname": "edge",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "edge"
     },
     {
       "name": "-nexa-icon",
@@ -17562,6 +18181,7 @@
       "group": "Style",
       "subgroup": "padding",
       "edittype": "String",
+      "defaultvalue": "0px 0px 0px 0px",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17576,18 +18196,16 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 과 내부 컨텐츠영역 사이의 여백을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역의 안쪽 여백을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-padding",
-      "normalpropertyname": "padding",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "padding"
     },
     {
       "name": "-nexa-rtl-background-image",
-      "group": "Style",
+      "group": "",
       "subgroup": "",
-      "edittype": "String",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17602,18 +18220,16 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 rtl 속성이 true 로 적용될 때 배경에 표시될 이미지를 설정하는 속성입니다.",
+      "requirement": "",
+      "description": "",
       "csspropertyname": "-nexa-rtl-background-image",
-      "normalpropertyname": "",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": ""
     },
     {
       "name": "-nexa-rtl-edge-image",
-      "group": "Style",
+      "group": "",
       "subgroup": "",
-      "edittype": "String",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17628,12 +18244,10 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 rtl 속성이 true 로 적용될 때 테두리(Border) 안쪽에 표시될 Edge 이미지를 설정하는 속성입니다.",
+      "requirement": "",
+      "description": "",
       "csspropertyname": "-nexa-rtl-edge-image",
-      "normalpropertyname": "",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": ""
     },
     {
       "name": "-nexa-rtl-icon",
@@ -17666,6 +18280,7 @@
       "group": "Style",
       "subgroup": "-nexa-text-align",
       "edittype": "Enum",
+      "defaultvalue": "left",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17680,18 +18295,17 @@
       "enuminfo": "HorizontalAlign",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트 또는 컨텐츠의 가로 정렬 방식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트 또는 컨텐츠의 가로 정렬 방식을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-text-align",
-      "normalpropertyname": "textAlign",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "textAlign"
     },
     {
       "name": "-nexa-text-decoration",
       "group": "Style",
       "subgroup": "text-decoration",
-      "edittype": "Enum",
+      "edittype": "MultiEnum",
+      "defaultvalue": "none",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17706,12 +18320,10 @@
       "enuminfo": "TextDecorationLine",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트에 적용할 효과를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트에 적용할 효과를 설정하는 속성입니다.",
       "csspropertyname": "-nexa-text-decoration",
-      "normalpropertyname": "textDecoration",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "textDecoration"
     },
     {
       "name": "-nexa-text-padding",
@@ -17744,6 +18356,7 @@
       "group": "Style",
       "subgroup": "-nexa-vertical-align",
       "edittype": "Enum",
+      "defaultvalue": "middle",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17758,18 +18371,17 @@
       "enuminfo": "VerticalAlign",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트 또는 컨텐츠의 세로 정렬 방식을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent에 표시되는 텍스트 또는 컨텐츠의 세로 정렬 방식을 설정하는 속성입니다.",
       "csspropertyname": "-nexa-vertical-align",
-      "normalpropertyname": "verticalAlign",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "verticalAlign"
     },
     {
       "name": "-nexa-word-wrap",
       "group": "Style",
       "subgroup": "-nexa-word-wrap",
       "edittype": "Enum",
+      "defaultvalue": "none",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17784,18 +18396,16 @@
       "enuminfo": "WordWrapType",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트가 출력영역보다 길 경우 자동으로 줄바꿈 되도록 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트가 출력영역보다 길 경우 자동으로 줄바꿈 되도록 설정하는 속성입니다.",
       "csspropertyname": "-nexa-word-wrap",
-      "normalpropertyname": "wordWrap",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "wordWrap"
     },
     {
       "name": "background",
       "group": "Style",
       "subgroup": "background",
-      "edittype": "String",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17810,18 +18420,17 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 배경 영역을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 배경 영역을 설정하는 속성입니다.",
       "csspropertyname": "background",
-      "normalpropertyname": "background",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "background"
     },
     {
       "name": "border-radius",
       "group": "Style",
       "subgroup": "border-radius",
       "edittype": "String",
+      "defaultvalue": "0px",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17836,18 +18445,17 @@
       "enuminfo": "",
       "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 모서리 모양을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 의 모서리 모양을 설정하는 속성입니다.",
       "csspropertyname": "border-radius",
-      "normalpropertyname": "borderRadius",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "borderRadius"
     },
     {
       "name": "box-shadow",
       "group": "Style",
       "subgroup": "box-shadow",
-      "edittype": "String",
+      "edittype": "",
+      "defaultvalue": "none",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17862,18 +18470,16 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 그림자 효과를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 그림자 효과를 설정하는 속성입니다.",
       "csspropertyname": "box-shadow",
-      "normalpropertyname": "boxShadow",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "boxShadow"
     },
     {
       "name": "color",
       "group": "Style",
       "subgroup": "color",
-      "edittype": "Color",
+      "edittype": "Enum",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17885,21 +18491,20 @@
       "unused": "false",
       "mandatory": "false",
       "objectinfo": "",
-      "enuminfo": "",
+      "enuminfo": "NamedColor",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트의 색상을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트의 색상을 설정하는 속성입니다.",
       "csspropertyname": "color",
-      "normalpropertyname": "color",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "color"
     },
     {
       "name": "cursor",
       "group": "Style",
       "subgroup": "cursor",
       "edittype": "Enum",
+      "defaultvalue": "auto",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17914,12 +18519,10 @@
       "enuminfo": "CursorType",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역에서 표시될 마우스 포인터의 종류를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역내에서 표시될 마우스 포인터의 종류를 설정하는 속성입니다.",
       "csspropertyname": "cursor",
-      "normalpropertyname": "cursor",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "cursor"
     },
     {
       "name": "font",
@@ -17938,20 +18541,18 @@
       "mandatory": "false",
       "objectinfo": "",
       "enuminfo": "",
-      "unitinfo": "",
+      "unitinfo": "FontSize2",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에서 사용하는 폰트를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "XComponent에서 사용하는 폰트를 설정하는 속성입니다.",
       "csspropertyname": "font",
-      "normalpropertyname": "font",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "font"
     },
     {
       "name": "letter-spacing",
       "group": "Style",
       "subgroup": "letter-spacing",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -17964,14 +18565,12 @@
       "mandatory": "false",
       "objectinfo": "",
       "enuminfo": "",
-      "unitinfo": "PixelNegative",
+      "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 문자의 간격(자간)을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 문자의 간격을 설정하는 속성입니다.",
       "csspropertyname": "letter-spacing",
-      "normalpropertyname": "letterSpacing",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "letterSpacing"
     },
     {
       "name": "opacity",
@@ -17992,12 +18591,10 @@
       "enuminfo": "",
       "unitinfo": "",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역의 투명도를 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역의 투명도를 설정하는 속성입니다.",
       "csspropertyname": "opacity",
-      "normalpropertyname": "opacity",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "opacity"
     },
     {
       "name": "text-decoration",
@@ -18030,7 +18627,7 @@
       "name": "word-spacing",
       "group": "Style",
       "subgroup": "word-spacing",
-      "edittype": "Number",
+      "edittype": "",
       "readonly": "false",
       "initonly": "false",
       "hidden": "false",
@@ -18043,20 +18640,38 @@
       "mandatory": "false",
       "objectinfo": "",
       "enuminfo": "",
-      "unitinfo": "PixelNegative",
+      "unitinfo": "Pixel",
       "delimiter": "",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시되는 텍스트의 단어 사이 간격을 설정하는 속성입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 표시되는 텍스트의 자간을 설정하는 속성입니다.",
       "csspropertyname": "word-spacing",
-      "normalpropertyname": "wordSpacing",
-      "stringrc": "false",
-      "defaultstringrc": "false"
+      "normalpropertyname": "wordSpacing"
     }
   ],
   "controls": [
     {
       "name": "ampmspinner",
       "classname": "nexacro.SpinnerControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "arrangeseparator",
+      "classname": "nexacro.Static",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "backwardscrollbutton",
+      "classname": "nexacro.Button",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -18125,6 +18740,16 @@
       "subgroup": ""
     },
     {
+      "name": "cascadebutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "charcounttext",
       "classname": "nexacro.FlexTextControl",
       "unusedstatus": "",
@@ -18153,6 +18778,16 @@
       "unused": "false",
       "group": "Control",
       "subgroup": "default"
+    },
+    {
+      "name": "closeallbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
     },
     {
       "name": "closebutton",
@@ -18295,6 +18930,66 @@
       "subgroup": ""
     },
     {
+      "name": "extrabutton1",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "extrabutton2",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "extrabutton3",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "extrabutton4",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "extrabutton5",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "extraseparator",
+      "classname": "nexacro.Static",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "fileuploaditem",
       "classname": "nexacro._FileUploadItemControl",
       "unusedstatus": "",
@@ -18317,6 +19012,56 @@
     {
       "name": "fileuploaditemedit",
       "classname": "nexacro.Edit",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "firstbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "forwardscrollbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "framelistpopupmenu",
+      "classname": "nexacro.PopupMenuControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "framelistpopupmenubutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "ghost",
+      "classname": "nexacro.Static",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -18355,6 +19100,56 @@
       "subgroup": ""
     },
     {
+      "name": "headbutton1",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "headbutton2",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "headbutton3",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "headbutton4",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "headbutton5",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "headline",
       "classname": "nexacro.PickerHeadLineControl",
       "unusedstatus": "",
@@ -18367,6 +19162,16 @@
     {
       "name": "helpertext",
       "classname": "nexacro.FieldBaseTextControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "horizontalbutton",
+      "classname": "nexacro.Button",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -18397,6 +19202,16 @@
     {
       "name": "hscrollindicator",
       "classname": "nexacro.ScrollIndicatorControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "icontext",
+      "classname": "nexacro._IconText",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -18445,6 +19260,16 @@
       "subgroup": ""
     },
     {
+      "name": "lastbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "leadingbutton",
       "classname": "nexacro.FieldBaseIconControl",
       "unusedstatus": "",
@@ -18467,6 +19292,16 @@
     {
       "name": "maxbutton",
       "classname": "nexacro._TitleBarButtonControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "maxrestorebutton",
+      "classname": "nexacro.Button",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -18645,6 +19480,26 @@
       "subgroup": ""
     },
     {
+      "name": "pagebutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "pinbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "popupmenuitem",
       "classname": "nexacro._PopupMenuItemControl",
       "unusedstatus": "",
@@ -18805,6 +19660,36 @@
       "subgroup": ""
     },
     {
+      "name": "rowgroupexpandbutton",
+      "classname": "nexacro._RowGroupExpandButtonControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "rowgroupheadtext",
+      "classname": "nexacro.FlexTextControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "rowgroupsubsumtext",
+      "classname": "nexacro.FlexTextControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
       "name": "secspinner",
       "classname": "nexacro.SpinnerControl",
       "unusedstatus": "",
@@ -18947,6 +19832,96 @@
     {
       "name": "stepselector",
       "classname": "nexacro.StepControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "switchbutton",
+      "classname": "nexacro.SwitchButtonControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "switchbuttonitem",
+      "classname": "nexacro.SwitchButtonItemControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "switchbuttontrack",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "switchtext",
+      "classname": "nexacro.Static",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "switchthumbbutton",
+      "classname": "nexacro.Button",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "tabbarbuttonset",
+      "classname": "nexacro.TabBarButtonSetControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "tabbarheadbuttonset",
+      "classname": "nexacro.TabBarHeadButtonSetControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "tabbaritem",
+      "classname": "nexacro.TabBarItemControl",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "tabbaritemset",
+      "classname": "nexacro.TabBarItemSetControl",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -19137,6 +20112,16 @@
     {
       "name": "treeitemtext",
       "classname": "nexacro.Static",
+      "unusedstatus": "",
+      "unusedcontrol": "",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "",
+      "subgroup": ""
+    },
+    {
+      "name": "verticalbutton",
+      "classname": "nexacro.Button",
       "unusedstatus": "",
       "unusedcontrol": "",
       "deprecated": "false",
@@ -19361,6 +20346,22 @@
       "group": "userstatus"
     },
     {
+      "name": "pinned",
+      "control": "true",
+      "default": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "userstatus"
+    },
+    {
+      "name": "pinnedselected",
+      "control": "true",
+      "default": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "userstatus"
+    },
+    {
       "name": "pushed",
       "control": "true",
       "default": "false",
@@ -19410,6 +20411,14 @@
     },
     {
       "name": "today",
+      "control": "true",
+      "default": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "group": "userstatus"
+    },
+    {
+      "name": "trackmove",
       "control": "true",
       "default": "false",
       "deprecated": "false",
@@ -19622,19 +20631,9 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 특정 이벤트를 선언하여 추가하는 메소드입니다.",
-      "arguments": [
-        {
-          "name": "strEventID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "Button 에 추가할 이벤트의 ID 를 문자열로 설정합니다."
-        }
-      ]
+      "requirement": "",
+      "description": "",
+      "arguments": []
     },
     {
       "name": "addEventHandler",
@@ -19643,8 +20642,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에 핸들러 함수를 추가하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에 핸들러 함수를 추가하는 메소드입니다.",
       "arguments": [
         {
           "name": "objFunc",
@@ -19682,8 +20681,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "함수를 검색하여 Button 의 특정 이벤트에 핸들러 함수로 추가하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에 검색된 함수를 핸들러 함수로 추가하는 메소드입니다.",
       "arguments": [
         {
           "name": "objTarget",
@@ -20116,8 +21115,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 Button 이(가) 화면의 제일 앞에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 XComponent 이(가) 화면의 제일 앞에 표시되게 합니다.",
       "arguments": []
     },
     {
@@ -20127,8 +21126,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 Button 이(가) 화면에 한단계 앞에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 XComponent 이(가) 화면에 한단계 앞에 표시되게 합니다.",
       "arguments": []
     },
     {
@@ -20305,7 +21304,7 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "",
       "description": "특정 이벤트에 등록된 핸들러 함수를 모두 제거하는 메소드입니다.",
       "arguments": [
         {
@@ -20940,8 +21939,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "스크립트에서 동적으로 생성한 Action 을(를) 삭제하는 메소드입니다.",
+      "requirement": "",
+      "description": "스크립트에서 동적으로 생성한 XComponent 을(를) 삭제하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -21445,8 +22444,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 핸들러 함수를 찾아 인덱스를 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 핸들러 함수를 찾아 인덱스를 반환하는 메소드입니다.",
       "arguments": [
         {
           "name": "objFunc",
@@ -23021,13 +24020,13 @@
     },
     {
       "name": "getCount",
-      "group": "",
+      "group": "Normal",
       "async": "false",
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트에 표시되는 전체 아이템의 개수를 반환하는 메서드입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에 표시되는 전체 아이템의 갯수를 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23170,8 +24169,52 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Component 에 표시된 텍스트값을 반환하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "getElementById",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 표시된 텍스트값을 반환하는 메소드입니다.",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "getElementsByClassName",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "getElementsByName",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "getElementsByTagName",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23181,17 +24224,17 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 지정된 인덱스에 해당하는 핸들러 함수를 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 지정된 인덱스에 해당하는 핸들러 함수를 반환하는 메소드입니다.",
       "arguments": [
         {
           "name": "nIdx",
-          "type": "Number",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "얻으려고 하는 핸들러 함수의 인덱스를 설정합니다.\n\n핸들러 함수의 인덱스는 0 부터 시작합니다."
+          "description": "얻으려고 하는 핸들러 함수의 인덱스를 설정합니다.\n인덱스는 \"0\"부터 시작합니다."
         },
         {
           "name": "strEventID",
@@ -23353,9 +24396,9 @@
       "async": "false",
       "usecontextmenu": "false",
       "deprecated": "false",
-      "unused": "true",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 자식 컴포넌트 중 현재 포커스를 가지고 있는 컴포넌트를 반환하는 메소드입니다.",
+      "unused": "false",
+      "requirement": "",
+      "description": "XComponent 의 자식 컴포넌트 중 현재 포커스를 가지고 있는 컴포넌트를 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23491,8 +24534,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 의 innerdataset 속성에 설정되어 있는 DataSet 오브젝트를 반환하는 메소드입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 innerdataset 속성에 설정되어 있는 DataSet 오브젝트를 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23935,8 +24978,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 bottom 값을 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 top을 기준으로 XComponent 의 bottom 값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23946,8 +24989,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 높이를 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 height 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23957,8 +25000,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 left 값을 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 left를 기준으로 XComponent 의 left 값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23968,8 +25011,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 right 값을 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 left를 기준으로 XComponent 의 right 값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23979,8 +25022,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 top 값을 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 top을 기준으로 XComponent 의 top 값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -23990,8 +25033,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 너비를 픽셀단위의 숫자로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 width 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24111,8 +25154,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 bottom 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 bottom 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24122,8 +25165,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 height 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 height 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24133,8 +25176,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 left 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 left 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24144,8 +25187,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 right 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 right 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24155,8 +25198,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 top 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 top 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -24166,8 +25209,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 width 속성값을 픽셀단위로 반환하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 width 속성값을 픽셀단위로 반환하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -25236,55 +26279,9 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
-      "description": "스크립트에서 동적으로 생성된 BindItem을 초기화시키는 메소드입니다.",
-      "arguments": [
-        {
-          "name": "strColumnID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "바인딩할 Dataset Column ID"
-        },
-        {
-          "name": "strCompID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "바인딩할 컴포넌트의 ID"
-        },
-        {
-          "name": "strDatasetID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "바인딩할 Dataset ID"
-        },
-        {
-          "name": "strName",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "BindItem을 구별할 수 있는 이름"
-        },
-        {
-          "name": "strPropertyID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "바인딩할 컴포넌트의 PropertyID"
-        }
-      ]
+      "requirement": "",
+      "description": "",
+      "arguments": []
     },
     {
       "name": "insertChild",
@@ -25332,46 +26329,9 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에 핸들러 함수를 지정한 위치에 삽입하는 메소드입니다.",
-      "arguments": [
-        {
-          "name": "nIndex",
-          "type": "Number",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "핸들러 함수가 삽입될 위치를 인덱스로 설정합니다.\n\n-1 값 설정 시 마지막에 추가됩니다.\n이벤트에 설정된 핸들러 함수의 갯수보다 큰 값을 설정한 경우 마지막에 추가됩니다.\nNaN 값을 입력하면 ECMA 의 정수 변환 규칙에 따라 0 이 설정됩니다."
-        },
-        {
-          "name": "objFunc",
-          "type": "Object",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "이벤트 발생 시 수행될 핸들러 함수를 설정합니다."
-        },
-        {
-          "name": "objTarget",
-          "type": "Object",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "핸들러 함수가 정의된 영역을 설정합니다."
-        },
-        {
-          "name": "strEventID",
-          "type": "String",
-          "in": "true",
-          "out": "true",
-          "option": "true",
-          "variable": "true",
-          "description": "핸들러 함수가 삽입될 이벤트의 ID 를 설정합니다."
-        }
-      ]
+      "requirement": "",
+      "description": "",
+      "arguments": []
     },
     {
       "name": "insertItem",
@@ -26110,62 +27070,62 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 위치와 크기를 변경하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 위치와 크기를 변경하는 메소드입니다.",
       "arguments": [
         {
-          "name": "vBottom",
-          "type": "String, Number",
+          "name": "nBottom",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 bottom 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvTop, vHeight 값을 모두 설정했을 경우 vBottom 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 top 속성값을 기준으로 Button 의 bottom 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Button 의 bottom 이 결정됩니다."
+          "description": "부모 컴포넌트의 우하단을 기준으로 XComponent 의 bottom 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다.\nnTop, nHeight 값을 모두 설정했을 경우 nRight 값은 무시됩니다"
         },
         {
-          "name": "vHeight",
-          "type": "String, Number",
+          "name": "nHeight",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 height 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Button 의 height 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Button 의 height 가 결정됩니다."
+          "description": "XComponent 의 height 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다."
         },
         {
-          "name": "vLeft",
-          "type": "String, Number",
+          "name": "nLeft",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 left 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 right 속성값을 기준으로 Button 의 left 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Button 의 left 가 결정됩니다."
+          "description": "부모 컴포넌트의 좌상단을 기준으로 XComponent 의 left 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다."
         },
         {
-          "name": "vRight",
-          "type": "String, Number",
+          "name": "nRight",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 right 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvLeft, vWidth 값을 모두 설정했을 경우 vRight 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 left 속성값을 기준으로 Button 의 right 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Button 의 right 가 결정됩니다."
+          "description": "부모 컴포넌트의 우하단을 기준으로 XComponent 의 right 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다.\nnLeft, nWidth 값을 모두 설정했을 경우 nRight 값은 무시됩니다."
         },
         {
-          "name": "vTop",
-          "type": "String, Number",
+          "name": "nTop",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 top 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 bottom 속성값을 기준으로 Button 의 top 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Button 의 top 이 결정됩니다."
+          "description": "부모 컴포넌트의 좌상단을 기준으로 XComponent 의 top 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다."
         },
         {
-          "name": "vWidth",
-          "type": "String, Number",
+          "name": "nWidth",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 width 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Button 의 width 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Button 의 width 가 결정됩니다."
+          "description": "XComponent 의 width 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다."
         }
       ]
     },
@@ -26236,8 +27196,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 인수로 전달된 컴포넌트보다 Button 이(가) 화면에 한단계 뒤에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 인수로 전달된 컴포넌트보다 XComponent 이(가) 화면에 한단계 뒤에 표시되게 합니다.",
       "arguments": [
         {
           "name": "objComp",
@@ -26266,8 +27226,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 인수로 전달된 컴포넌트보다 Button 이(가) 화면에 한단계 앞에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 인수로 전달된 컴포넌트보다 XComponent 이(가) 화면에 한단계 앞에 표시되게 합니다.",
       "arguments": [
         {
           "name": "objComp",
@@ -26386,6 +27346,28 @@
       "unused": "false",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "현재 이벤트의 Default Action 을 취소하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "querySelector",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
+      "arguments": []
+    },
+    {
+      "name": "querySelectorAll",
+      "group": "",
+      "async": "false",
+      "usecontextmenu": "false",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Web API 와 동일 명칭,용법으로 HTMLContentBox의 content 로 생성된 node 를 탐색하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -26549,19 +27531,9 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 선언된 특정 이벤트를 삭제하는 메소드입니다.",
-      "arguments": [
-        {
-          "name": "strEventID",
-          "type": "String",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "Button 에서 삭제할 이벤트의 ID 를 문자열로 설정합니다."
-        }
-      ]
+      "requirement": "",
+      "description": "",
+      "arguments": []
     },
     {
       "name": "removeEventHandler",
@@ -26570,8 +27542,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 핸들러 함수를 제거하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 핸들러 함수를 제거하는 메소드입니다.",
       "arguments": [
         {
           "name": "objFunc",
@@ -26609,8 +27581,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 검색된 함수와 동일한 핸들러 함수를 제거하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 검색된 함수와 동일한 핸들러 함수를 제거하는 메소드입니다.",
       "arguments": [
         {
           "name": "objTarget",
@@ -26934,26 +27906,26 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 크기를 변경하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 크기를 변경하는 메소드입니다.",
       "arguments": [
         {
-          "name": "vHeight",
-          "type": "String, Number",
+          "name": "nHeight",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 height 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n음수값을 설정할 수 없습니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Button 의 height 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Button 의 height 가 결정됩니다."
+          "description": "XComponent 의 height 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다.\n음수를 설정할 수 없습니다."
         },
         {
-          "name": "vWidth",
-          "type": "String, Number",
+          "name": "nWidth",
+          "type": "Integer",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 width 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n음수값을 설정할 수 없습니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Button 의 width 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Button 의 width 가 결정됩니다."
+          "description": "XComponent 의 width 속성값을 설정합니다.\nPixel 단위 또는 비율(\"%\")로 설정할 수 있습니다.\n음수를 설정할 수 없습니다."
         }
       ]
     },
@@ -27434,8 +28406,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 Button 이(가) 화면의 제일 뒤에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 XComponent 이(가) 화면의 제일 뒤에 표시되게 합니다.",
       "arguments": []
     },
     {
@@ -27445,8 +28417,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모가 동일한 컴포넌트 중 Button 이(가) 화면에 한단계 뒤에 표시되게 합니다.",
+      "requirement": "",
+      "description": "부모가 동일한 컴포넌트 중 XComponent 이(가) 화면에 한단계 뒤에 표시되게 합니다.",
       "arguments": []
     },
     {
@@ -27765,8 +28737,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 첫번째 핸들러 함수를 변경하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 첫번째 핸들러 함수를 변경하는 메소드입니다.",
       "arguments": [
         {
           "name": "objFunc",
@@ -27804,8 +28776,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 특정 이벤트에서 첫번째 핸들러 함수를 검색된 함수로 변경하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 특정 이벤트에서 첫번째 핸들러 함수를 검색된 함수로 변경하는 메소드입니다.",
       "arguments": [
         {
           "name": "objTarget",
@@ -27951,18 +28923,9 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 포커스를 주는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 에 포커스를 주는 메소드입니다.",
       "arguments": [
-        {
-          "name": "bInnerFocus",
-          "type": "Boolean",
-          "in": "false",
-          "out": "false",
-          "option": "false",
-          "variable": "false",
-          "description": "Button 이(가) 컨테이너 컴포넌트 일 때 자식 컴포넌트에게 포커스를 이동할지 설정합니다.\n\ntrue 설정 시 자식 컴포넌트 중 포커스를 받을 수 있는 첫번째 컴포넌트가 포커스 됩니다.\nfalse 설정 시 Button 에 포커스 됩니다.\n\nButton 이(가) 컨테이너 컴포넌트 일 때 값을 설정하지 않으면 true 로 동작합니다."
-        },
         {
           "name": "bMoveScroll",
           "type": "Boolean",
@@ -27970,7 +28933,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "부모 컴포넌트에 스크롤이 있을 경우 Button 기준으로 스크롤을 이동할지 설정합니다.\n\ntrue 설정 시 Button 이(가) 화면에 표시되도록 스크롤을 이동시킵니다.\nfalse 설정 시 Button 의 위치에 관계없이 스크롤을 이동시키지 않습니다.\n\n값을 설정하지 않으면 true 로 동작합니다."
+          "description": "부모 컴포넌트에 스크롤이 있을 경우 XComponent 기준으로 스크롤을 이동할지 설정합니다.\n\"true\" 설정 시 XComponent 이(가) 화면에 표시되도록 스크롤을 이동시킵니다.\n\"false\" 설정 시 XComponent 의 위치에 관계없이 스크롤을 이동시키지 않습니다."
         }
       ]
     },
@@ -28002,8 +28965,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 의 innerdataset 속성에 인수로 전달된 DataSet 오브젝트를 설정하는 메소드입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 innerdataset 속성에 인수로 전달된 DataSet 오브젝트를 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "objDataset",
@@ -28023,8 +28986,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 bottom 값을 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 top을 기준으로 XComponent 의 bottom 값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nBottom",
@@ -28033,7 +28996,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 bottom 값을 픽셀단위의 숫자로 설정합니다."
+          "description": "부모 컴포넌트의 top에서 떨어진 거리를 픽셀단위의 숫자로 설정합니다."
         }
       ]
     },
@@ -28044,8 +29007,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 높이를 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 height 속성값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nHeight",
@@ -28054,7 +29017,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 높이를 픽셀단위의 숫자로 설정합니다."
+          "description": "XComponent 의 높이를 픽셀단위로 설정합니다."
         }
       ]
     },
@@ -28065,8 +29028,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 left 값을 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 left 를 기준으로 XComponent 의 left 값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nLeft",
@@ -28075,7 +29038,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 left 값을 픽셀단위의 숫자로 설정합니다"
+          "description": "부모 컴포넌트의 left 에서 떨어진 거리를 픽셀단위의 숫자로 설정합니다"
         }
       ]
     },
@@ -28086,8 +29049,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 right 값을 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 left 를 기준으로 XComponent 의 right 값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nRight",
@@ -28096,7 +29059,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "부모 컴포넌트의 Left 위치를 기준으로 Button 의 right 값을 픽셀단위의 숫자로 설정합니다."
+          "description": "부모 컴포넌트의 left 에서 떨어진 거리를 픽셀단위의 숫자로 설정합니다."
         }
       ]
     },
@@ -28107,8 +29070,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 top 값을 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "부모 컴포넌트의 top을 기준으로 XComponent 의 top 값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nTop",
@@ -28117,7 +29080,7 @@
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "부모 컴포넌트의 Top 위치를 기준으로 Button 의 top 값을 픽셀단위의 숫자로 설정합니다."
+          "description": "부모 컴포넌트의 top에서 떨어진 거리를 픽셀단위의 숫자로 설정합니다"
         }
       ]
     },
@@ -28128,17 +29091,17 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 너비를 픽셀단위로 설정하는 메소드입니다.",
+      "requirement": "",
+      "description": "XComponent 의 width 속성값을 픽셀단위로 설정하는 메소드입니다.",
       "arguments": [
         {
           "name": "nWidth",
-          "type": "Number",
+          "type": "Object",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
-          "description": "Button 의 너비를 픽셀단위의 숫자로 설정합니다."
+          "description": "XComponent 의 너비를 픽셀단위로 설정합니다."
         }
       ]
     },
@@ -28317,8 +29280,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 의 에디트 영역에 포커스가 있을 때 인수로 지정된 영역을 선택하는 메소드입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 에디트 영역에 포커스가 있을 때 인수로 지정된 영역을 선택하는 메소드입니다.",
       "arguments": [
         {
           "name": "nBegin",
@@ -28347,7 +29310,7 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "Combo 의 편집영역에서 현재 선택되어 있는 텍스트를 전달된 인수값으로 변경하는 메소드입니다.",
       "arguments": [
         {
@@ -28662,8 +29625,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "스크립트로 동적 생성한 Button 을(를) 화면에 표시하는 메소드입니다.",
+      "requirement": "",
+      "description": "스크립트에서 동적으로 생성된 XComponent 을(를) 화면에 표시하는 메소드입니다.",
       "arguments": []
     },
     {
@@ -29244,8 +30207,8 @@
       "usecontextmenu": "false",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 의 value 속성값을 바인딩 되어 있는 DataSet 에 즉시 반영시키는 메소드입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 value 속성값을 바인딩 되어 있는 DataSet 에 즉시 반영시키는 메소드입니다.",
       "arguments": []
     },
     {
@@ -29362,12 +30325,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트에서 아이템을 변경할 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에서 아이템을 변경할 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.CheckBoxSet",
+          "type": "nexacro.Combo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -29642,12 +30605,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 왼쪽버튼을 클릭했을 때 발생하는 이벤트입니다.",
+      "requirement": "",
+      "description": "XComponent 영역 내에서 마우스 왼쪽버튼을 클릭했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -29778,16 +30741,16 @@
       ]
     },
     {
-      "name": "oncontextmenu",
-      "group": "",
+      "name": "oncontentloaded",
+      "group": "Event",
       "deprecated": "false",
       "unused": "false",
       "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역에서 오른쪽 마우스 버튼을 클릭하거나 터치를 일정시간 유지할 때 발생하는 이벤트입니다.",
+      "description": "HTMLContentBox 의 setElementHTML 호출 성공 이후 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.HTMLContentBox",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -29796,12 +30759,31 @@
         },
         {
           "name": "e",
-          "type": "nexacro.ContextMenuEventInfo",
+          "type": "nexacro.ContentLoadEventInfo",
           "in": "false",
           "out": "false",
           "option": "false",
           "variable": "false",
           "description": "Event Object."
+        }
+      ]
+    },
+    {
+      "name": "oncontextmenu",
+      "group": "",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "",
+      "description": "",
+      "arguments": [
+        {
+          "name": "obj",
+          "type": "nexacro.Component",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event가 발생한 Object."
         }
       ]
     },
@@ -29894,12 +30876,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 왼쪽버튼을 더블클릭 했을 때 발생하는 이벤트입니다.",
+      "requirement": "",
+      "description": "XComponent 영역 내에서 마우스 왼쪽버튼을 더블클릭 했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -29983,7 +30965,7 @@
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Combo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30002,16 +30984,44 @@
       ]
     },
     {
+      "name": "ondevicePaginatorup",
+      "group": "Event",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Android NRE",
+      "description": "모바일 에서 디바이스 버튼을 눌렀을 때 발생하는 이벤트입니다.",
+      "arguments": [
+        {
+          "name": "obj",
+          "type": "nexacro.Paginator",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event가 발생한 Object."
+        },
+        {
+          "name": "e",
+          "type": "nexacro.DevicePaginatorEventInfo",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event Object."
+        }
+      ]
+    },
+    {
       "name": "ondrag",
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 왼쪽버튼으로 드래그를 수행했을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스 왼쪽버튼으로 드래그를 수행했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30034,12 +31044,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내로 드래그 상태의 마우스 포인터가 들어왔을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내로 드래그 상태의 마우스 포인터가 들어왔을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30062,12 +31072,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 밖으로 드래그 상태의 마우스 포인터가 나갈 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 밖으로 드래그 상태의 마우스 포인터가 나갈 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30090,12 +31100,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 드래그 상태의 마우스 포인터가 움직일 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 드래그 상태의 마우스 포인터가 움직일 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30118,12 +31128,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 드래그 상태의 마우스 버튼을 떼었을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 드래그 상태의 마우스 버튼을 떼었을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30189,6 +31199,34 @@
         {
           "name": "e",
           "type": "nexacro.EditClickEventInfo",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event Object."
+        }
+      ]
+    },
+    {
+      "name": "onenablestatuschanged",
+      "group": "Event",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "HTMLContentBox 의 enable 상태가 변경될 때 발생하는 이벤트입니다.",
+      "arguments": [
+        {
+          "name": "obj",
+          "type": "nexacro.HTMLContentBox",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event가 발생한 Object."
+        },
+        {
+          "name": "e",
+          "type": "nexacro.EnableStatusChangedEventInfo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30398,12 +31436,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Calendar 의 innerdataset 속성에 바인딩된 DataSet 에서 데이터 변경이 된 후 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 의 innerdataset 속성에 바인딩된 DataSet 에서 데이터 변경이 된 후 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Calendar",
+          "type": "nexacro.Combo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30425,13 +31463,13 @@
       "name": "oninput",
       "group": "Event",
       "deprecated": "false",
-      "unused": "true",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 키보드로 값이 입력될 때 발생하는 이벤트 입니다.",
+      "unused": "false",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 키보드로 값이 입력될 때 발생하는 이벤트 입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30482,12 +31520,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "CheckBoxSet 컴포넌트에서 아이템 선택이 변경된 후 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Combo 에서 아이템이 변경된 후 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.CheckBoxSet",
+          "type": "nexacro.Combo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30510,12 +31548,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
       "description": "아이템 리스트에서 아이템을 클릭했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.CheckBoxSet",
+          "type": "nexacro.Combo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30566,12 +31604,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 포커스가 있는 상태에서 키보드의 키가 눌렸을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 포커스가 있는 상태에서 키보드의 키가 눌렸을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30594,12 +31632,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 포커스가 있는 상태에서 눌렸던 키보드가 떼어질 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 포커스가 있는 상태에서 눌렸던 키보드가 떼어질 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30622,12 +31660,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에서 포커스가 나갈  때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에서 포커스가 나갈  때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30678,12 +31716,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 왼쪽버튼을 눌렀을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스 왼쪽버튼을 눌렀을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30706,12 +31744,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 눌렸던 마우스 왼쪽버튼을 떼었을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 눌렸던 마우스 왼쪽버튼을 떼었을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30957,13 +31995,13 @@
       "name": "onmousedown",
       "group": "Event",
       "deprecated": "false",
-      "unused": "true",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스의 왼쪽/오른쪽 버튼을 제외한 나머지 버튼이 눌렸을 때 발생하는 이벤트입니다.",
+      "unused": "false",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스의 왼쪽/오른쪽 버튼을 제외한 나머지 버튼이 눌렸을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -30986,12 +32024,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내로 마우스 포인터가 들어왔을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내로 마우스 포인터가 들어왔을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31014,12 +32052,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 밖으로 마우스 포인터가 나갈 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 밖으로 마우스 포인터가 나갈 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31042,12 +32080,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 포인터가 움직일 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스 포인터가 움직일 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31069,13 +32107,13 @@
       "name": "onmouseup",
       "group": "Event",
       "deprecated": "false",
-      "unused": "true",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "마우스의 왼쪽/오른쪽 버튼을 제외한 나머지 버튼이 떼어질 때 발생하는 이벤트입니다.",
+      "unused": "false",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 눌렸던 마우스의 버튼(왼쪽/오른쪽 버튼 제외)을 떼었을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31097,13 +32135,13 @@
       "name": "onmousewheel",
       "group": "Event",
       "deprecated": "false",
-      "unused": "true",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스의 휠버튼을 회전했을 때 발생하는 이벤트입니다.",
+      "unused": "false",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스의 휠버튼을 회전했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31126,12 +32164,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 위치가 이동했을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent의 위치가 이동했을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31169,6 +32207,34 @@
         {
           "name": "e",
           "type": "nexacro.OrientationChangeEventInfo",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event Object."
+        }
+      ]
+    },
+    {
+      "name": "onpagechanged",
+      "group": "Event",
+      "deprecated": "false",
+      "unused": "false",
+      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
+      "description": "Paginator 에서 페이지가 변경된 후 발생하는 이벤트입니다.",
+      "arguments": [
+        {
+          "name": "obj",
+          "type": "nexacro.Paginator",
+          "in": "false",
+          "out": "false",
+          "option": "false",
+          "variable": "false",
+          "description": "Event가 발생한 Object."
+        },
+        {
+          "name": "e",
+          "type": "nexacro.PageChangeEventInfo",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31266,12 +32332,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 오른쪽버튼을 눌렀을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스 오른쪽버튼을 눌렀을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31294,12 +32360,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 마우스 오른쪽버튼을 떼었을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 마우스 오른쪽버튼을 떼었을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31434,12 +32500,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 에 포커스가 들어올 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 에 포커스가 들어올 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31462,12 +32528,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 의 크기가 변경됐을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent의 크기가 변경됐을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31630,12 +32696,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 터치를 떼었을 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 터치를 떼었을 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31658,12 +32724,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 터치 상태를 유지하며 움직일 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 터치 상태를 유지하며 움직일 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",
@@ -31686,12 +32752,12 @@
       "group": "Event",
       "deprecated": "false",
       "unused": "false",
-      "requirement": "Edge,Chrome,Safari,Firefox,Opera,Windows NRE,macOS NRE,Android NRE,iOS/iPadOS NRE,Android Default Web Browser,iOS/iPadOS Default Web Browser",
-      "description": "Button 영역 내에서 터치가 시작될 때 발생하는 이벤트입니다.",
+      "requirement": "IE10,IE11,Edge,Chrome,Safari,Firefox,Opera,Windows NRE,Android NRE,iOS/iPadOS NRE",
+      "description": "XComponent 영역 내에서 터치가 시작될 때 발생하는 이벤트입니다.",
       "arguments": [
         {
           "name": "obj",
-          "type": "nexacro.Button",
+          "type": "nexacro.Component",
           "in": "false",
           "out": "false",
           "option": "false",

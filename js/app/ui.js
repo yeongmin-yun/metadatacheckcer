@@ -170,8 +170,8 @@ export async function switchTab(tabId) {
     // Load data for Component Analyzer or Component Report if not already loaded
     if (tabId === 'component-analyzer-tab' || tabId === 'component-report-tab') {
         if (!state.isComponentDataLoaded) {
-            await loadComponentAnalyzerData();
-            state.isComponentDataLoaded = true;
+            const success = await loadComponentAnalyzerData();
+            state.isComponentDataLoaded = success;
         }
     }
     

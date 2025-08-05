@@ -25,16 +25,6 @@
     "filename": "Button.js"
   },
   {
-    "child": "nexacro.CheckBoxChangedEventInfo",
-    "parent": "nexacro.ChangedEventInfo",
-    "filename": "CheckBox.js"
-  },
-  {
-    "child": "nexacro.CheckBox",
-    "parent": "nexacro._IconText",
-    "filename": "CheckBox.js"
-  },
-  {
     "child": "nexacro.AnimationItem",
     "parent": "nexacro.Object",
     "filename": "Animation.js"
@@ -58,16 +48,6 @@
     "child": "nexacro.AnimationTimeline",
     "parent": "nexacro.Animation",
     "filename": "Animation.js"
-  },
-  {
-    "child": "nexacro.CheckBoxSet",
-    "parent": "nexacro.Component",
-    "filename": "CheckBoxSet.js"
-  },
-  {
-    "child": "nexacro._CheckBoxSetItemControl",
-    "parent": "nexacro.CheckBox",
-    "filename": "CheckBoxSet.js"
   },
   {
     "child": "nexacro.CalendarCloseUpEventInfo",
@@ -110,6 +90,16 @@
     "filename": "Calendar.js"
   },
   {
+    "child": "nexacro.CheckBoxChangedEventInfo",
+    "parent": "nexacro.ChangedEventInfo",
+    "filename": "CheckBox.js"
+  },
+  {
+    "child": "nexacro.CheckBox",
+    "parent": "nexacro._IconText",
+    "filename": "CheckBox.js"
+  },
+  {
     "child": "nexacro.ComboCloseUpEventInfo",
     "parent": "nexacro.Event",
     "filename": "Combo.js"
@@ -143,6 +133,16 @@
     "child": "nexacro._ComboPopupControl",
     "parent": "nexacro.PopupControl",
     "filename": "Combo.js"
+  },
+  {
+    "child": "nexacro.CheckBoxSet",
+    "parent": "nexacro.Component",
+    "filename": "CheckBoxSet.js"
+  },
+  {
+    "child": "nexacro._CheckBoxSetItemControl",
+    "parent": "nexacro.CheckBox",
+    "filename": "CheckBoxSet.js"
   },
   {
     "child": "nexacro.CellInfo",
@@ -255,31 +255,6 @@
     "filename": "Cell.js"
   },
   {
-    "child": "nexacro.Component",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "CompBase.js"
-  },
-  {
-    "child": "nexacro.PopupControl",
-    "parent": "nexacro.Component",
-    "filename": "CompBase.js"
-  },
-  {
-    "child": "nexacro._WaitControl",
-    "parent": "nexacro.PopupControl",
-    "filename": "CompBase.js"
-  },
-  {
-    "child": "nexacro.CanvasComponent",
-    "parent": "nexacro.Component",
-    "filename": "CompBase.js"
-  },
-  {
-    "child": "nexacro.NormalDataset",
-    "parent": "nexacro.Dataset",
-    "filename": "Dataset.js"
-  },
-  {
     "child": "nexacro.DataObjectLoadEventInfo",
     "parent": "nexacro.Event",
     "filename": "DataObject.js"
@@ -320,29 +295,29 @@
     "filename": "DataObject.js"
   },
   {
-    "child": "nexacro.DateField",
-    "parent": "nexacro.TextField",
-    "filename": "DateField.js"
+    "child": "nexacro.Component",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "CompBase.js"
   },
   {
-    "child": "nexacro.DateFieldBox",
-    "parent": "nexacro.TextFieldBox",
-    "filename": "DateField.js"
+    "child": "nexacro.PopupControl",
+    "parent": "nexacro.Component",
+    "filename": "CompBase.js"
   },
   {
-    "child": "nexacro._DateFieldPopupControl",
+    "child": "nexacro._WaitControl",
     "parent": "nexacro.PopupControl",
-    "filename": "DateField.js"
+    "filename": "CompBase.js"
   },
   {
-    "child": "nexacro.DateFieldDayClickEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "DateField.js"
+    "child": "nexacro.CanvasComponent",
+    "parent": "nexacro.Component",
+    "filename": "CompBase.js"
   },
   {
-    "child": "nexacro.DateFieldCloseUpEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "DateField.js"
+    "child": "nexacro.NormalDataset",
+    "parent": "nexacro.Dataset",
+    "filename": "Dataset.js"
   },
   {
     "child": "nexacro.DatePickerControl",
@@ -390,6 +365,36 @@
     "filename": "DatePicker.js"
   },
   {
+    "child": "nexacro.Div",
+    "parent": "nexacro.Component",
+    "filename": "Div.js"
+  },
+  {
+    "child": "nexacro.DateField",
+    "parent": "nexacro.TextField",
+    "filename": "DateField.js"
+  },
+  {
+    "child": "nexacro.DateFieldBox",
+    "parent": "nexacro.TextFieldBox",
+    "filename": "DateField.js"
+  },
+  {
+    "child": "nexacro._DateFieldPopupControl",
+    "parent": "nexacro.PopupControl",
+    "filename": "DateField.js"
+  },
+  {
+    "child": "nexacro.DateFieldDayClickEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "DateField.js"
+  },
+  {
+    "child": "nexacro.DateFieldCloseUpEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "DateField.js"
+  },
+  {
     "child": "nexacro.DomParseErrorEventInfo",
     "parent": "nexacro.Event",
     "filename": "DomObject.js"
@@ -403,11 +408,6 @@
     "child": "nexacro.XmlSerializer",
     "parent": "nexacro.Object",
     "filename": "DomObject.js"
-  },
-  {
-    "child": "nexacro.Div",
-    "parent": "nexacro.Component",
-    "filename": "Div.js"
   },
   {
     "child": "nexacro.RangeDateChangedEventInfo",
@@ -458,6 +458,11 @@
     "child": "nexacro.DateRangePickerDayClickEventInfo",
     "parent": "nexacro.Event",
     "filename": "DateRangePicker.js"
+  },
+  {
+    "child": "nexacro.Edit",
+    "parent": "nexacro.Component",
+    "filename": "Edit.js"
   },
   {
     "child": "nexacro.InputEventInfo",
@@ -520,21 +525,6 @@
     "filename": "EditBase.js"
   },
   {
-    "child": "nexacro.Edit",
-    "parent": "nexacro.Component",
-    "filename": "Edit.js"
-  },
-  {
-    "child": "nexacro.FileDialogEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "FileDialog.js"
-  },
-  {
-    "child": "nexacro.FileDialog",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "FileDialog.js"
-  },
-  {
     "child": "nexacro.FileDownloadEventInfo",
     "parent": "nexacro.Event",
     "filename": "FileDownload.js"
@@ -550,6 +540,16 @@
     "filename": "FileDownload.js"
   },
   {
+    "child": "nexacro.FileDialogEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "FileDialog.js"
+  },
+  {
+    "child": "nexacro.FileDialog",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "FileDialog.js"
+  },
+  {
     "child": "nexacro.FileDownTransferEventInfo",
     "parent": "nexacro.Event",
     "filename": "FileDownTransfer.js"
@@ -563,36 +563,6 @@
     "child": "nexacro.FileDownTransfer",
     "parent": "nexacro._EventSinkObject",
     "filename": "FileDownTransfer.js"
-  },
-  {
-    "child": "nexacro.ExcelExportProgressEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "ExportObject.js"
-  },
-  {
-    "child": "nexacro.ExcelExportEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "ExportObject.js"
-  },
-  {
-    "child": "nexacro.ExcelExportErrorEventInfo",
-    "parent": "nexacro.ErrorEventInfo",
-    "filename": "ExportObject.js"
-  },
-  {
-    "child": "nexacro.ExcelExportObject",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "ExportObject.js"
-  },
-  {
-    "child": "nexacro.ExportItem",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "ExportObject.js"
-  },
-  {
-    "child": "nexacro.ExportProgress",
-    "parent": "nexacro.PopupControl",
-    "filename": "ExportObject.js"
   },
   {
     "child": "nexacro.FileUploadItemEventInfo",
@@ -645,6 +615,36 @@
     "filename": "FileUpload.js"
   },
   {
+    "child": "nexacro.ExcelExportProgressEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "ExportObject.js"
+  },
+  {
+    "child": "nexacro.ExcelExportEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "ExportObject.js"
+  },
+  {
+    "child": "nexacro.ExcelExportErrorEventInfo",
+    "parent": "nexacro.ErrorEventInfo",
+    "filename": "ExportObject.js"
+  },
+  {
+    "child": "nexacro.ExcelExportObject",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "ExportObject.js"
+  },
+  {
+    "child": "nexacro.ExportItem",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "ExportObject.js"
+  },
+  {
+    "child": "nexacro.ExportProgress",
+    "parent": "nexacro.PopupControl",
+    "filename": "ExportObject.js"
+  },
+  {
     "child": "nexacro.FileUpTransferEventInfo",
     "parent": "nexacro.Event",
     "filename": "FileUpTransfer.js"
@@ -663,6 +663,11 @@
     "child": "nexacro.FileUpTransfer",
     "parent": "nexacro._EventSinkObject",
     "filename": "FileUpTransfer.js"
+  },
+  {
+    "child": "nexacro.GroupBox",
+    "parent": "nexacro.Component",
+    "filename": "GroupBox.js"
   },
   {
     "child": "nexacro.Element",
@@ -790,14 +795,24 @@
     "filename": "Element_Runtime.js"
   },
   {
-    "child": "nexacro.ImageViewer",
-    "parent": "nexacro.Component",
-    "filename": "ImageViewer.js"
+    "child": "nexacro.HTMLContentBox",
+    "parent": "nexacro.HTMLComponent",
+    "filename": "HTMLContentBox.js"
   },
   {
-    "child": "nexacro._ImageAreaControl",
-    "parent": "nexacro.Component",
-    "filename": "ImageViewer.js"
+    "child": "nexacro.ExcelImportEventInfo, nexacro.ExcelImportEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "ImportObject.js"
+  },
+  {
+    "child": "nexacro.ExcelImportErrorEventInfo",
+    "parent": "nexacro.ErrorEventInfo",
+    "filename": "ImportObject.js"
+  },
+  {
+    "child": "nexacro.ExcelImportObject",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "ImportObject.js"
   },
   {
     "child": "nexacro.GoogleMapEventInfo",
@@ -895,34 +910,14 @@
     "filename": "GoogleMap.js"
   },
   {
-    "child": "nexacro.ExcelImportEventInfo, nexacro.ExcelImportEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "ImportObject.js"
-  },
-  {
-    "child": "nexacro.ExcelImportErrorEventInfo",
-    "parent": "nexacro.ErrorEventInfo",
-    "filename": "ImportObject.js"
-  },
-  {
-    "child": "nexacro.ExcelImportObject",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "ImportObject.js"
-  },
-  {
-    "child": "nexacro.MaskEdit",
+    "child": "nexacro.ImageViewer",
     "parent": "nexacro.Component",
-    "filename": "MaskEdit.js"
+    "filename": "ImageViewer.js"
   },
   {
-    "child": "nexacro.ListBox",
+    "child": "nexacro._ImageAreaControl",
     "parent": "nexacro.Component",
-    "filename": "ListBox.js"
-  },
-  {
-    "child": "nexacro._ListBoxItemControl",
-    "parent": "nexacro.Static",
-    "filename": "ListBox.js"
+    "filename": "ImageViewer.js"
   },
   {
     "child": "nexacro.Frame",
@@ -970,59 +965,39 @@
     "filename": "FrameBase.js"
   },
   {
-    "child": "nexacro.GroupBox",
+    "child": "nexacro.MaskEdit",
     "parent": "nexacro.Component",
-    "filename": "GroupBox.js"
+    "filename": "MaskEdit.js"
   },
   {
-    "child": "nexacro.FlexibleComponent",
-    "parent": "nexacro.Component",
-    "filename": "MobileCompBase.js"
-  },
-  {
-    "child": "nexacro.TextControl",
+    "child": "nexacro._MenuItemControl",
     "parent": "nexacro.Static",
-    "filename": "MobileCompBase.js"
+    "filename": "Menu.js"
   },
   {
-    "child": "nexacro.IconControl",
-    "parent": "nexacro.TextControl",
-    "filename": "MobileCompBase.js"
+    "child": "nexacro.MenuClickEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Menu.js"
   },
   {
-    "child": "nexacro.LabelControl",
-    "parent": "nexacro.TextControl",
-    "filename": "MobileCompBase.js"
+    "child": "nexacro.MenuDragEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Menu.js"
   },
   {
-    "child": "nexacro.FieldBaseTextControl",
-    "parent": "nexacro.TextControl",
-    "filename": "MobileCompBase.js"
+    "child": "nexacro.MenuMouseEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Menu.js"
   },
   {
-    "child": "nexacro.FieldBaseIconControl",
-    "parent": "nexacro.IconControl",
-    "filename": "MobileCompBase.js"
+    "child": "nexacro.MenuContextMenuEventInfo",
+    "parent": "nexacro.MouseEventInfo",
+    "filename": "Menu.js"
   },
   {
-    "child": "nexacro.FieldBaseLabelControl",
-    "parent": "nexacro.LabelControl",
-    "filename": "MobileCompBase.js"
-  },
-  {
-    "child": "nexacro.FieldBaseBox",
-    "parent": "nexacro.FlexibleComponent",
-    "filename": "MobileCompBase.js"
-  },
-  {
-    "child": "nexacro.FieldBaseScrollableBox",
-    "parent": "nexacro.FieldBaseBox",
-    "filename": "MobileCompBase.js"
-  },
-  {
-    "child": "nexacro.FieldBase",
-    "parent": "nexacro.FlexibleComponent",
-    "filename": "MobileCompBase.js"
+    "child": "nexacro.Menu",
+    "parent": "nexacro.Component",
+    "filename": "Menu.js"
   },
   {
     "child": "nexacro.LayoutChangeEventInfo",
@@ -1080,34 +1055,14 @@
     "filename": "FormBase.js"
   },
   {
-    "child": "nexacro._MenuItemControl",
-    "parent": "nexacro.Static",
-    "filename": "Menu.js"
-  },
-  {
-    "child": "nexacro.MenuClickEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Menu.js"
-  },
-  {
-    "child": "nexacro.MenuDragEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Menu.js"
-  },
-  {
-    "child": "nexacro.MenuMouseEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Menu.js"
-  },
-  {
-    "child": "nexacro.MenuContextMenuEventInfo",
-    "parent": "nexacro.MouseEventInfo",
-    "filename": "Menu.js"
-  },
-  {
-    "child": "nexacro.Menu",
+    "child": "nexacro.ListBox",
     "parent": "nexacro.Component",
-    "filename": "Menu.js"
+    "filename": "ListBox.js"
+  },
+  {
+    "child": "nexacro._ListBoxItemControl",
+    "parent": "nexacro.Static",
+    "filename": "ListBox.js"
   },
   {
     "child": "nexacro.FlexibleControlElement",
@@ -1133,11 +1088,6 @@
     "child": "nexacro._ButtonBoxElement",
     "parent": "nexacro.Element",
     "filename": "MobileElement_Runtime.js"
-  },
-  {
-    "child": "nexacro.Plugin",
-    "parent": "nexacro.Component",
-    "filename": "Plugin.js"
   },
   {
     "child": "nexacro.FlexibleControlElement",
@@ -1165,6 +1115,61 @@
     "filename": "MobileElement_HTML5.js"
   },
   {
+    "child": "nexacro.FlexibleComponent",
+    "parent": "nexacro.Component",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.TextControl",
+    "parent": "nexacro.Static",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.IconControl",
+    "parent": "nexacro.TextControl",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.LabelControl",
+    "parent": "nexacro.TextControl",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBaseTextControl",
+    "parent": "nexacro.TextControl",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBaseIconControl",
+    "parent": "nexacro.IconControl",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBaseLabelControl",
+    "parent": "nexacro.LabelControl",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBaseBox",
+    "parent": "nexacro.FlexibleComponent",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBaseScrollableBox",
+    "parent": "nexacro.FieldBaseBox",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.FieldBase",
+    "parent": "nexacro.FlexibleComponent",
+    "filename": "MobileCompBase.js"
+  },
+  {
+    "child": "nexacro.Plugin",
+    "parent": "nexacro.Component",
+    "filename": "Plugin.js"
+  },
+  {
     "child": "nexacro.MultiLineTextField",
     "parent": "nexacro.FieldBase",
     "filename": "MultiLineTextField.js"
@@ -1175,19 +1180,24 @@
     "filename": "MultiLineTextField.js"
   },
   {
+    "child": "nexacro.PageChangeEventInfo",
+    "parent": "nexacro.ChangedEventInfo",
+    "filename": "Paginator.js"
+  },
+  {
+    "child": "nexacro.Paginator",
+    "parent": "nexacro.Component",
+    "filename": "Paginator.js"
+  },
+  {
     "child": "nexacro.PopupDateRangePicker",
     "parent": "nexacro.DateRangePicker",
     "filename": "PopupDateRangePicker.js"
   },
   {
-    "child": "nexacro.ProgressBar",
-    "parent": "nexacro.Component",
-    "filename": "ProgressBar.js"
-  },
-  {
-    "child": "nexacro._ProgressBarItemControl",
-    "parent": "nexacro._Icon",
-    "filename": "ProgressBar.js"
+    "child": "nexacro.PopupDiv",
+    "parent": "nexacro.Div",
+    "filename": "PopupDiv.js"
   },
   {
     "child": "nexacro.Panel",
@@ -1200,24 +1210,39 @@
     "filename": "Panel.js"
   },
   {
-    "child": "nexacro.PopupDiv",
-    "parent": "nexacro.Div",
-    "filename": "PopupDiv.js"
-  },
-  {
-    "child": "nexacro.RadioClickEventInfo",
-    "parent": "nexacro.ClickEventInfo",
-    "filename": "Radio.js"
-  },
-  {
-    "child": "nexacro.Radio",
+    "child": "nexacro.ProgressBar",
     "parent": "nexacro.Component",
-    "filename": "Radio.js"
+    "filename": "ProgressBar.js"
   },
   {
-    "child": "nexacro._RadioItemControl",
-    "parent": "nexacro._IconText",
-    "filename": "Radio.js"
+    "child": "nexacro._ProgressBarItemControl",
+    "parent": "nexacro._Icon",
+    "filename": "ProgressBar.js"
+  },
+  {
+    "child": "nexacro.ScrollBarControl",
+    "parent": "nexacro.Component",
+    "filename": "ScrollBar.js"
+  },
+  {
+    "child": "nexacro.ScrollIndicatorControl",
+    "parent": "nexacro.ScrollBarControl",
+    "filename": "ScrollBar.js"
+  },
+  {
+    "child": "nexacro._ResizerGhostControl",
+    "parent": "nexacro.Component",
+    "filename": "Resizer.js"
+  },
+  {
+    "child": "nexacro._ResizerGripperControl",
+    "parent": "nexacro.Component",
+    "filename": "Resizer.js"
+  },
+  {
+    "child": "nexacro.ResizerControl",
+    "parent": "nexacro.Component",
+    "filename": "Resizer.js"
   },
   {
     "child": "nexacro._PopupMenuItemControl",
@@ -1238,6 +1263,126 @@
     "child": "nexacro.PopupMenu",
     "parent": "nexacro.PopupControl",
     "filename": "PopupMenu.js"
+  },
+  {
+    "child": "nexacro.RadioClickEventInfo",
+    "parent": "nexacro.ClickEventInfo",
+    "filename": "Radio.js"
+  },
+  {
+    "child": "nexacro.Radio",
+    "parent": "nexacro.Component",
+    "filename": "Radio.js"
+  },
+  {
+    "child": "nexacro._RadioItemControl",
+    "parent": "nexacro._IconText",
+    "filename": "Radio.js"
+  },
+  {
+    "child": "nexacro.SketchLoadEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro.SketchErrorEventInfo",
+    "parent": "nexacro.ErrorEventInfo",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro.SketchEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro.Sketch",
+    "parent": "nexacro.Component",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro.SketchEditControl",
+    "parent": "nexacro.TextArea",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro.ImageSketchBackground",
+    "parent": "nexacro.Image",
+    "filename": "Sketch.js"
+  },
+  {
+    "child": "nexacro._SplitterGhostControl",
+    "parent": "nexacro.Component",
+    "filename": "Splitter.js"
+  },
+  {
+    "child": "nexacro.SplitterControl",
+    "parent": "nexacro.Component",
+    "filename": "Splitter.js"
+  },
+  {
+    "child": "nexacro.SpinEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "Spin.js"
+  },
+  {
+    "child": "nexacro.Spin",
+    "parent": "nexacro.Component",
+    "filename": "Spin.js"
+  },
+  {
+    "child": "nexacro._SpinEditControl",
+    "parent": "nexacro.MaskEdit",
+    "filename": "Spin.js"
+  },
+  {
+    "child": "nexacro._SpinButtonControl",
+    "parent": "nexacro.Button",
+    "filename": "Spin.js"
+  },
+  {
+    "child": "nexacro._IconText",
+    "parent": "nexacro.Component",
+    "filename": "Static.js"
+  },
+  {
+    "child": "nexacro._Icon",
+    "parent": "nexacro.Component",
+    "filename": "Static.js"
+  },
+  {
+    "child": "nexacro.Static",
+    "parent": "nexacro.Component",
+    "filename": "Static.js"
+  },
+  {
+    "child": "nexacro._TitleBarIconTextControl",
+    "parent": "nexacro._IconText",
+    "filename": "Static.js"
+  },
+  {
+    "child": "nexacro.SpinField",
+    "parent": "nexacro.TextField",
+    "filename": "SpinField.js"
+  },
+  {
+    "child": "nexacro.SpinFieldBox",
+    "parent": "nexacro.TextFieldBox",
+    "filename": "SpinField.js"
+  },
+  {
+    "child": "nexacro._SpinFieldSpinButtonControl",
+    "parent": "nexacro.Button",
+    "filename": "SpinField.js"
+  },
+  {
+    "child": "nexacro.SpinnerControl",
+    "parent": "nexacro.Component",
+    "filename": "SpinnerControl.js"
+  },
+  {
+    "child": "nexacro.StatusBarControl",
+    "parent": "nexacro.Form",
+    "filename": "StatusBar.js"
   },
   {
     "child": "nexacro.MultiCombo",
@@ -1295,89 +1440,39 @@
     "filename": "MultiCombo.js"
   },
   {
-    "child": "nexacro.ScrollBarControl",
+    "child": "nexacro.SwitchChangedEventInfo",
+    "parent": "nexacro.ChangedEventInfo",
+    "filename": "Switch.js"
+  },
+  {
+    "child": "nexacro.SwitchClickEventInfo",
+    "parent": "nexacro.ClickEventInfo",
+    "filename": "Switch.js"
+  },
+  {
+    "child": "nexacro.Switch",
     "parent": "nexacro.Component",
-    "filename": "ScrollBar.js"
+    "filename": "Switch.js"
   },
   {
-    "child": "nexacro.ScrollIndicatorControl",
-    "parent": "nexacro.ScrollBarControl",
-    "filename": "ScrollBar.js"
-  },
-  {
-    "child": "nexacro.SpinEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Spin.js"
-  },
-  {
-    "child": "nexacro.Spin",
+    "child": "nexacro.SwitchButtonControl",
     "parent": "nexacro.Component",
-    "filename": "Spin.js"
+    "filename": "Switch.js"
   },
   {
-    "child": "nexacro._SpinEditControl",
-    "parent": "nexacro.MaskEdit",
-    "filename": "Spin.js"
+    "child": "nexacro.SwitchButtonItemControl",
+    "parent": "nexacro.Component",
+    "filename": "Switch.js"
   },
   {
-    "child": "nexacro._SpinButtonControl",
+    "child": "nexacro.SwitchThumbButtonControl",
     "parent": "nexacro.Button",
-    "filename": "Spin.js"
+    "filename": "Switch.js"
   },
   {
-    "child": "nexacro.SpinnerControl",
-    "parent": "nexacro.Component",
-    "filename": "SpinnerControl.js"
-  },
-  {
-    "child": "nexacro.StatusBarControl",
-    "parent": "nexacro.Form",
-    "filename": "StatusBar.js"
-  },
-  {
-    "child": "nexacro.SpinField",
-    "parent": "nexacro.TextField",
-    "filename": "SpinField.js"
-  },
-  {
-    "child": "nexacro.SpinFieldBox",
-    "parent": "nexacro.TextFieldBox",
-    "filename": "SpinField.js"
-  },
-  {
-    "child": "nexacro._SpinFieldSpinButtonControl",
+    "child": "nexacro.SwitchTrackControl",
     "parent": "nexacro.Button",
-    "filename": "SpinField.js"
-  },
-  {
-    "child": "nexacro.SketchLoadEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Sketch.js"
-  },
-  {
-    "child": "nexacro.SketchErrorEventInfo",
-    "parent": "nexacro.ErrorEventInfo",
-    "filename": "Sketch.js"
-  },
-  {
-    "child": "nexacro.SketchEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "Sketch.js"
-  },
-  {
-    "child": "nexacro.Sketch",
-    "parent": "nexacro.Component",
-    "filename": "Sketch.js"
-  },
-  {
-    "child": "nexacro.SketchEditControl",
-    "parent": "nexacro.TextArea",
-    "filename": "Sketch.js"
-  },
-  {
-    "child": "nexacro.ImageSketchBackground",
-    "parent": "nexacro.Image",
-    "filename": "Sketch.js"
+    "filename": "Switch.js"
   },
   {
     "child": "nexacro.StepChangeEventInfo",
@@ -1400,54 +1495,9 @@
     "filename": "Step.js"
   },
   {
-    "child": "nexacro._IconText",
-    "parent": "nexacro.Component",
-    "filename": "Static.js"
-  },
-  {
-    "child": "nexacro._Icon",
-    "parent": "nexacro.Component",
-    "filename": "Static.js"
-  },
-  {
-    "child": "nexacro.Static",
-    "parent": "nexacro.Component",
-    "filename": "Static.js"
-  },
-  {
-    "child": "nexacro._TitleBarIconTextControl",
-    "parent": "nexacro._IconText",
-    "filename": "Static.js"
-  },
-  {
-    "child": "nexacro.TextField",
-    "parent": "nexacro.FieldBase",
-    "filename": "TextField.js"
-  },
-  {
-    "child": "nexacro.TextFieldBox",
-    "parent": "nexacro.FieldBaseBox",
-    "filename": "TextField.js"
-  },
-  {
     "child": "nexacro.TextArea",
     "parent": "nexacro.Component",
     "filename": "TextArea.js"
-  },
-  {
-    "child": "nexacro.TimePickerControl",
-    "parent": "nexacro.Component",
-    "filename": "TimePickerControl.js"
-  },
-  {
-    "child": "nexacro.TitleBarControl",
-    "parent": "nexacro.Form",
-    "filename": "TitleBar.js"
-  },
-  {
-    "child": "nexacro.View",
-    "parent": "nexacro.Div",
-    "filename": "View.js"
   },
   {
     "child": "nexacro.TrayBalloonTipHideEventInfo",
@@ -1463,6 +1513,26 @@
     "child": "nexacro.TrayPopupMenu",
     "parent": "nexacro._EventSinkObject",
     "filename": "Tray.js"
+  },
+  {
+    "child": "nexacro.TextField",
+    "parent": "nexacro.FieldBase",
+    "filename": "TextField.js"
+  },
+  {
+    "child": "nexacro.TextFieldBox",
+    "parent": "nexacro.FieldBaseBox",
+    "filename": "TextField.js"
+  },
+  {
+    "child": "nexacro.TimePickerControl",
+    "parent": "nexacro.Component",
+    "filename": "TimePickerControl.js"
+  },
+  {
+    "child": "nexacro.TitleBarControl",
+    "parent": "nexacro.Form",
+    "filename": "TitleBar.js"
   },
   {
     "child": "nexacro.VideoPlayStateChangedEventInfo",
@@ -1485,24 +1555,29 @@
     "filename": "VideoPlayer.js"
   },
   {
-    "child": "nexacro.VirtualFileEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "VirtualFile.js"
+    "child": "nexacro._TabBarItemControl",
+    "parent": "nexacro.Component",
+    "filename": "TabBar.js"
   },
   {
-    "child": "nexacro.VirtualFileErrorEventInfo",
-    "parent": "nexacro.Event",
-    "filename": "VirtualFile.js"
+    "child": "nexacro._TabBarItemSetControl",
+    "parent": "nexacro.Component",
+    "filename": "TabBar.js"
   },
   {
-    "child": "nexacro._FileAttribute",
-    "parent": "nexacro.Object",
-    "filename": "VirtualFile.js"
+    "child": "nexacro._TabBarButtonSetControl",
+    "parent": "nexacro.Component",
+    "filename": "TabBar.js"
   },
   {
-    "child": "nexacro.VirtualFile",
-    "parent": "nexacro._EventSinkObject",
-    "filename": "VirtualFile.js"
+    "child": "nexacro._TabBarHeadButtonSetControl",
+    "parent": "nexacro._TabBarButtonSetControl",
+    "filename": "TabBar.js"
+  },
+  {
+    "child": "nexacro.TabBarControl",
+    "parent": "nexacro.Component",
+    "filename": "TabBar.js"
   },
   {
     "child": "nexacro.ChangeEventInfo",
@@ -1540,6 +1615,11 @@
     "filename": "Tab.js"
   },
   {
+    "child": "nexacro.View",
+    "parent": "nexacro.Div",
+    "filename": "View.js"
+  },
+  {
     "child": "nexacro._TransformEasing",
     "parent": "nexacro.Object",
     "filename": "ViewTransition.js"
@@ -1558,6 +1638,26 @@
     "child": "nexacro._ViewTransitionEffector",
     "parent": "nexacro.Object",
     "filename": "ViewTransition.js"
+  },
+  {
+    "child": "nexacro.VirtualFileEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "VirtualFile.js"
+  },
+  {
+    "child": "nexacro.VirtualFileErrorEventInfo",
+    "parent": "nexacro.Event",
+    "filename": "VirtualFile.js"
+  },
+  {
+    "child": "nexacro._FileAttribute",
+    "parent": "nexacro.Object",
+    "filename": "VirtualFile.js"
+  },
+  {
+    "child": "nexacro.VirtualFile",
+    "parent": "nexacro._EventSinkObject",
+    "filename": "VirtualFile.js"
   },
   {
     "child": "nexacro.WebLoadCompEventInfo",
