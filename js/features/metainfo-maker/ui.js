@@ -126,8 +126,75 @@ function createSelectionTag(item, index, key) {
     return tag;
 }
 
+export function toggleObjectInfoEditMode(isEditing) {
+    dom.objectinfoViewContainer.classList.toggle('hidden', isEditing);
+    dom.objectinfoFormContainer.classList.toggle('hidden', !isEditing);
+    dom.editObjectInfoBtn.classList.toggle('hidden', isEditing);
+    dom.saveObjectInfoBtn.classList.toggle('hidden', !isEditing);
+
+    if (isEditing) {
+        renderObjectInfoForm();
+    } else {
+        renderObjectInfoView();
+    }
+}
+
+function renderObjectInfoView() {
+    const container = dom.objectinfoViewContainer;
+    container.innerHTML = '';
+    const objectInfoData = (state.userSelections.ObjectInfo && state.userSelections.ObjectInfo[0]) || {};
+
+    for (const key in objectInfoData) {
+        if (objectInfoData[key]) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'text-sm';
+            wrapper.innerHTML = `<strong class="font-medium text-gray-900">${key}:</strong> <span class="text-gray-700">${objectInfoData[key]}</span>`;
+            container.appendChild(wrapper);
+        }
+    }
+     if (Object.keys(objectInfoData).length === 0) {
+        container.innerHTML = '<p class="text-gray-500 col-span-full">No ObjectInfo data loaded.</p>';
+    }
+}
+
+function renderObjectInfoForm() {
+    const container = dom.objectinfoFormContainer;
+    container.innerHTML = '';
+    
+    const headers = getSheetHeaders().ObjectInfo;
+    const objectInfoData = (state.userSelections.ObjectInfo && state.userSelections.ObjectInfo[0]) || {};
+
+    headers.forEach(header => {
+        const wrapper = document.createElement('div');
+        const label = document.createElement('label');
+        label.className = 'block text-sm font-medium text-gray-700 mb-1';
+        label.textContent = header;
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = header;
+        input.id = `objectinfo-input-${header}`;
+        input.className = 'mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm';
+        input.value = objectInfoData[header] || '';
+        
+        input.addEventListener('input', (e) => {
+            if (!state.userSelections.ObjectInfo[0]) {
+                state.userSelections.ObjectInfo[0] = {};
+            }
+            state.userSelections.ObjectInfo[0][header] = e.target.value;
+        });
+
+        wrapper.appendChild(label);
+        wrapper.appendChild(input);
+        container.appendChild(wrapper);
+    });
+}
+
 export function renderSelections() {
+    renderObjectInfoView(); // Always render the view by default
     for (const key in state.userSelections) {
+        if (key === 'ObjectInfo') continue;
+
         const fromFileContainer = dom.selectionContainers[key];
         const addedContainer = dom.addedSelectionContainers[key];
         if (!fromFileContainer || !addedContainer) continue;
@@ -169,60 +236,144 @@ export function renderSelections() {
 export function openCustomItemModal(type) {
     setCurrentCustomItemType(type);
     dom.customItemModalTitle.textContent = `Add Custom ${type.replace('Info', '')}`;
-    
+    dom.customItemModalFormContainer.innerHTML = ''; // Clear previous form
+
+    if (type === 'MethodInfo') {
+        buildMethodInfoForm();
+    } else {
+        buildGenericForm(type);
+    }
+
+    dom.customItemModal.classList.remove('hidden');
+}
+
+function buildGenericForm(type) {
     const headers = getSheetHeaders()[type];
     if (!headers) {
         console.error(`No headers found for type: ${type}`);
         return;
     }
-
-    dom.customItemModalFormContainer.innerHTML = '';
-
     headers.forEach(headerText => {
+        const field = createFormField(headerText);
+        dom.customItemModalFormContainer.appendChild(field);
+    });
+}
+
+function buildMethodInfoForm() {
+    const headers = getSheetHeaders().MethodInfo;
+    headers.forEach(headerText => {
+        if (headerText !== 'arguments_json') {
+            const field = createFormField(headerText, headerText.includes('description') ? 'textarea' : 'input');
+            dom.customItemModalFormContainer.appendChild(field);
+        }
+    });
+
+    // Container for dynamic arguments
+    const argsContainer = document.createElement('div');
+    argsContainer.id = 'arguments-container';
+    argsContainer.className = 'space-y-4 mt-4 p-4 border-t';
+    
+    const argsTitle = document.createElement('h4');
+    argsTitle.className = 'text-md font-semibold text-gray-800';
+    argsTitle.textContent = 'Arguments';
+    argsContainer.appendChild(argsTitle);
+
+    dom.customItemModalFormContainer.appendChild(argsContainer);
+
+    const addArgBtn = document.createElement('button');
+    addArgBtn.type = 'button';
+    addArgBtn.textContent = 'Add Argument';
+    addArgBtn.className = 'mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-sm';
+    addArgBtn.addEventListener('click', () => addArgumentRow());
+    dom.customItemModalFormContainer.appendChild(addArgBtn);
+}
+
+function addArgumentRow(arg = {}) {
+    const container = document.getElementById('arguments-container');
+    const argIndex = container.querySelectorAll('.argument-row').length;
+    const argRow = document.createElement('div');
+    argRow.className = 'argument-row grid grid-cols-1 gap-2 p-3 border rounded-md bg-gray-50';
+
+    const argFields = {
+        name: 'text', type: 'text', in: 'checkbox', out: 'checkbox', 
+        option: 'checkbox', variable: 'checkbox', description: 'textarea'
+    };
+
+    for (const [key, fieldType] of Object.entries(argFields)) {
         const fieldWrapper = document.createElement('div');
-        fieldWrapper.className = 'grid grid-cols-3 gap-4 items-center';
-
         const label = document.createElement('label');
-        label.className = 'text-sm font-medium text-gray-700 col-span-1';
-        label.textContent = headerText;
-        label.htmlFor = `custom-input-${headerText}`;
-        fieldWrapper.appendChild(label);
-
-        const inputContainer = document.createElement('div');
-        inputContainer.className = 'col-span-2';
+        label.className = 'text-xs font-medium text-gray-600';
+        label.textContent = key;
         
         let field;
-        if (booleanAttributes.has(headerText)) {
-            field = document.createElement('select');
-            field.className = 'w-full p-2 pr-8 border border-gray-300 rounded-md text-sm bg-white text-red-500';
-            field.innerHTML = `
-                <option value="true">true</option>
-                <option value="false" selected>false</option>
-            `;
-            field.addEventListener('change', (e) => {
-                if (e.target.value === 'true') {
-                    e.target.classList.remove('text-red-500');
-                    e.target.classList.add('text-blue-500');
-                } else {
-                    e.target.classList.remove('text-blue-500');
-                    e.target.classList.add('text-red-500');
-                }
-            });
+        if (fieldType === 'textarea') {
+            field = document.createElement('textarea');
+            field.rows = 2;
+        } else if (fieldType === 'checkbox') {
+            field = document.createElement('input');
+            field.type = 'checkbox';
+            field.checked = arg[key] === 'true' || arg[key] === true;
         } else {
             field = document.createElement('input');
             field.type = 'text';
-            field.className = 'w-full p-2 border border-gray-300 rounded-md text-sm';
-            field.placeholder = headerText;
         }
-        field.id = `custom-input-${headerText}`;
-        field.name = headerText;
         
-        inputContainer.appendChild(field);
-        fieldWrapper.appendChild(inputContainer);
-        dom.customItemModalFormContainer.appendChild(fieldWrapper);
-    });
+        field.name = `arg_${argIndex}_${key}`;
+        field.className = 'w-full p-1 border border-gray-300 rounded-md text-sm';
+        if (fieldType !== 'checkbox') {
+            field.value = arg[key] || '';
+        }
 
-    dom.customItemModal.classList.remove('hidden');
+        fieldWrapper.appendChild(label);
+        fieldWrapper.appendChild(field);
+        argRow.appendChild(fieldWrapper);
+    }
+
+    const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
+    removeBtn.textContent = 'Remove';
+    removeBtn.className = 'mt-2 px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600 text-xs justify-self-end';
+    removeBtn.addEventListener('click', () => argRow.remove());
+    argRow.appendChild(removeBtn);
+
+    container.appendChild(argRow);
+}
+
+
+function createFormField(headerText, fieldType = 'input') {
+    const fieldWrapper = document.createElement('div');
+    fieldWrapper.className = 'grid grid-cols-3 gap-4 items-center';
+
+    const label = document.createElement('label');
+    label.className = 'text-sm font-medium text-gray-700 col-span-1';
+    label.textContent = headerText;
+    label.htmlFor = `custom-input-${headerText}`;
+    fieldWrapper.appendChild(label);
+
+    const inputContainer = document.createElement('div');
+    inputContainer.className = 'col-span-2';
+    
+    let field;
+    if (booleanAttributes.has(headerText)) {
+        field = document.createElement('select');
+        field.className = 'w-full p-2 pr-8 border border-gray-300 rounded-md text-sm bg-white';
+        field.innerHTML = `<option value="true">true</option><option value="false" selected>false</option>`;
+    } else if (fieldType === 'textarea') {
+        field = document.createElement('textarea');
+        field.className = 'w-full p-2 border border-gray-300 rounded-md text-sm';
+        field.rows = 3;
+    } else {
+        field = document.createElement('input');
+        field.type = 'text';
+        field.className = 'w-full p-2 border border-gray-300 rounded-md text-sm';
+    }
+    field.id = `custom-input-${headerText}`;
+    field.name = headerText;
+    field.placeholder = headerText;
+    
+    inputContainer.appendChild(field);
+    fieldWrapper.appendChild(inputContainer);
+    return fieldWrapper;
 }
 
 export function showSteps(stepToShow) {

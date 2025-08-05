@@ -1,61 +1,55 @@
 import { dom } from './dom-elements.js';
-import { state } from './state.js';
-import { showToast } from '../../app/ui-helpers.js';
-import { renderAllButtons, filterButtons, showSteps, openCustomItemModal } from './ui.js';
-import { handleCreateNew, handleTemplateDownload, handleInfoFileUpload, handleXlsxFileUpload, processXlsxAndGenerateInfo, handleItemRemoval, handleSaveCustomItem } from './event-handlers.js';
+import { loadInitialData } from './logic.js';
+import { renderAllButtons, filterButtons, showSteps, setNextButtonState, openCustomItemModal } from './ui.js';
+import { handleCreateNew, handleTemplateDownload, handleInfoFileUpload, handleXlsxFileUpload, processXlsxAndGenerateInfo, handleItemRemoval, handleSaveCustomItem, handleEditObjectInfo, handleSaveObjectInfo } from './event-handlers.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (!dom.createNewInfoBtn) return;
-    initialize();
-});
-
-async function initialize() {
-    try {
-        const response = await fetch('./parsers/json/aggregated_metainfo.json');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        const aggregatedData = await response.json();
-        state.aggregatedData = aggregatedData;
-
-        const namesResponse = await fetch('./parsers/json/aggregated_component_names.json');
-        if (!namesResponse.ok) throw new Error(`HTTP error! status: ${namesResponse.status}`);
-        const names = await namesResponse.json();
-        state.componentNames = new Set(names);
-
+function initializeMetainfoMaker() {
+    // Initial data loading
+    loadInitialData().then(() => {
         renderAllButtons();
-    } catch (error) {
-        console.error("Failed to load initial data:", error);
-        showToast('초기 데이터 로딩에 실패했습니다.', 'error');
-    }
-
-    // --- Event Listeners ---
-    dom.createNewInfoBtn.addEventListener('click', handleCreateNew);
-    dom.step1NextBtn.addEventListener('click', () => {
-        document.getElementById('metainfo-step-1').classList.add('hidden');
-        showSteps(3);
+    }).catch(error => {
+        console.error("Failed to initialize Metainfo Maker:", error);
     });
-    dom.downloadTemplateBtn.addEventListener('click', handleTemplateDownload);
+
+    // Event Listeners
+    dom.createNewInfoBtn.addEventListener('click', handleCreateNew);
     dom.existingInfoFileInput.addEventListener('change', handleInfoFileUpload);
     dom.infoFileInput.addEventListener('change', handleXlsxFileUpload);
     dom.generateInfoBtn.addEventListener('click', processXlsxAndGenerateInfo);
+    dom.saveCustomItemBtn.addEventListener('click', handleSaveCustomItem);
+    dom.cancelCustomItemBtn.addEventListener('click', () => {
+        dom.customItemModal.classList.add('hidden');
+    });
 
+    dom.step1NextBtn.addEventListener('click', () => {
+        showSteps(2);
+        dom.steps.step2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    dom.step2NextBtn.addEventListener('click', () => {
+        showSteps(3);
+        dom.steps.step3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // Search functionality
     for (const key in dom.searchInputs) {
-        dom.searchInputs[key].addEventListener('input', (e) => filterButtons(key, e.target.value));
-    }
-    
-    for (const key in dom.selectionContainers) {
-        dom.selectionContainers[key].addEventListener('click', (event) => {
-            if (event.target.tagName === 'BUTTON' && event.target.dataset.type) {
-                const type = event.target.dataset.type;
-                const index = parseInt(event.target.dataset.index, 10);
-                handleItemRemoval(type, index);
-            }
+        dom.searchInputs[key].addEventListener('input', (e) => {
+            filterButtons(key, e.target.value);
         });
     }
 
-    document.querySelectorAll('.custom-add-btn').forEach(btn => {
-        btn.addEventListener('click', () => openCustomItemModal(btn.dataset.type));
+    // Add event listeners for custom add buttons
+    document.querySelectorAll('.custom-add-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const type = e.target.dataset.type;
+            openCustomItemModal(type);
+        });
     });
 
-    dom.saveCustomItemBtn.addEventListener('click', handleSaveCustomItem);
-    dom.cancelCustomItemBtn.addEventListener('click', () => dom.customItemModal.classList.add('hidden'));
+    dom.downloadTemplateBtn.addEventListener('click', handleTemplateDownload);
+    dom.editObjectInfoBtn.addEventListener('click', handleEditObjectInfo);
+    dom.saveObjectInfoBtn.addEventListener('click', handleSaveObjectInfo);
 }
+
+// Initialize the feature
+initializeMetainfoMaker();

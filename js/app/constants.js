@@ -7,6 +7,7 @@ export const METAINFO_EVENT_JSON_FILE_PATH = './parsers/json/metainfo/output_eve
 export const ALL_COMPONENT_EVENTS_JSON_FILE_PATH = './parsers/json/codebase/output_event.json';
 export const ANNOTATIONS_JSON_FILE_PATH = './parsers/json/codebase/output_annotations.json';
 export const AGGREGATED_NAMES_JSON_FILE_PATH = './parsers/json/aggregated_component_names.json';
+export const AGGREGATED_METAINFO_JSON_FILE_PATH = './parsers/json/aggregated_metainfo.json';
 
 export const GROUP_ORDER = ['Component', 'Control', 'EventInfo', 'ETC'];
 export const TARGET_ROOT_NAME = "nexacro._EventSinkObject";

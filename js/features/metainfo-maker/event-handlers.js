@@ -3,13 +3,23 @@ import { dom } from './dom-elements.js';
 import { state, setCurrentCustomItemType } from './state.js';
 import { showToast } from '../../app/ui-helpers.js';
 import { parseInfoFile, downloadFile, getSheetHeaders, generateXlsxFromData, convertWorkbookToInfoXml } from './logic.js';
-import { renderSelections, renderAllButtons, filterButtons, showSteps, setNextButtonState, openCustomItemModal } from './ui.js';
+import { renderSelections, renderAllButtons, filterButtons, showSteps, setNextButtonState, openCustomItemModal, toggleObjectInfoEditMode } from './ui.js';
 
 export function handleCreateNew() {
     dom.existingInfoFileInput.value = '';
-    Object.keys(state.userSelections).forEach(key => state.userSelections[key] = []);
+    // Reset all selections, providing a default structure for ObjectInfo
+    state.userSelections = {
+        ObjectInfo: [{}],
+        PropertyInfo: [],
+        ControlInfo: [],
+        StatusInfo: [],
+        CSSInfo: [],
+        MethodInfo: [],
+        EventHandlerInfo: [],
+    };
     state.parsedInfoData = null;
     state.rawInfoFileContent = null;
+    state.trailingContent = '';
     
     renderSelections();
     showToast('빈 템플릿으로 시작합니다. 항목을 추가하세요.', 'info');
@@ -71,6 +81,7 @@ export function handleInfoFileUpload(event) {
     if (!file) {
         state.parsedInfoData = null;
         state.rawInfoFileContent = null;
+        state.trailingContent = ''; // Reset trailing content
         renderSelections();
         setNextButtonState(false);
         return;
@@ -86,7 +97,10 @@ export function handleInfoFileUpload(event) {
     reader.onload = (e) => {
         try {
             state.rawInfoFileContent = e.target.result;
-            state.parsedInfoData = parseInfoFile(state.rawInfoFileContent);
+            const { meta, trailingContent } = parseInfoFile(state.rawInfoFileContent);
+            state.parsedInfoData = meta;
+            state.trailingContent = trailingContent;
+
             for (const key in state.userSelections) {
                 if (state.parsedInfoData[key]) {
                     state.userSelections[key] = state.parsedInfoData[key].map(item => ({ ...item, fromFile: true }));
@@ -116,66 +130,28 @@ export function handleXlsxFileUpload() {
 }
 
 export function handleTemplateDownload() {
-    const newComponentName = dom.newComponentNameInput.value.trim();
-    let dataForXlsx = { ObjectInfo: [] };
-    let finalFilename = 'MetaInfo_Template.xlsx';
+    const objectInfo = (state.userSelections.ObjectInfo && state.userSelections.ObjectInfo[0])
+        ? state.userSelections.ObjectInfo[0]
+        : {};
 
-    if (state.parsedInfoData && state.rawInfoFileContent) {
-        const originalComponentName = state.parsedInfoData.ObjectInfo[0]?.shorttypename;
-        let contentToParse = state.rawInfoFileContent;
-
-        if (newComponentName && originalComponentName && originalComponentName !== newComponentName) {
-            const replaceRegex = new RegExp(originalComponentName, 'g');
-            contentToParse = state.rawInfoFileContent.replace(replaceRegex, newComponentName);
-            finalFilename = `${newComponentName}.info.xlsx`;
-            showToast(`'${originalComponentName}'이(가) '${newComponentName}'(으)로 대체되었습니다.`, 'info');
-        } else if (originalComponentName) {
-             finalFilename = `${originalComponentName}.info.xlsx`;
-        }
-        
-        try {
-            const tempData = parseInfoFile(contentToParse);
-            dataForXlsx.ObjectInfo = tempData.ObjectInfo;
-        } catch (error) {
-            showToast(`파일 처리 오류: ${error.message}`, 'error');
-            return;
-        }
-    } else if (newComponentName) {
-        dataForXlsx.ObjectInfo = [{
-            id: `nexacro.${newComponentName}`,
-            classname: `nexacro.${newComponentName}`,
-            shorttypename: newComponentName,
-            csstypename: newComponentName.toLowerCase(),
-        }];
-        finalFilename = `${newComponentName}.info.xlsx`;
+    // Strengthen validation: Ensure essential fields exist before download.
+    if (!objectInfo.shorttypename || !objectInfo.id) {
+        showToast('ObjectInfo의 id와 shorttypename을 먼저 입력해야 합니다.', 'error');
+        toggleObjectInfoEditMode(true); // Switch to edit mode to guide the user
+        const shortTypeNameInput = document.getElementById('objectinfo-input-shorttypename');
+        if(shortTypeNameInput) shortTypeNameInput.focus();
+        return;
     }
 
-    const processedSelections = JSON.parse(JSON.stringify(state.userSelections));
+    const componentName = objectInfo.shorttypename;
 
-    if (newComponentName) {
-        const originalComponentName = state.parsedInfoData?.ObjectInfo[0]?.shorttypename;
+    // Auto-populate other essential fields if they are empty
+    if (!objectInfo.classname) objectInfo.classname = `nexacro.${componentName}`;
+    if (!objectInfo.csstypename) objectInfo.csstypename = componentName.toLowerCase();
 
-        for (const key in processedSelections) {
-            if (Array.isArray(processedSelections[key])) {
-                processedSelections[key].forEach(item => {
-                    if (item.description) {
-                        if (originalComponentName && newComponentName !== originalComponentName) {
-                            item.description = item.description.replace(new RegExp(originalComponentName, 'g'), newComponentName);
-                        }
-                        
-                        const words = item.description.split(' ');
-                        const firstWord = words[0];
-                        if (state.componentNames.has(firstWord)) {
-                            words[0] = newComponentName;
-                            item.description = words.join(' ');
-                        }
-                    }
-                });
-            }
-        }
-    }
-
-    Object.assign(dataForXlsx, processedSelections);
+    const dataForXlsx = JSON.parse(JSON.stringify(state.userSelections));
+    const finalFilename = `${componentName}.info.xlsx`;
+    
     generateXlsxFromData(dataForXlsx, finalFilename);
     showToast('XLSX 템플릿 다운로드가 시작됩니다.', 'success');
     showSteps(4);
@@ -192,7 +168,7 @@ export function processXlsxAndGenerateInfo() {
     reader.onload = (e) => {
         try {
             const workbook = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
-            const xmlString = convertWorkbookToInfoXml(workbook);
+            const xmlString = convertWorkbookToInfoXml(workbook, state.trailingContent);
             const objectInfo = XLSX.utils.sheet_to_json(workbook.Sheets["ObjectInfo"])[0];
             const fileName = objectInfo ? `${objectInfo.shorttypename || 'Component'}.info` : 'Generated.info';
             downloadFile(fileName, xmlString);
@@ -206,16 +182,46 @@ export function processXlsxAndGenerateInfo() {
 }
 
 export function handleSaveCustomItem() {
-    const fields = dom.customItemModalFormContainer.querySelectorAll('input, select');
     const newItem = { fromFile: false };
+    
+    if (state.currentCustomItemType === 'MethodInfo') {
+        // Handle MethodInfo form
+        const form = dom.customItemModalFormContainer;
+        const mainFields = form.querySelectorAll('input, select, textarea');
+        mainFields.forEach(field => {
+            if (field.name && !field.name.startsWith('arg_')) {
+                newItem[field.name] = field.value.trim();
+            }
+        });
 
-    fields.forEach(field => {
-        const key = field.name;
-        const value = field.value.trim();
-        if (value) {
-            newItem[key] = value;
-        }
-    });
+        const args = [];
+        const argRows = form.querySelectorAll('.argument-row');
+        argRows.forEach(row => {
+            const arg = {};
+            const argFields = row.querySelectorAll('input, textarea');
+            argFields.forEach(field => {
+                const key = field.name.split('_').pop();
+                if (field.type === 'checkbox') {
+                    arg[key] = field.checked ? 'true' : 'false';
+                } else {
+                    arg[key] = field.value.trim();
+                }
+            });
+            args.push(arg);
+        });
+        newItem.arguments_json = JSON.stringify(args, null, 2);
+
+    } else {
+        // Handle generic form
+        const fields = dom.customItemModalFormContainer.querySelectorAll('input, select');
+        fields.forEach(field => {
+            const key = field.name;
+            const value = field.value.trim();
+            if (value) {
+                newItem[key] = value;
+            }
+        });
+    }
 
     if (!newItem.name) {
         showToast('항목의 이름을 작성해야합니다.', 'error');
@@ -250,4 +256,13 @@ export function handleUnusedChange(event) {
         showToast(`Property '${state.userSelections[type][index].name}' unused status 업데이트 되었습니다.[${value}].`, 'info');
         renderSelections();
     }
+}
+
+export function handleEditObjectInfo() {
+    toggleObjectInfoEditMode(true);
+}
+
+export function handleSaveObjectInfo() {
+    toggleObjectInfoEditMode(false);
+    showToast('ObjectInfo가 저장되었습니다.', 'success');
 }

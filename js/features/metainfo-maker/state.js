@@ -3,6 +3,7 @@ export const state = {
     rawInfoFileContent: null,
     aggregatedData: { properties: [], cssinfo: [], controls: [], statuses: [], methods: [], events: [] },
     userSelections: {
+        ObjectInfo: [],
         PropertyInfo: [],
         ControlInfo: [],
         StatusInfo: [],
@@ -12,6 +13,7 @@ export const state = {
     },
     componentNames: new Set(),
     currentCustomItemType: null,
+    trailingContent: '',
 };
 
 export const booleanAttributes = new Set(['readonly', 'initonly', 'hidden', 'deprecated', 'unused', 'mandatory', 'async', 'usecontextmenu', 'default', 'control', 'expr', 'bind', 'style']);
