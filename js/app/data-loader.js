@@ -115,7 +115,9 @@ export async function loadComponentAnalyzerData() {
             fetch(`${basePath}/metainfo/output_property_metainfo.json`),
             fetch(`${basePath}/codebase/all_component_properties.json`),
             fetch(`${basePath}/metainfo/output_event_metainfo.json`),
-            fetch(`${basePath}/aggregated_component_names.json`)
+            fetch(`${basePath}/aggregated_component_names.json`),
+            fetch(`${basePath}/codebase/impact_analysis.json`),
+            fetch(`${basePath}/codebase/function_signatures.json`)
         ]);
 
         for (const res of responses) {
@@ -129,7 +131,9 @@ export async function loadComponentAnalyzerData() {
             allInheritanceDataRaw, propertyData, eventData,
             metainfoPropertyData, allComponentPropertiesData,
             metainfoEventData,
-            aggregatedComponentNames
+            aggregatedComponentNames,
+            impactAnalysisData,
+            functionSignatures
         ] = await Promise.all(responses.map(res => res.json()));
         
         // Update state
@@ -141,6 +145,19 @@ export async function loadComponentAnalyzerData() {
         state.metainfoEventData = metainfoEventData;
         state.allComponentEventsData = eventData; // Use eventData for both
         state.aggregatedComponentNames = aggregatedComponentNames;
+        state.impactAnalysisData = impactAnalysisData;
+        state.functionSignatures = functionSignatures;
+
+        // Create a map for quick function signature lookup
+        state.functionSignaturesMap = new Map();
+        for (const fileName in state.functionSignatures) {
+            const functions = state.functionSignatures[fileName];
+            if (Array.isArray(functions)) {
+                functions.forEach(func => {
+                    state.functionSignaturesMap.set(func.name, func);
+                });
+            }
+        }
 
         const childToParentMap = new Map(state.allInheritanceDataRaw.map(d => [d.child, d.parent]));
         const allChildNames = [...new Set(state.allInheritanceDataRaw.map(item => item.child))];

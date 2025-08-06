@@ -1,7 +1,7 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import * as XLSX from "https://cdn.jsdelivr.net/npm/xlsx@0.18.5/xlsx.mjs";
 import { state } from './state.js';
-import { updatePropertyTable, updateEventTable } from './ui.js';
+import { updatePropertyTable, updateEventTable, displayImpactAnalysis } from './ui.js';
 import { logEvent, buildFilteredInheritanceTree } from './utils.js';
 import { TARGET_ROOT_NAME } from './constants.js';
 
@@ -152,14 +152,10 @@ export function showAnalysisView(clickedNodeName) {
     state.currentSelectedComponent = clickedNodeName; // Set the current component
     const buttonContainer = document.getElementById('button-container');
     const visualizationContainer = document.getElementById('visualization-container');
-    const logContainer = document.getElementById('log-container');
-    const logContent = document.getElementById('log-content');
-
-    logContent.innerHTML = '';
+    
     buttonContainer.classList.add('slide-up', 'hidden');
     visualizationContainer.classList.remove('hidden');
     visualizationContainer.classList.add('fade-in');
-    logContainer.classList.remove('hidden');
 
     document.getElementById('download-xlsx-button').onclick = () => downloadInheritanceXLSX(clickedNodeName);
 
@@ -167,6 +163,7 @@ export function showAnalysisView(clickedNodeName) {
     drawEventPieChart(clickedNodeName);
     showInheritanceGraph(clickedNodeName);
     drawSubElementsGraph(clickedNodeName);
+    displayImpactAnalysis(clickedNodeName);
 }
 
 /**

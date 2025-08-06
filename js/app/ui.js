@@ -62,13 +62,13 @@ export function filterButtons() {
     const visualizationContainer = document.getElementById('visualization-container');
     const propertyTableContainer = document.getElementById('property-table-container');
     const eventTableContainer = document.getElementById('event-table-container');
-    const logContainer = document.getElementById('log-container');
+    const impactAnalysisContainer = document.getElementById('impact-analysis-container');
     const preSearchContainer = document.getElementById('pre-search-container');
 
     visualizationContainer.classList.add('hidden');
     propertyTableContainer.classList.add('hidden');
     eventTableContainer.classList.add('hidden');
-    logContainer.classList.add('hidden');
+    impactAnalysisContainer.classList.add('hidden');
 
     if (!searchTerm) {
         buttonContainer.classList.add('hidden');
@@ -131,6 +131,149 @@ export function updateEventTable(title, events) {
     }
     tableContainer.classList.remove('hidden');
 }
+
+/**
+ * Displays a detailed impact analysis based on the new data structure.
+ * @param {string} componentName - The name of the component that was clicked.
+ */
+export function displayImpactAnalysis(componentName) {
+    const container = document.getElementById('impact-analysis-container');
+    const searchInput = document.getElementById('impact-analysis-search-input');
+
+    // New specific containers
+    const directCallsContainer = document.getElementById('direct-calls-container');
+    const implicitUsageContainer = document.getElementById('implicit-usage-container');
+    const explicitCallsContainer = document.getElementById('explicit-calls-container');
+    const directCallsContent = document.getElementById('direct-calls-content');
+    const implicitUsageContent = document.getElementById('implicit-usage-content');
+    const explicitCallsContent = document.getElementById('explicit-calls-content');
+    const noImpactMessage = document.getElementById('no-impact-found-message');
+
+    const allImpactData = state.impactAnalysisData;
+
+    // --- Data Aggregation ---
+    let directCalls = [];
+    let implicitUsages = [];
+    let explicitCalls = [];
+
+    for (const itemName in allImpactData) {
+        const itemData = allImpactData[itemName];
+        if (itemData.defined_in === componentName && itemData.impact) {
+            if (itemData.impact.direct_calls) {
+                directCalls.push(...itemData.impact.direct_calls.map(c => ({ ...c, source_function: itemName })));
+            }
+            if (itemData.impact.inheritance) {
+                if (itemData.impact.inheritance.implicit_usage) {
+                    implicitUsages.push(...itemData.impact.inheritance.implicit_usage.map(u => ({ parent_function: itemName, using_child: u })));
+                }
+                if (itemData.impact.inheritance.explicit_calls) {
+                    explicitCalls.push(...itemData.impact.inheritance.explicit_calls.map(c => ({ ...c, parent_function: itemName })));
+                }
+            }
+        }
+    }
+
+    // --- UI Rendering ---
+    const renderContent = (dc, iu, ec) => {
+        let hasContent = false;
+
+        // Render Direct Calls
+        if (dc.length > 0) {
+            hasContent = true;
+            directCallsContent.innerHTML = `
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100 sticky top-0">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Function in ${componentName}</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Calling Function</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">In Component</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        ${dc.map(item => `
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.source_function}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.calling_function}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.calling_component}</td>
+                            </tr>`).join('')}
+                    </tbody>
+                </table>`;
+            directCallsContainer.classList.remove('hidden');
+        } else {
+            directCallsContainer.classList.add('hidden');
+        }
+
+        // Render Implicit Usage
+        if (iu.length > 0) {
+            hasContent = true;
+            implicitUsageContent.innerHTML = `
+                <table class="min-w-full divide-y divide-gray-200">
+                     <thead class="bg-gray-100 sticky top-0">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parent Function/Property</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Used by Child Component</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        ${iu.map(item => `
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.parent_function}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.using_child}</td>
+                            </tr>`).join('')}
+                    </tbody>
+                </table>`;
+            implicitUsageContainer.classList.remove('hidden');
+        } else {
+            implicitUsageContainer.classList.add('hidden');
+        }
+        
+        // Render Explicit Calls
+        if (ec.length > 0) {
+            hasContent = true;
+            explicitCallsContent.innerHTML = `
+                <table class="min-w-full divide-y divide-gray-200">
+                     <thead class="bg-gray-100 sticky top-0">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Parent Function/Property</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Called by Child Function</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">In Child Component</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        ${ec.map(item => `
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.parent_function}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.calling_function}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.calling_component}</td>
+                            </tr>`).join('')}
+                    </tbody>
+                </table>`;
+            explicitCallsContainer.classList.remove('hidden');
+        } else {
+            explicitCallsContainer.classList.add('hidden');
+        }
+
+        // Show or hide the 'no impact' message
+        if (!hasContent) {
+            noImpactMessage.classList.remove('hidden');
+        } else {
+            noImpactMessage.classList.add('hidden');
+        }
+    };
+
+    renderContent(directCalls, implicitUsages, explicitCalls);
+    container.classList.remove('hidden');
+
+    searchInput.value = '';
+    searchInput.oninput = () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        const filteredDC = directCalls.filter(item => Object.values(item).some(val => String(val).toLowerCase().includes(searchTerm)));
+        const filteredIU = implicitUsages.filter(item => Object.values(item).some(val => String(val).toLowerCase().includes(searchTerm)));
+        const filteredEC = explicitCalls.filter(item => Object.values(item).some(val => String(val).toLowerCase().includes(searchTerm)));
+        renderContent(filteredDC, filteredIU, filteredEC);
+    };
+}
+
 
 
 /**
