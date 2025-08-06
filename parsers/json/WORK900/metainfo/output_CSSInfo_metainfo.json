@@ -1,29 +1,5 @@
 [
   {
-    "componentname": "AbstractComponent",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "AbstractComponent.info"
-  },
-  {
     "componentname": "AbstractSelectOne",
     "properties": [
       "background",
@@ -72,7 +48,7 @@
     "filename": "AbstractSelectAny.info"
   },
   {
-    "componentname": "Button",
+    "componentname": "AbstractComponent",
     "properties": [
       "background",
       "border-radius",
@@ -83,21 +59,70 @@
       "letter-spacing",
       "-nexa-border",
       "-nexa-edge",
-      "-nexa-icon",
-      "-nexa-icon-position",
       "-nexa-padding",
       "-nexa-rtl-background-image",
       "-nexa-rtl-edge-image",
-      "-nexa-rtl-icon",
       "-nexa-text-align",
       "-nexa-text-decoration",
-      "-nexa-text-padding",
       "-nexa-vertical-align",
       "-nexa-word-wrap",
       "opacity",
       "word-spacing"
     ],
-    "filename": "Button.info"
+    "filename": "AbstractComponent.info"
+  },
+  {
+    "componentname": "CellRowGroupControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "CellRowGroupControl.info"
+  },
+  {
+    "componentname": "CellTreeLineControl",
+    "properties": [
+      "-nexa-border"
+    ],
+    "filename": "CellTreeLineControl.info"
+  },
+  {
+    "componentname": "CellTreeItemControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "CellTreeItemControl.info"
   },
   {
     "componentname": "Calendar",
@@ -124,14 +149,7 @@
     "filename": "Calendar.info"
   },
   {
-    "componentname": "CellTreeLineControl",
-    "properties": [
-      "-nexa-border"
-    ],
-    "filename": "CellTreeLineControl.info"
-  },
-  {
-    "componentname": "CellRowGroupControl",
+    "componentname": "Button",
     "properties": [
       "background",
       "border-radius",
@@ -142,39 +160,21 @@
       "letter-spacing",
       "-nexa-border",
       "-nexa-edge",
+      "-nexa-icon",
+      "-nexa-icon-position",
       "-nexa-padding",
       "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-rtl-icon",
       "-nexa-text-align",
       "-nexa-text-decoration",
+      "-nexa-text-padding",
       "-nexa-vertical-align",
       "-nexa-word-wrap",
       "opacity",
       "word-spacing"
     ],
-    "filename": "CellRowGroupControl.info"
-  },
-  {
-    "componentname": "CellTreeItemControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "CellTreeItemControl.info"
+    "filename": "Button.info"
   },
   {
     "componentname": "CheckBox",
@@ -253,7 +253,7 @@
     "filename": "ChildFrame.info"
   },
   {
-    "componentname": "Component",
+    "componentname": "Combo",
     "properties": [
       "background",
       "border-radius",
@@ -274,7 +274,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "Component.info"
+    "filename": "Combo.info"
   },
   {
     "componentname": "CompositeComponent",
@@ -301,7 +301,7 @@
     "filename": "CompositeComponent.info"
   },
   {
-    "componentname": "Combo",
+    "componentname": "Component",
     "properties": [
       "background",
       "border-radius",
@@ -322,93 +322,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "Combo.info"
-  },
-  {
-    "componentname": "DateFieldBoxControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "DateFieldBoxControl.info"
-  },
-  {
-    "componentname": "DatePickerControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "DatePickerControl.info"
-  },
-  {
-    "componentname": "DatePickerBodyControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "DatePickerBodyControl.info"
-  },
-  {
-    "componentname": "DatePickerDayItemControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "DatePickerDayItemControl.info"
+    "filename": "Component.info"
   },
   {
     "componentname": "DateField",
@@ -435,7 +349,7 @@
     "filename": "DateField.info"
   },
   {
-    "componentname": "DatePickerHeadControl",
+    "componentname": "DatePickerControl",
     "properties": [
       "background",
       "border-radius",
@@ -452,7 +366,50 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "DatePickerHeadControl.info"
+    "filename": "DatePickerControl.info"
+  },
+  {
+    "componentname": "DateFieldBoxControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "DateFieldBoxControl.info"
+  },
+  {
+    "componentname": "DatePickerBodyControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "DatePickerBodyControl.info"
   },
   {
     "componentname": "DatePickerGroupControl",
@@ -476,6 +433,26 @@
       "word-spacing"
     ],
     "filename": "DatePickerGroupControl.info"
+  },
+  {
+    "componentname": "DatePickerHeadControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "DatePickerHeadControl.info"
   },
   {
     "componentname": "DatePickerWeekItemControl",
@@ -522,6 +499,29 @@
       "word-spacing"
     ],
     "filename": "DatePickerYearItemControl.info"
+  },
+  {
+    "componentname": "DatePickerDayItemControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "DatePickerDayItemControl.info"
   },
   {
     "componentname": "DateRangePicker",
@@ -596,29 +596,6 @@
     "filename": "Edit.info"
   },
   {
-    "componentname": "FieldBaseLabelControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "FieldBaseLabelControl.info"
-  },
-  {
     "componentname": "FieldBaseIconControl",
     "properties": [
       "background",
@@ -640,6 +617,29 @@
       "word-spacing"
     ],
     "filename": "FieldBaseIconControl.info"
+  },
+  {
+    "componentname": "FieldBaseTextControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "FieldBaseTextControl.info"
   },
   {
     "componentname": "FileDownload",
@@ -694,7 +694,7 @@
     "filename": "FileUpload.info"
   },
   {
-    "componentname": "FileUploadItemControl",
+    "componentname": "FieldBaseLabelControl",
     "properties": [
       "background",
       "border-radius",
@@ -714,7 +714,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "FileUploadItemControl.info"
+    "filename": "FieldBaseLabelControl.info"
   },
   {
     "componentname": "FlexTextControl",
@@ -738,6 +738,51 @@
       "word-spacing"
     ],
     "filename": "FlexTextControl.info"
+  },
+  {
+    "componentname": "FileUploadItemControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "FileUploadItemControl.info"
+  },
+  {
+    "componentname": "GoogleMap",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "GoogleMap.info"
   },
   {
     "componentname": "FrameSet",
@@ -764,28 +809,6 @@
     "filename": "FrameSet.info"
   },
   {
-    "componentname": "GoogleMap",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "GoogleMap.info"
-  },
-  {
     "componentname": "Form",
     "properties": [
       "background",
@@ -810,52 +833,6 @@
     "filename": "Form.info"
   },
   {
-    "componentname": "HTMLContentBox",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "HTMLContentBox.info"
-  },
-  {
-    "componentname": "GroupBox",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "GroupBox.info"
-  },
-  {
     "componentname": "HFrameSet",
     "properties": [
       "background",
@@ -878,6 +855,28 @@
       "word-spacing"
     ],
     "filename": "HFrameSet.info"
+  },
+  {
+    "componentname": "HTMLContentBox",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "HTMLContentBox.info"
   },
   {
     "componentname": "IconControl",
@@ -906,6 +905,52 @@
     "filename": "IconControl.info"
   },
   {
+    "componentname": "GroupBox",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "GroupBox.info"
+  },
+  {
+    "componentname": "ImageAreaControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "ImageControl.info"
+  },
+  {
     "componentname": "IconTextControl",
     "properties": [
       "background",
@@ -932,28 +977,6 @@
       "word-spacing"
     ],
     "filename": "IconTextControl.info"
-  },
-  {
-    "componentname": "ImageAreaControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "ImageControl.info"
   },
   {
     "componentname": "ImageViewer",
@@ -1004,7 +1027,7 @@
     "filename": "ListBox.info"
   },
   {
-    "componentname": "ListBoxItemControl",
+    "componentname": "MaskEdit",
     "properties": [
       "background",
       "border-radius",
@@ -1025,7 +1048,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "ListBoxItemControl.info"
+    "filename": "MaskEdit.info"
   },
   {
     "componentname": "MainFrame",
@@ -1052,7 +1075,7 @@
     "filename": "MainFrame.info"
   },
   {
-    "componentname": "MaskEdit",
+    "componentname": "ListBoxItemControl",
     "properties": [
       "background",
       "border-radius",
@@ -1073,31 +1096,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "MaskEdit.info"
-  },
-  {
-    "componentname": "MenuItemControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "MenuItemControl.info"
+    "filename": "ListBoxItemControl.info"
   },
   {
     "componentname": "Menu",
@@ -1124,10 +1123,11 @@
     "filename": "Menu.info"
   },
   {
-    "componentname": "MultiComboTagBoxControl",
+    "componentname": "MenuItemControl",
     "properties": [
       "background",
       "border-radius",
+      "box-shadow",
       "color",
       "cursor",
       "font",
@@ -1144,7 +1144,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "MultiComboTagBoxControl.info"
+    "filename": "MenuItemControl.info"
   },
   {
     "componentname": "MultiComboListControl",
@@ -1194,11 +1194,10 @@
     "filename": "MultiCombo.info"
   },
   {
-    "componentname": "MultiLineTextField",
+    "componentname": "MultiComboTagBoxControl",
     "properties": [
       "background",
       "border-radius",
-      "box-shadow",
       "color",
       "cursor",
       "font",
@@ -1215,7 +1214,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "MultiLineTextField.info"
+    "filename": "MultiComboTagBoxControl.info"
   },
   {
     "componentname": "MultiLineTextFieldBoxControl",
@@ -1239,6 +1238,30 @@
       "word-spacing"
     ],
     "filename": "MultiLineTextFieldBoxControl.info"
+  },
+  {
+    "componentname": "MultiLineTextField",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "MultiLineTextField.info"
   },
   {
     "componentname": "Paginator",
@@ -1292,30 +1315,6 @@
     "filename": "PickerHeadLineControl.info"
   },
   {
-    "componentname": "Plugin",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "Plugin.info"
-  },
-  {
     "componentname": "Panel",
     "properties": [
       "background",
@@ -1338,6 +1337,54 @@
       "word-spacing"
     ],
     "filename": "Panel.info"
+  },
+  {
+    "componentname": "PopupMenu",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "PopupMenu.info"
+  },
+  {
+    "componentname": "Plugin",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "Plugin.info"
   },
   {
     "componentname": "PopupDiv",
@@ -1412,30 +1459,6 @@
     "filename": "PopupMenuItemControl.info"
   },
   {
-    "componentname": "PopupMenu",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "PopupMenu.info"
-  },
-  {
     "componentname": "ResizerControl",
     "properties": [
       "background",
@@ -1447,67 +1470,6 @@
       "opacity"
     ],
     "filename": "ResizerControl.info"
-  },
-  {
-    "componentname": "ResizerGhostControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "opacity"
-    ],
-    "filename": "ResizerGhostControl.info"
-  },
-  {
-    "componentname": "ProgressBar",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "ProgressBar.info"
-  },
-  {
-    "componentname": "Radio",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "Radio.info"
   },
   {
     "componentname": "RadioItemControl",
@@ -1536,6 +1498,93 @@
       "word-spacing"
     ],
     "filename": "RadioItemControl.info"
+  },
+  {
+    "componentname": "RowGroupExpandButtonControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-icon",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-rtl-icon",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "RowGroupExpandButtonControl.info"
+  },
+  {
+    "componentname": "Radio",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "Radio.info"
+  },
+  {
+    "componentname": "ProgressBar",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "ProgressBar.info"
+  },
+  {
+    "componentname": "ResizerGhostControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "opacity"
+    ],
+    "filename": "ResizerGhostControl.info"
   },
   {
     "componentname": "ScrollBarControl",
@@ -1568,7 +1617,7 @@
     "filename": "ScrollIndicatorControl.info"
   },
   {
-    "componentname": "RowGroupExpandButtonControl",
+    "componentname": "Spin",
     "properties": [
       "background",
       "border-radius",
@@ -1579,11 +1628,9 @@
       "letter-spacing",
       "-nexa-border",
       "-nexa-edge",
-      "-nexa-icon",
       "-nexa-padding",
       "-nexa-rtl-background-image",
       "-nexa-rtl-edge-image",
-      "-nexa-rtl-icon",
       "-nexa-text-align",
       "-nexa-text-decoration",
       "-nexa-vertical-align",
@@ -1591,7 +1638,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "RowGroupExpandButtonControl.info"
+    "filename": "Spin.info"
   },
   {
     "componentname": "SpinBarControl",
@@ -1607,19 +1654,6 @@
       "opacity"
     ],
     "filename": "SpinBarControl.info"
-  },
-  {
-    "componentname": "SplitterControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "opacity"
-    ],
-    "filename": "SplitterControl.info"
   },
   {
     "componentname": "Sketch",
@@ -1646,41 +1680,6 @@
     "filename": "Sketch.info"
   },
   {
-    "componentname": "StatusBarControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-vertical-align",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "StatusBarControl.info"
-  },
-  {
-    "componentname": "StepControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "opacity"
-    ],
-    "filename": "StepControl.info"
-  },
-  {
     "componentname": "SpinnerControl",
     "properties": [
       "background",
@@ -1705,11 +1704,10 @@
     "filename": "SpinnerControl.info"
   },
   {
-    "componentname": "Spin",
+    "componentname": "StatusBarControl",
     "properties": [
       "background",
       "border-radius",
-      "box-shadow",
       "color",
       "cursor",
       "font",
@@ -1720,13 +1718,11 @@
       "-nexa-rtl-background-image",
       "-nexa-rtl-edge-image",
       "-nexa-text-align",
-      "-nexa-text-decoration",
       "-nexa-vertical-align",
-      "-nexa-word-wrap",
       "opacity",
       "word-spacing"
     ],
-    "filename": "Spin.info"
+    "filename": "StatusBarControl.info"
   },
   {
     "componentname": "Static",
@@ -1751,6 +1747,72 @@
       "word-spacing"
     ],
     "filename": "Static.info"
+  },
+  {
+    "componentname": "StepControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "opacity"
+    ],
+    "filename": "StepControl.info"
+  },
+  {
+    "componentname": "SwitchButtonControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-icon",
+      "-nexa-icon-position",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-rtl-icon",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-text-padding",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "SwitchButtonControl.info"
+  },
+  {
+    "componentname": "Tab",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "Tab.info"
   },
   {
     "componentname": "SwitchButtonItemControl",
@@ -1809,48 +1871,6 @@
     "filename": "Switch.info"
   },
   {
-    "componentname": "SwitchButtonControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-icon",
-      "-nexa-icon-position",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-rtl-icon",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-text-padding",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "SwitchButtonControl.info"
-  },
-  {
-    "componentname": "TabBarButtonSetControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "-nexa-border",
-      "-nexa-padding",
-      "-nexa-edge",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "opacity"
-    ],
-    "filename": "TabBarButtonSetControl.info"
-  },
-  {
     "componentname": "TabBarControl",
     "properties": [
       "background",
@@ -1870,6 +1890,20 @@
     "filename": "TabBarControl.info"
   },
   {
+    "componentname": "TabBarButtonSetControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "-nexa-border",
+      "-nexa-padding",
+      "-nexa-edge",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "opacity"
+    ],
+    "filename": "TabBarButtonSetControl.info"
+  },
+  {
     "componentname": "TabBarHeadButtonSetControl",
     "properties": [
       "background",
@@ -1882,6 +1916,20 @@
       "opacity"
     ],
     "filename": "TabBarHeadButtonSetControl.info"
+  },
+  {
+    "componentname": "TabBarItemSetControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "-nexa-border",
+      "-nexa-padding",
+      "-nexa-edge",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "opacity"
+    ],
+    "filename": "TabBarItemSetControl.info"
   },
   {
     "componentname": "TabBarItemControl",
@@ -1903,21 +1951,20 @@
     "filename": "TabBarItemControl.info"
   },
   {
-    "componentname": "TabBarItemSetControl",
+    "componentname": "SplitterControl",
     "properties": [
       "background",
       "border-radius",
       "-nexa-border",
-      "-nexa-padding",
       "-nexa-edge",
       "-nexa-rtl-background-image",
       "-nexa-rtl-edge-image",
       "opacity"
     ],
-    "filename": "TabBarItemSetControl.info"
+    "filename": "SplitterControl.info"
   },
   {
-    "componentname": "Tab",
+    "componentname": "TabpageControl",
     "properties": [
       "background",
       "border-radius",
@@ -1938,7 +1985,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "Tab.info"
+    "filename": "TabpageControl.info"
   },
   {
     "componentname": "TabButtonIconControl",
@@ -1965,29 +2012,6 @@
       "word-spacing"
     ],
     "filename": "TabButtonIconControl.info"
-  },
-  {
-    "componentname": "TagBoxControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "TagBoxControl.info"
   },
   {
     "componentname": "TabButtonItemControl",
@@ -2017,7 +2041,7 @@
     "filename": "TabButtonItemControl.info"
   },
   {
-    "componentname": "TabpageControl",
+    "componentname": "TextField",
     "properties": [
       "background",
       "border-radius",
@@ -2038,7 +2062,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "TabpageControl.info"
+    "filename": "TextField.info"
   },
   {
     "componentname": "TextArea",
@@ -2065,29 +2089,6 @@
     "filename": "TextArea.info"
   },
   {
-    "componentname": "TextFieldBoxControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "TextFieldBoxControl.info"
-  },
-  {
     "componentname": "TileFrameSet",
     "properties": [
       "background",
@@ -2112,7 +2113,7 @@
     "filename": "TileFrameSet.info"
   },
   {
-    "componentname": "TimePickerControl",
+    "componentname": "TagBoxControl",
     "properties": [
       "background",
       "border-radius",
@@ -2132,54 +2133,7 @@
       "opacity",
       "word-spacing"
     ],
-    "filename": "TimePickerControl.info"
-  },
-  {
-    "componentname": "TextField",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "TextField.info"
-  },
-  {
-    "componentname": "TimePickerGroupControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "TimePickerGroupControl.info"
+    "filename": "TagBoxControl.info"
   },
   {
     "componentname": "TitleBarButtonControl",
@@ -2208,6 +2162,52 @@
     "filename": "TitleBarButtonControl.info"
   },
   {
+    "componentname": "TextFieldBoxControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "TextFieldBoxControl.info"
+  },
+  {
+    "componentname": "TimePickerControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "TimePickerControl.info"
+  },
+  {
     "componentname": "TitleBarIconTextControl",
     "properties": [
       "background",
@@ -2232,6 +2232,29 @@
       "word-spacing"
     ],
     "filename": "TitleBarIconTextControl.info"
+  },
+  {
+    "componentname": "TimePickerGroupControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "TimePickerGroupControl.info"
   },
   {
     "componentname": "TreeItemIconControl",
@@ -2260,6 +2283,27 @@
     "filename": "TreeItemIconControl.info"
   },
   {
+    "componentname": "TitleBarControl",
+    "properties": [
+      "background",
+      "border-radius",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-rtl-background-image",
+      "-nexa-rtl-edge-image",
+      "-nexa-text-align",
+      "-nexa-vertical-align",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "TitleBarControl.info"
+  },
+  {
     "componentname": "VFrameSet",
     "properties": [
       "background",
@@ -2282,49 +2326,6 @@
       "word-spacing"
     ],
     "filename": "VFrameSet.info"
-  },
-  {
-    "componentname": "VideoPlayer",
-    "properties": [
-      "background",
-      "border-radius",
-      "box-shadow",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "VideoPlayer.info"
-  },
-  {
-    "componentname": "TitleBarControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-vertical-align",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "TitleBarControl.info"
   },
   {
     "componentname": "View",
@@ -2373,6 +2374,28 @@
     "filename": "WebBrowser.info"
   },
   {
+    "componentname": "VideoPlayer",
+    "properties": [
+      "background",
+      "border-radius",
+      "box-shadow",
+      "color",
+      "cursor",
+      "font",
+      "letter-spacing",
+      "-nexa-border",
+      "-nexa-edge",
+      "-nexa-padding",
+      "-nexa-text-align",
+      "-nexa-text-decoration",
+      "-nexa-vertical-align",
+      "-nexa-word-wrap",
+      "opacity",
+      "word-spacing"
+    ],
+    "filename": "VideoPlayer.info"
+  },
+  {
     "componentname": "WebView",
     "properties": [
       "background",
@@ -2395,28 +2418,5 @@
       "word-spacing"
     ],
     "filename": "WebView.info"
-  },
-  {
-    "componentname": "FieldBaseTextControl",
-    "properties": [
-      "background",
-      "border-radius",
-      "color",
-      "cursor",
-      "font",
-      "letter-spacing",
-      "-nexa-border",
-      "-nexa-edge",
-      "-nexa-padding",
-      "-nexa-rtl-background-image",
-      "-nexa-rtl-edge-image",
-      "-nexa-text-align",
-      "-nexa-text-decoration",
-      "-nexa-vertical-align",
-      "-nexa-word-wrap",
-      "opacity",
-      "word-spacing"
-    ],
-    "filename": "FieldBaseTextControl.info"
   }
 ]
