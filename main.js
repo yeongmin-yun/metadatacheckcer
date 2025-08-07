@@ -94,5 +94,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Set the initial tab to load
-    switchTab('component-analyzer-tab');
+    switchTab('home-tab');
 });
